@@ -1,0 +1,215 @@
+# Sources {.unnumbered}
+
+Where each game's moves were read from. Nothing here is a reconstruction: the moves were taken from a published record, replayed on a board to check that every one of them is legal, and cross-checked against the result the source reports. Where two sources disagreed, both are listed and the chapter says so.
+
+The notes are written for this book unless the note says whose judgement it is reporting. Where a note carries a name, that name is the person the assessment belongs to, and the source it was read in is listed with the game.
+
+## 1475 &middot; Francesco di Castellvi vs Narciso Vinyoles, 1475 {.unnumbered}
+
+- [Francesco di Castellvi vs Narciso Vinyoles (1475) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1259987) &mdash; move list, date and event
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry this game's description comes from
+
+## 1623 &middot; Greco's Lesson {.unnumbered}
+
+- [Gioachino Greco (Wikipedia)](https://en.wikipedia.org/wiki/Gioachino_Greco) &mdash; the manuscripts, and the question of whether the games were played
+- [Gioachino Greco vs NN (1623) "When in Rome" (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1243022) &mdash; move list, date and place
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry that names the game
+
+## 1750 &middot; Légal's Mate {.unnumbered}
+
+- [Légal Trap (Wikipedia)](https://en.wikipedia.org/wiki/L%C3%A9gal_Trap) &mdash; both move orders, the dating, and the account of the alteration
+
+## 1788 &middot; The First Double Rook Sacrifice {.unnumbered}
+
+- [Thomas Bowdler vs Henry Seymour Conway (1788) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1282695) &mdash; move list, date and place
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry naming this the first example of the double rook sacrifice
+
+## 1790 &middot; Pawns Are the Soul of Chess {.unnumbered}
+
+- [Andrew Smith vs F. D. Philidor (1790) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1257921) &mdash; move list, date and the blindfold display it was played in
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry naming the game as a demonstration of pawn play
+
+## 1834 &middot; The Three Pawns {.unnumbered}
+
+- [McDonnell vs La Bourdonnais, 4th match game 16 (1834) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1001165) &mdash; move list, match and round
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry naming it the most famous win of their matches
+
+## 1844 &middot; Petrov's Immortal {.unnumbered}
+
+- [F. Alexander Hoffmann vs Alexander Petrov (1844) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1257910) &mdash; move list, date and place
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry naming the game Petrov's Immortal
+
+## 1851 &middot; The Immortal Game {.unnumbered}
+
+- [Immortal Game (Wikipedia)](https://en.wikipedia.org/wiki/Immortal_Game) &mdash; move list and date
+- [Adolf Anderssen vs Lionel Kieseritzky (1851) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1018910) &mdash; move list and date
+
+## 1852 &middot; The Evergreen Game {.unnumbered}
+
+- [Evergreen Game (Wikipedia)](https://en.wikipedia.org/wiki/Evergreen_Game) &mdash; move list
+- [Adolf Anderssen vs Jean Dufresne (1852) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1018961) &mdash; move list and place
+
+## 1857 &middot; Morphy's Queen Sacrifice {.unnumbered}
+
+- [Louis Paulsen vs Paul Morphy (1857) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1242884) &mdash; move list, round and date, from the Book of the First American Chess Congress
+
+## 1858 &middot; The Opera Game {.unnumbered}
+
+- [Opera Game (Wikipedia)](https://en.wikipedia.org/wiki/Opera_Game) &mdash; move list and occasion
+- [Paul Morphy vs Duke of Brunswick and Count Isouard (1858) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1233404) &mdash; move list and place; it dates the game only to 1858
+
+## 1872 &middot; The Immortal Draw {.unnumbered}
+
+- [Immortal Draw (Wikipedia)](https://en.wikipedia.org/wiki/Immortal_Draw) &mdash; move list and the editorial marks
+- [Carl Hamppe vs Philipp Meitner (1872) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1250160) &mdash; move list and place
+
+## 1883 &middot; Zukertort's Immortal {.unnumbered}
+
+- [Johannes Zukertort vs Joseph Henry Blackburne (1883) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1001854) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry naming the game Zukertort's Immortal
+
+## 1889 &middot; The Double Bishop Sacrifice {.unnumbered}
+
+- [Lasker versus Bauer, Amsterdam, 1889 (Wikipedia)](https://en.wikipedia.org/wiki/Lasker_versus_Bauer,_Amsterdam,_1889) &mdash; move list and the editorial mark
+- [Emanuel Lasker vs Johann Hermann Bauer (1889) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1026352) &mdash; move list, round and date
+
+## 1895 &middot; The Mate Steinitz Demonstrated {.unnumbered}
+
+- [Wilhelm Steinitz vs Curt von Bardeleben (1895) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1132699) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the ten-move mate and the circumstances of the finish
+
+## 1907 &middot; Rubinstein's Immortal {.unnumbered}
+
+- [Rotlewi versus Rubinstein (Wikipedia)](https://en.wikipedia.org/wiki/Rotlewi_versus_Rubinstein) &mdash; move list and the editorial marks
+- [Gersz Rotlewi vs Akiba Rubinstein (1907) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1119679) &mdash; move list, round and date
+
+## 1912 &middot; The Gold Coins Game {.unnumbered}
+
+- [Levitsky versus Marshall (Wikipedia)](https://en.wikipedia.org/wiki/Levitsky_versus_Marshall) &mdash; move list and the editorial marks
+- [Stepan Levitsky vs Frank James Marshall (1912) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1094915) &mdash; move list, round and date
+
+## 1914 &middot; The Game That Won St Petersburg {.unnumbered}
+
+- [Emanuel Lasker vs José Raúl Capablanca (1914) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1258181) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the game and its place in the tournament
+
+## 1918 &middot; The Marshall Attack, Refuted at the Board {.unnumbered}
+
+- [José Raúl Capablanca vs Frank James Marshall (1918) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1095025) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on Marshall's prepared gambit and Capablanca's acceptance of it
+
+## 1922 &middot; Alekhine at Hastings {.unnumbered}
+
+- [Efim Bogoljubov vs Alexander Alekhine (1922) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1012099) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the game
+
+## 1923 &middot; The Immortal Zugzwang Game {.unnumbered}
+
+- [Immortal Zugzwang Game (Wikipedia)](https://en.wikipedia.org/wiki/Immortal_Zugzwang_Game) &mdash; move list and the editorial marks
+
+## 1924 &middot; The End of an Unbeaten Run {.unnumbered}
+
+- [Richard Réti vs José Raúl Capablanca (1924) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1102101) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry noting that this game ended Capablanca's unbeaten run
+
+## 1938 &middot; Botvinnik's Combination {.unnumbered}
+
+- [Mikhail Botvinnik vs José Raúl Capablanca (1938) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1031957) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on Botvinnik's initiative and the combination
+
+## 1956 &middot; The Game of the Century {.unnumbered}
+
+- [The Game of the Century (Wikipedia)](https://en.wikipedia.org/wiki/The_Game_of_the_Century_(chess)) &mdash; move list, tournament details and the editorial marks
+- [Donald Byrne vs Robert James Fischer (1956) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1008361) &mdash; move list, round and date
+
+## 1958 &middot; Nezhmetdinov's Queen {.unnumbered}
+
+- [Lev Polugaevsky vs Rashid Nezhmetdinov (1958) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1111459) &mdash; move list, event and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the queen sacrifice on move twenty-four
+
+## 1960 &middot; The Game in the Bond Film {.unnumbered}
+
+- [Boris Spassky vs David Bronstein (1960) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1034110) &mdash; move list, round and date
+- [1960 USSR Chess Championship (Wikipedia)](https://en.wikipedia.org/wiki/1960_USSR_Chess_Championship) &mdash; the tournament, and the use of this game in From Russia with Love
+
+## 1960 &middot; Tal Takes the Title {.unnumbered}
+
+- [Mikhail Tal vs Mikhail Botvinnik (1960), match game 1 (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1032529) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on Tal's style against Botvinnik's logic
+
+## 1972 &middot; The Game Spassky Applauded {.unnumbered}
+
+- [Robert James Fischer vs Boris Spassky (1972), match game 6 (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1044366) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on Fischer's opening surprise in this game
+
+## 1978 &middot; The Chinese Immortal {.unnumbered}
+
+- [Liu Wenzhe vs Jan Hein Donner (1978) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1260270) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry naming the game the Chinese Immortal
+
+## 1985 &middot; The Knight on d3 {.unnumbered}
+
+- [Anatoly Karpov vs Garry Kasparov (1985), match game 16 (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1067175) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the gambit and the dominating knight
+
+## 1987 &middot; The Game He Had to Win {.unnumbered}
+
+- [Garry Kasparov vs Anatoly Karpov (1987), match game 24 (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1067242) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the final game of the Seville match
+
+## 1991 &middot; The Tiebreak {.unnumbered}
+
+- [Vassily Ivanchuk vs Artur Yusupov (1991), tiebreak game (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1060180) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the knight sacrifice in the tiebreak
+
+## 1994 &middot; Polgár Against the Attacker {.unnumbered}
+
+- [Alexey Shirov vs Judit Polgár (1994) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1111195) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on Polgár's play in this game
+
+## 1996 &middot; The First Machine to Beat a World Champion {.unnumbered}
+
+- [Deep Blue versus Kasparov, 1996, Game 1 (Wikipedia)](https://en.wikipedia.org/wiki/Deep_Blue_versus_Kasparov,_1996,_Game_1) &mdash; move list and the editorial marks
+
+## 1997 &middot; Nineteen Moves {.unnumbered}
+
+- [Deep Blue versus Kasparov, 1997, Game 6 (Wikipedia)](https://en.wikipedia.org/wiki/Deep_Blue_versus_Kasparov,_1997,_Game_6) &mdash; move list and the editorial marks
+
+## 1998 &middot; The Best Move of All Time {.unnumbered}
+
+- [Veselin Topalov vs Alexey Shirov (1998) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1143956) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry describing move 47 as the best move of all time
+
+## 1999 &middot; Kasparov's Immortal {.unnumbered}
+
+- [Kasparov's Immortal (Wikipedia)](https://en.wikipedia.org/wiki/Kasparov%27s_Immortal) &mdash; move list and the editorial marks
+- [Garry Kasparov vs Veselin Topalov (1999) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1011478) &mdash; move list, round and date
+- [Lichess analysis board of the game](https://lichess.org/9gFZXLl5) &mdash; the game, playable, as linked from the Wikipedia article
+
+## 2013 &middot; Anand's Immortal {.unnumbered}
+
+- [Anand's Immortal (Wikipedia)](https://en.wikipedia.org/wiki/Anand%27s_Immortal) &mdash; move list and the editorial marks
+- [Levon Aronian vs Viswanathan Anand (2013) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1704763) &mdash; move list, round and date
+
+## 2015 &middot; The Twenty-First Century Immortal {.unnumbered}
+
+- [Wei Yi vs Lázaro Bruzón Batista (2015) (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=1795096) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry comparing the game to Kasparov's Immortal and the Game of the Century
+
+## 2021 &middot; The Longest Championship Game {.unnumbered}
+
+- [Carlsen versus Nepomniachtchi, World Chess Championship 2021, Game 6 (Wikipedia)](https://en.wikipedia.org/wiki/Carlsen_versus_Nepomniachtchi,_World_Chess_Championship_2021,_Game_6) &mdash; move list and the editorial marks
+- [Magnus Carlsen vs Ian Nepomniachtchi (2021), match game 6 (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=2127373) &mdash; move list, round and date
+
+## 2023 &middot; The Last Game of the 2023 Championship {.unnumbered}
+
+- [Ian Nepomniachtchi vs Ding Liren (2023), tiebreak game (chessgames.com)](https://www.chessgames.com/perl/chessgame?gid=2488997) &mdash; move list, round and date
+- [List of chess games (Wikipedia)](https://en.wikipedia.org/wiki/List_of_chess_games) &mdash; the entry on the self-pin at move forty-six and the errors that followed
+
+## Where the moves came from, counted {.unnumbered}
+
+| Site | Games cited |
+| --- | -: |
+| en.wikipedia.org | 41 |
+| chessgames.com | 37 |
+| lichess.org | 1 |
