@@ -14,7 +14,7 @@
     "href": "timeline.html",
     "title": "The games",
     "section": "",
-    "text": "The early game\n41 games, 1475 to 2023, oldest first. Every one of them has been replayed move by move on a board before being published here, and every one names the source its moves were read from.\nChess before the tournament: games recorded because someone thought them worth writing down.",
+    "text": "The early game\n46 games, 1475 to 2023, oldest first. Every one of them has been replayed move by move on a board before being published here, and every one names the source its moves were read from.\nChess before the tournament: games recorded because someone thought them worth writing down.",
     "crumbs": [
       "The games"
     ]
@@ -34,7 +34,7 @@
     "href": "timeline.html#the-romantic-era",
     "title": "The games",
     "section": "The romantic era",
-    "text": "The romantic era\nGambits accepted on principle, kings hunted down the board, and the first games to be famous.\n\n\n\nYear\nGame\nPlayers\nResult\nMoves\n\n\n\n\n1834\nThe Three Pawns\nAlexander McDonnell – Louis-Charles Mahé de La Bourdonnais\n0-1\n37\n\n\n1844\nPetrov’s Immortal\nAlexander Hoffmann – Alexander Petrov\n0-1\n20\n\n\n1851\nThe Immortal Game\nAdolf Anderssen – Lionel Kieseritzky\n1-0\n23\n\n\n1852\nThe Evergreen Game\nAdolf Anderssen – Jean Dufresne\n1-0\n24\n\n\n1857\nMorphy’s Queen Sacrifice\nLouis Paulsen – Paul Morphy\n0-1\n28\n\n\n1858\nThe Opera Game\nPaul Morphy – Duke Karl of Brunswick and Count Isouard\n1-0\n17\n\n\n1872\nThe Immortal Draw\nCarl Hamppe – Philipp Meitner\n1/2-1/2\n18",
+    "text": "The romantic era\nGambits accepted on principle, kings hunted down the board, and the first games to be famous.\n\n\n\nYear\nGame\nPlayers\nResult\nMoves\n\n\n\n\n1834\nLouis Charles Mahe De La Bourdonnais vs Alexander McDonnell, 1834\nLouis Charles Mahe De La Bourdonnais – Alexander McDonnell\n0-1\n36\n\n\n1834\nThe Three Pawns\nAlexander McDonnell – Louis-Charles Mahé de La Bourdonnais\n0-1\n37\n\n\n1843\nPierre Charles Fournier de Saint Amant vs Howard Staunton, 1843\nPierre Charles Fournier de Saint Amant – Howard Staunton\n0-1\n39\n\n\n1844\nPetrov’s Immortal\nAlexander Hoffmann – Alexander Petrov\n0-1\n20\n\n\n1851\nThe Immortal Game\nAdolf Anderssen – Lionel Kieseritzky\n1-0\n23\n\n\n1852\nThe Evergreen Game\nAdolf Anderssen – Jean Dufresne\n1-0\n24\n\n\n1857\nJohn William Schulten vs Paul Morphy, 1857\nJohn William Schulten – Paul Morphy\n0-1\n23\n\n\n1857\nMorphy’s Queen Sacrifice\nLouis Paulsen – Paul Morphy\n0-1\n28\n\n\n1858\nThe Opera Game\nPaul Morphy – Duke Karl of Brunswick and Count Isouard\n1-0\n17\n\n\n1862\nWilhelm Steinitz vs Augustus Mongredien, 1862\nWilhelm Steinitz – Augustus Mongredien\n1-0\n29\n\n\n1872\nThe Immortal Draw\nCarl Hamppe – Philipp Meitner\n1/2-1/2\n18\n\n\n1874\nVictor Knorre vs Mikhail Chigorin, 1874\nVictor Knorre – Mikhail Chigorin\n0-1\n14",
     "crumbs": [
       "The games"
     ]
@@ -135,14 +135,36 @@
     ]
   },
   {
+    "objectID": "games/1834-bourdonnais-mcdonnell.html",
+    "href": "games/1834-bourdonnais-mcdonnell.html",
+    "title": "1834 · Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell, 1834",
+    "section": "",
+    "text": "1834 · The romantic era · D20Louis Charles Mahe De La BourdonnaisvsAlexander McDonnell0-1La Bourdonnais - McDonnell 4th Casual Match, London ENGReuben Fine in The World's Great Chess Games described it as the first great immortal game of chess. McDonnell sacrifices his queen for two minor pieces (Wikipedia).\n\n\n\n\n\nSource of the movesLouis Charles Mahe De La Bourdonnais vs Alexander McDonnell (1834) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The romantic era",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>1834 · Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell, 1834</span>"
+    ]
+  },
+  {
     "objectID": "games/1834-mcdonnell-labourdonnais.html",
     "href": "games/1834-mcdonnell-labourdonnais.html",
     "title": "1834 · The Three Pawns",
     "section": "",
-    "text": "1834 · The romantic era · Sicilian Defence, Löwenthal Variation (B32)Alexander McDonnellvsLouis-Charles Mahé de La Bourdonnais0-1Fourth casual match, game 16, Westminster Chess Club, London, EnglandLa Bourdonnais finishes with three connected passed pawns on the second rank.\n\n\n\n\n\nSource of the movesMcDonnell vs La Bourdonnais, 4th match game 16 (1834) (chessgames.com) move list, match and roundList of chess games (Wikipedia) the entry naming it the most famous win of their matches\nPGN, with the notes as move commentsSource record",
+    "text": "1834 · The romantic era · Sicilian Defence, Löwenthal Variation (B32)Alexander McDonnellvsLouis-Charles Mahé de La Bourdonnais0-1Fourth casual match, game 16, Westminster Chess Club, London, EnglandPerhaps the most famous win of their matches (considered an unofficial world championship), La Bourdonnais shows how a rolling pawn mass can overwhelm all of his opponent's major pieces (Wikipedia).\n\n\n\n\n\nSource of the movesMcDonnell vs La Bourdonnais, 4th match game 16 (1834) (chessgames.com) move list, match and roundList of chess games (Wikipedia) the entry naming it the most famous win of their matches\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The romantic era",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>1834 · The Three Pawns</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>1834 · The Three Pawns</span>"
+    ]
+  },
+  {
+    "objectID": "games/1843-amant-staunton.html",
+    "href": "games/1843-amant-staunton.html",
+    "title": "1843 · Pierre Charles Fournier de Saint Amant vs Howard Staunton, 1843",
+    "section": "",
+    "text": "21 November 1843 · The romantic era · B21Pierre Charles Fournier de Saint AmantvsHoward Staunton0-1Staunton - Saint Amant, Paris FRA\n\n\n\n\n\nSource of the movesPierre Charles Fournier de Saint Amant vs Howard Staunton (1843) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The romantic era",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1843 · Pierre Charles Fournier de Saint Amant vs Howard Staunton, 1843</span>"
     ]
   },
   {
@@ -153,7 +175,7 @@
     "text": "November 1844 · The romantic era · Giuoco Piano (C53)Alexander HoffmannvsAlexander Petrov0-1Match game, Warsaw, Poland (then the Russian Empire)Petrov wins with a queen sacrifice and a king hunt. Known as Petrov's Immortal.\n\n\n\n\n\nSource of the movesF. Alexander Hoffmann vs Alexander Petrov (1844) (chessgames.com) move list, date and placeList of chess games (Wikipedia) the entry naming the game Petrov's Immortal\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The romantic era",
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>1844 · Petrov's Immortal</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>1844 · Petrov's Immortal</span>"
     ]
   },
   {
@@ -164,7 +186,7 @@
     "text": "21 June 1851 · The romantic era · King's Gambit Accepted, Bishop's Gambit (Bryan Countergambit) (C33)Adolf AnderssenvsLionel Kieseritzky1-0Informal game, played during the London international tournament, London, EnglandAnderssen gives up both rooks and his queen and mates with three minor pieces. Known as the Immortal Game.Kieseritzky is thought to have resigned at about move twenty, so the last three moves may never have been played.\n\n\n\n\n\nSource of the movesImmortal Game (Wikipedia) move list and dateAdolf Anderssen vs Lionel Kieseritzky (1851) (chessgames.com) move list and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The romantic era",
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>1851 · The Immortal Game</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>1851 · The Immortal Game</span>"
     ]
   },
   {
@@ -175,7 +197,18 @@
     "text": "1852 · The romantic era · Evans Gambit (C52)Adolf AnderssenvsJean Dufresne1-0Informal game, Berlin, PrussiaAnderssen mates after a queen sacrifice. Known as the Evergreen Game.\n\n\n\n\n\nSource of the movesEvergreen Game (Wikipedia) move listAdolf Anderssen vs Jean Dufresne (1852) (chessgames.com) move list and place\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The romantic era",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>1852 · The Evergreen Game</span>"
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>1852 · The Evergreen Game</span>"
+    ]
+  },
+  {
+    "objectID": "games/1857-schulten-morphy.html",
+    "href": "games/1857-schulten-morphy.html",
+    "title": "1857 · John William Schulten vs Paul Morphy, 1857",
+    "section": "",
+    "text": "1857 · The romantic era · C31John William SchultenvsPaul Morphy0-1New York, New York, NY USAIn a casual game played after the conclusion of the first American Chess Congress, Morphy pins down Schulten's king in the middle and proceeds to checkmate it with forceful play (Wikipedia).\n\n\n\n\n\nSource of the movesJohn William Schulten vs Paul Morphy (1857) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The romantic era",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>1857 · John William Schulten vs Paul Morphy, 1857</span>"
     ]
   },
   {
@@ -186,7 +219,7 @@
     "text": "3 November 1857 · The romantic era · Four Knights Game (C48)Louis PaulsenvsPaul Morphy0-1First American Chess Congress, round 4, New York, United StatesMorphy sacrifices his queen on move 17 and wins with bishop and rooks.\n\n\n\n\n\nSource of the movesLouis Paulsen vs Paul Morphy (1857) (chessgames.com) move list, round and date, from the Book of the First American Chess Congress\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The romantic era",
-      "<span class='chapter-number'>10</span>  <span class='chapter-title'>1857 · Morphy's Queen Sacrifice</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>1857 · Morphy's Queen Sacrifice</span>"
     ]
   },
   {
@@ -197,7 +230,18 @@
     "text": "1858 · The romantic era · Philidor Defence (C41)Paul MorphyvsDuke Karl of Brunswick and Count Isouard1-0Informal consultation game, played in a box at the Italian opera, Salle Ventadour, Paris, FranceMorphy mates on move 17 after sacrificing his queen. Known as the Opera Game.\n\n\n\n\n\nSource of the movesOpera Game (Wikipedia) move list and occasionPaul Morphy vs Duke of Brunswick and Count Isouard (1858) (chessgames.com) move list and place; it dates the game only to 1858\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The romantic era",
-      "<span class='chapter-number'>11</span>  <span class='chapter-title'>1858 · The Opera Game</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>1858 · The Opera Game</span>"
+    ]
+  },
+  {
+    "objectID": "games/1862-steinitz-mongredien.html",
+    "href": "games/1862-steinitz-mongredien.html",
+    "title": "1862 · Wilhelm Steinitz vs Augustus Mongredien, 1862",
+    "section": "",
+    "text": "July 1862 · The romantic era · B01Wilhelm SteinitzvsAugustus Mongredien1-0B.C.A. Grand Tourney, London ENG\n\n\n\n\n\nSource of the movesWilhelm Steinitz vs Augustus Mongredien (1862) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The romantic era",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>1862 · Wilhelm Steinitz vs Augustus Mongredien, 1862</span>"
     ]
   },
   {
@@ -208,7 +252,18 @@
     "text": "1872 · The romantic era · Vienna Game, Hamppe-Meitner Variation (C25)Carl HamppevsPhilipp Meitner1/2-1/2Casual game, Vienna, AustriaMeitner gives up bishop, queen and knight; the game is drawn by perpetual check. Known as the Immortal Draw.Drawn by perpetual check. Later analysis holds that White was winning at several points.\n\n\n\n\n\nSource of the movesImmortal Draw (Wikipedia) move list and the editorial marksCarl Hamppe vs Philipp Meitner (1872) (chessgames.com) move list and place\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The romantic era",
-      "<span class='chapter-number'>12</span>  <span class='chapter-title'>1872 · The Immortal Draw</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>1872 · The Immortal Draw</span>"
+    ]
+  },
+  {
+    "objectID": "games/1874-knorre-chigorin.html",
+    "href": "games/1874-knorre-chigorin.html",
+    "title": "1874 · Victor Knorre vs Mikhail Chigorin, 1874",
+    "section": "",
+    "text": "1874 · The romantic era · C50Victor KnorrevsMikhail Chigorin0-1St. Petersburg, St. PetersburgKnorre's premature castling on the kingside combined with an ineffective pin allows Chigorin to strike back with a violent counterattack culminating in a brilliant queen sacrifice and subsequent checkmate (Wikipedia).\n\n\n\n\n\nSource of the movesVictor Knorre vs Mikhail Chigorin (1874) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The romantic era",
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>1874 · Victor Knorre vs Mikhail Chigorin, 1874</span>"
     ]
   },
   {
@@ -219,7 +274,7 @@
     "text": "5 May 1883 · The classical era · English Opening (A13)Johannes ZukertortvsJoseph Henry Blackburne1-0London international tournament, round 6, London, EnglandZukertort leaves his queen where it cannot be taken without allowing mate. Known as Zukertort's Immortal.\n\n\n\n\n\nSource of the movesJohannes Zukertort vs Joseph Henry Blackburne (1883) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry naming the game Zukertort's Immortal\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>1883 · Zukertort's Immortal</span>"
+      "<span class='chapter-number'>18</span>  <span class='chapter-title'>1883 · Zukertort's Immortal</span>"
     ]
   },
   {
@@ -230,7 +285,7 @@
     "text": "26 August 1889 · The classical era · Bird's Opening (A03)Emanuel LaskervsJohann Hermann Bauer1-0Amsterdam tournament, round 1, Amsterdam, NetherlandsThe first famous example of the double bishop sacrifice.\n\n\n\n\n\nSource of the movesLasker versus Bauer, Amsterdam, 1889 (Wikipedia) move list and the editorial markEmanuel Lasker vs Johann Hermann Bauer (1889) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>1889 · The Double Bishop Sacrifice</span>"
+      "<span class='chapter-number'>19</span>  <span class='chapter-title'>1889 · The Double Bishop Sacrifice</span>"
     ]
   },
   {
@@ -241,7 +296,7 @@
     "text": "17 August 1895 · The classical era · Italian Game, Giuoco Piano (C54)Wilhelm SteinitzvsCurt von Bardeleben1-0Hastings international tournament, round 10, Hastings, EnglandSteinitz gives four consecutive rook checks with the rook en prise throughout.Von Bardeleben did not resign over the board. By the usual account he left the hall and lost on time, and Steinitz demonstrated the mate afterwards.\n\n\n\n\n\nSource of the movesWilhelm Steinitz vs Curt von Bardeleben (1895) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the ten-move mate and the circumstances of the finish\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>1895 · The Mate Steinitz Demonstrated</span>"
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>1895 · The Mate Steinitz Demonstrated</span>"
     ]
   },
   {
@@ -252,7 +307,7 @@
     "text": "26 December 1907 · The classical era · Tarrasch Defence, Symmetrical Variation (D32)Gersz RotlewivsAkiba Rubinstein0-1Lodz tournament, round 6, Łódź, Poland (then the Russian Empire)Rubinstein sacrifices queen and rook and forces mate. Known as Rubinstein's Immortal.\n\n\n\n\n\nSource of the movesRotlewi versus Rubinstein (Wikipedia) move list and the editorial marksGersz Rotlewi vs Akiba Rubinstein (1907) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>1907 · Rubinstein's Immortal</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>1907 · Rubinstein's Immortal</span>"
     ]
   },
   {
@@ -263,7 +318,7 @@
     "text": "20 July 1912 · The classical era · French Defence, Marshall Variation (C10)Stepan LevitskyvsFrank Marshall0-1Eighteenth DSB Congress, round 6, Breslau, GermanyMarshall's 23...Qg3 places his queen en prise in three different ways.Marshall wrote that spectators threw gold pieces onto the board. His wife denied it, and others said the coins were bets being settled.\n\n\n\n\n\nSource of the movesLevitsky versus Marshall (Wikipedia) move list and the editorial marksStepan Levitsky vs Frank James Marshall (1912) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>17</span>  <span class='chapter-title'>1912 · The Gold Coins Game</span>"
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>1912 · The Gold Coins Game</span>"
     ]
   },
   {
@@ -274,7 +329,7 @@
     "text": "18 May 1914 · The classical era · Ruy Lopez, Exchange Variation (C68)Emanuel LaskervsJosé Raúl Capablanca1-0St Petersburg tournament, round 7 of the final, St Petersburg, RussiaLasker beats Capablanca from an early queen exchange, and takes the tournament.\n\n\n\n\n\nSource of the movesEmanuel Lasker vs José Raúl Capablanca (1914) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the game and its place in the tournament\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>18</span>  <span class='chapter-title'>1914 · The Game That Won St Petersburg</span>"
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>1914 · The Game That Won St Petersburg</span>"
     ]
   },
   {
@@ -285,7 +340,7 @@
     "text": "23 October 1918 · The classical era · Ruy Lopez, Marshall Attack (C89)José Raúl CapablancavsFrank Marshall1-0New York tournament, round 1, New York, United StatesMarshall unveils the gambit that bears his name; Capablanca accepts it and defends successfully.\n\n\n\n\n\nSource of the movesJosé Raúl Capablanca vs Frank James Marshall (1918) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Marshall's prepared gambit and Capablanca's acceptance of it\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>19</span>  <span class='chapter-title'>1918 · The Marshall Attack, Refuted at the Board</span>"
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>1918 · The Marshall Attack, Refuted at the Board</span>"
     ]
   },
   {
@@ -296,7 +351,7 @@
     "text": "21 September 1922 · The classical era · Dutch Defence (A90)Efim BogoljubovvsAlexander Alekhine0-1Hastings tournament, round 10, Hastings, EnglandAlekhine promotes two pawns, with a third advancing when White resigns.\n\n\n\n\n\nSource of the movesEfim Bogoljubov vs Alexander Alekhine (1922) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the game\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>1922 · Alekhine at Hastings</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>1922 · Alekhine at Hastings</span>"
     ]
   },
   {
@@ -307,7 +362,7 @@
     "text": "9 March 1923 · The classical era · Queen's Indian Defence (E18)Friedrich SämischvsAron Nimzowitsch0-1Copenhagen tournament, round 6, Copenhagen, DenmarkNimzowitsch's last move leaves White with no move that does not lose material. Known as the Immortal Zugzwang Game.Whether the final position is a true zugzwang is disputed; Soltis notes that White could have moved a piece and played on.\n\n\n\n\n\nSource of the movesImmortal Zugzwang Game (Wikipedia) move list and the editorial marks\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>1923 · The Immortal Zugzwang Game</span>"
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>1923 · The Immortal Zugzwang Game</span>"
     ]
   },
   {
@@ -318,7 +373,7 @@
     "text": "22 March 1924 · The classical era · Réti Opening (A15)Richard RétivsJosé Raúl Capablanca1-0New York tournament, round 5, New York, United StatesThe game that ended Capablanca's eight-year unbeaten run in tournament play.\n\n\n\n\n\nSource of the movesRichard Réti vs José Raúl Capablanca (1924) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry noting that this game ended Capablanca's unbeaten run\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>1924 · The End of an Unbeaten Run</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>1924 · The End of an Unbeaten Run</span>"
     ]
   },
   {
@@ -329,7 +384,7 @@
     "text": "22 November 1938 · The Soviet school · Nimzo-Indian Defence (E40)Mikhail BotvinnikvsJosé Raúl Capablanca1-0AVRO tournament, round 11, Rotterdam, NetherlandsBotvinnik gives up bishop and knight to promote his e-pawn.\n\n\n\n\n\nSource of the movesMikhail Botvinnik vs José Raúl Capablanca (1938) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Botvinnik's initiative and the combination\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>1938 · Botvinnik's Combination</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>1938 · Botvinnik's Combination</span>"
     ]
   },
   {
@@ -340,7 +395,7 @@
     "text": "17 October 1956 · The Soviet school · Grünfeld Defence (D92)Donald ByrnevsBobby Fischer0-1Third Rosenwald Trophy tournament, Marshall Chess Club, New York, United StatesFischer, aged 13, sacrifices his queen on move 17. Known as the Game of the Century.\n\n\n\n\n\nSource of the movesThe Game of the Century (Wikipedia) move list, tournament details and the editorial marksDonald Byrne vs Robert James Fischer (1956) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>1956 · The Game of the Century</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>1956 · The Game of the Century</span>"
     ]
   },
   {
@@ -351,7 +406,7 @@
     "text": "June 1958 · The Soviet school · Old Indian Defence (A53)Lev PolugaevskyvsRashid Nezhmetdinov0-1Russian Championship, Sochi, Soviet UnionNezhmetdinov sacrifices his queen on move 24 and mates with three pieces.\n\n\n\n\n\nSource of the movesLev Polugaevsky vs Rashid Nezhmetdinov (1958) (chessgames.com) move list, event and dateList of chess games (Wikipedia) the entry on the queen sacrifice on move twenty-four\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>1958 · Nezhmetdinov's Queen</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>1958 · Nezhmetdinov's Queen</span>"
     ]
   },
   {
@@ -362,7 +417,7 @@
     "text": "20 February 1960 · The Soviet school · King's Gambit, Accepted (C36)Boris SpasskyvsDavid Bronstein1-0USSR Championship, round 16, Leningrad, Soviet UnionA King's Gambit, and the game the chess scene in From Russia with Love was built from.\n\n\n\n\n\nSource of the movesBoris Spassky vs David Bronstein (1960) (chessgames.com) move list, round and date1960 USSR Chess Championship (Wikipedia) the tournament, and the use of this game in From Russia with Love\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>1960 · The Game in the Bond Film</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>1960 · The Game in the Bond Film</span>"
     ]
   },
   {
@@ -373,7 +428,7 @@
     "text": "15 March 1960 · The Soviet school · French Defence, Winawer Variation (C18)Mikhail TalvsMikhail Botvinnik1-0World Championship match, game 1, Moscow, Soviet UnionThe first game of the match in which Tal took the world title at 23.\n\n\n\n\n\nSource of the movesMikhail Tal vs Mikhail Botvinnik (1960), match game 1 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Tal's style against Botvinnik's logic\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>1960 · Tal Takes the Title</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>1960 · Tal Takes the Title</span>"
     ]
   },
   {
@@ -384,7 +439,7 @@
     "text": "23 July 1972 · The Soviet school · Queen's Gambit Declined, Tartakower Variation (D59)Bobby FischervsBoris Spassky1-0World Championship match, game 6, Reykjavík, IcelandFischer opens 1.c4 for the first time in the match; Spassky applauded at the end.\n\n\n\n\n\nSource of the movesRobert James Fischer vs Boris Spassky (1972), match game 6 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Fischer's opening surprise in this game\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>1972 · The Game Spassky Applauded</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>1972 · The Game Spassky Applauded</span>"
     ]
   },
   {
@@ -395,7 +450,7 @@
     "text": "2 November 1978 · The modern era · Pirc Defence (B07)Liu WenzhevsJan Hein Donner1-0Chess Olympiad, round 8, Buenos Aires, ArgentinaLiu sacrifices his queen on move 16 and mates on move 20. Known as the Chinese Immortal.\n\n\n\n\n\nSource of the movesLiu Wenzhe vs Jan Hein Donner (1978) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry naming the game the Chinese Immortal\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>1978 · The Chinese Immortal</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>1978 · The Chinese Immortal</span>"
     ]
   },
   {
@@ -406,7 +461,7 @@
     "text": "15 October 1985 · The modern era · Sicilian Defence, Taimanov Variation (B44)Anatoly KarpovvsGarry Kasparov0-1World Championship match, game 16, Moscow, Soviet UnionKasparov's knight occupies d3 from move 16 to the end of the game.\n\n\n\n\n\nSource of the movesAnatoly Karpov vs Garry Kasparov (1985), match game 16 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the gambit and the dominating knight\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>1985 · The Knight on d3</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>1985 · The Knight on d3</span>"
     ]
   },
   {
@@ -417,7 +472,7 @@
     "text": "18 December 1987 · The modern era · English Opening (A13)Garry KasparovvsAnatoly Karpov1-0World Championship match, game 24, Seville, SpainKasparov had to win the final game of the match to keep the title, and did.\n\n\n\n\n\nSource of the movesGarry Kasparov vs Anatoly Karpov (1987), match game 24 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the final game of the Seville match\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>1987 · The Game He Had to Win</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>1987 · The Game He Had to Win</span>"
     ]
   },
   {
@@ -428,7 +483,7 @@
     "text": "24 August 1991 · The modern era · King's Indian Defence, Fianchetto Variation (E67)Vasyl IvanchukvsArtur Yusupov0-1Candidates match, tiebreak game, Brussels, BelgiumYusupov sacrifices a knight to win a must-win tiebreak game.\n\n\n\n\n\nSource of the movesVassily Ivanchuk vs Artur Yusupov (1991), tiebreak game (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the knight sacrifice in the tiebreak\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>1991 · The Tiebreak</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>1991 · The Tiebreak</span>"
     ]
   },
   {
@@ -439,7 +494,7 @@
     "text": "October 1994 · The modern era · Sicilian Defence, Four Knights Variation (B45)Alexey ShirovvsJudit Polgár0-1Sicilian theme tournament, round 8, Buenos Aires, ArgentinaPolgár answers Shirov's attack with counter-sacrifices; White resigns with his king on c4.\n\n\n\n\n\nSource of the movesAlexey Shirov vs Judit Polgár (1994) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Polgár's play in this game\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>1994 · Polgár Against the Attacker</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>1994 · Polgár Against the Attacker</span>"
     ]
   },
   {
@@ -450,7 +505,7 @@
     "text": "10 February 1996 · The computer age · Sicilian Defence, Alapin Variation (B22)Deep BluevsGarry Kasparov1-0Deep Blue versus Kasparov 1996, game 1, Philadelphia, United StatesThe first game in which a computer beat a reigning world champion at tournament time controls.\n\n\n\n\n\nSource of the movesDeep Blue versus Kasparov, 1996, Game 1 (Wikipedia) move list and the editorial marks\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>1996 · The First Machine to Beat a World Champion</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>1996 · The First Machine to Beat a World Champion</span>"
     ]
   },
   {
@@ -461,7 +516,7 @@
     "text": "11 May 1997 · The computer age · Caro-Kann Defence, Steinitz Variation (B17)Deep BluevsGarry Kasparov1-0Deep Blue versus Kasparov rematch, game 6, New York, United StatesDeep Blue wins in 19 moves, the first computer to beat a reigning world champion in a match.\n\n\n\n\n\nSource of the movesDeep Blue versus Kasparov, 1997, Game 6 (Wikipedia) move list and the editorial marks\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>1997 · Nineteen Moves</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>1997 · Nineteen Moves</span>"
     ]
   },
   {
@@ -472,7 +527,7 @@
     "text": "4 March 1998 · The computer age · Grünfeld Defence, Exchange Variation (D85)Veselin TopalovvsAlexey Shirov0-1Linares tournament, round 10, Linares, SpainShirov's 47...Bh3 gives away a bishop to gain a single tempo in a bishop endgame.\n\n\n\n\n\nSource of the movesVeselin Topalov vs Alexey Shirov (1998) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry describing move 47 as the best move of all time\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>1998 · The Best Move of All Time</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>1998 · The Best Move of All Time</span>"
     ]
   },
   {
@@ -483,7 +538,7 @@
     "text": "20 January 1999 · The computer age · Pirc Defence (B07)Garry KasparovvsVeselin Topalov1-0Hoogovens tournament, round 4, Wijk aan Zee, NetherlandsKasparov sacrifices a rook on move 24 and drives the black king from b8 to d1. Known as Kasparov's Immortal.The soundness of the combination is disputed. Topalov could have declined the rook with 24...Kb6.\n\n\n\n\n\nSource of the movesKasparov's Immortal (Wikipedia) move list and the editorial marksGarry Kasparov vs Veselin Topalov (1999) (chessgames.com) move list, round and dateLichess analysis board of the game the game, playable, as linked from the Wikipedia article\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>1999 · Kasparov's Immortal</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>1999 · Kasparov's Immortal</span>"
     ]
   },
   {
@@ -494,7 +549,7 @@
     "text": "15 January 2013 · The computer age · Semi-Slav Defence, Meran Variation (D47)Levon AronianvsViswanathan Anand0-1Tata Steel tournament, round 4, Wijk aan Zee, NetherlandsAnand sacrifices repeatedly and wins in 23 moves. Known as Anand's Immortal.\n\n\n\n\n\nSource of the movesAnand's Immortal (Wikipedia) move list and the editorial marksLevon Aronian vs Viswanathan Anand (2013) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>2013 · Anand's Immortal</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>2013 · Anand's Immortal</span>"
     ]
   },
   {
@@ -505,7 +560,7 @@
     "text": "3 July 2015 · The computer age · Sicilian Defence (B40)Wei YivsLázaro Bruzón1-0Danzhou grandmaster tournament, round 2, Danzhou, ChinaWei Yi's rook sacrifice forces the black king to e4 on move 25.\n\n\n\n\n\nSource of the movesWei Yi vs Lázaro Bruzón Batista (2015) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry comparing the game to Kasparov's Immortal and the Game of the Century\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>2015 · The Twenty-First Century Immortal</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>2015 · The Twenty-First Century Immortal</span>"
     ]
   },
   {
@@ -516,7 +571,7 @@
     "text": "3 December 2021 · The computer age · Queen's Pawn Game, Pseudo-Catalan (D02)Magnus CarlsenvsIan Nepomniachtchi1-0World Championship 2021, game 6, Dubai, United Arab EmiratesAt 136 moves, the longest game in world championship history.The position was a theoretical draw by the tablebases from move 115. The decisive error was 130...Qe6.\n\n\n\n\n\nSource of the movesCarlsen versus Nepomniachtchi, World Chess Championship 2021, Game 6 (Wikipedia) move list and the editorial marksMagnus Carlsen vs Ian Nepomniachtchi (2021), match game 6 (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>2021 · The Longest Championship Game</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>2021 · The Longest Championship Game</span>"
     ]
   },
   {
@@ -527,7 +582,7 @@
     "text": "30 April 2023 · The computer age · Ruy Lopez (C65)Ian NepomniachtchivsDing Liren0-1World Championship 2023, tiebreak game 4 (game 18 of the match), Astana, KazakhstanThe last tiebreak game of the 2023 championship; Ding Liren won the title.\n\n\n\n\n\nSource of the movesIan Nepomniachtchi vs Ding Liren (2023), tiebreak game (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the self-pin at move forty-six and the errors that followed\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>2023 · The Last Game of the 2023 Championship</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>2023 · The Last Game of the 2023 Championship</span>"
     ]
   },
   {
@@ -597,11 +652,33 @@
     ]
   },
   {
+    "objectID": "sources.html#louis-charles-mahe-de-la-bourdonnais-vs-alexander-mcdonnell-1834",
+    "href": "sources.html#louis-charles-mahe-de-la-bourdonnais-vs-alexander-mcdonnell-1834",
+    "title": "Sources",
+    "section": "1834 · Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell, 1834",
+    "text": "1834 · Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell, 1834\n\nLouis Charles Mahe De La Bourdonnais vs Alexander McDonnell (1834) (chessgames.com) — move list, date and event",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
     "objectID": "sources.html#the-three-pawns",
     "href": "sources.html#the-three-pawns",
     "title": "Sources",
     "section": "1834 · The Three Pawns",
     "text": "1834 · The Three Pawns\n\nMcDonnell vs La Bourdonnais, 4th match game 16 (1834) (chessgames.com) — move list, match and round\nList of chess games (Wikipedia) — the entry naming it the most famous win of their matches",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
+    "objectID": "sources.html#pierre-charles-fournier-de-saint-amant-vs-howard-staunton-1843",
+    "href": "sources.html#pierre-charles-fournier-de-saint-amant-vs-howard-staunton-1843",
+    "title": "Sources",
+    "section": "1843 · Pierre Charles Fournier de Saint Amant vs Howard Staunton, 1843",
+    "text": "1843 · Pierre Charles Fournier de Saint Amant vs Howard Staunton, 1843\n\nPierre Charles Fournier de Saint Amant vs Howard Staunton (1843) (chessgames.com) — move list, date and event",
     "crumbs": [
       "Appendices",
       "Sources"
@@ -641,6 +718,17 @@
     ]
   },
   {
+    "objectID": "sources.html#john-william-schulten-vs-paul-morphy-1857",
+    "href": "sources.html#john-william-schulten-vs-paul-morphy-1857",
+    "title": "Sources",
+    "section": "1857 · John William Schulten vs Paul Morphy, 1857",
+    "text": "1857 · John William Schulten vs Paul Morphy, 1857\n\nJohn William Schulten vs Paul Morphy (1857) (chessgames.com) — move list, date and event",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
     "objectID": "sources.html#morphys-queen-sacrifice",
     "href": "sources.html#morphys-queen-sacrifice",
     "title": "Sources",
@@ -663,11 +751,33 @@
     ]
   },
   {
+    "objectID": "sources.html#wilhelm-steinitz-vs-augustus-mongredien-1862",
+    "href": "sources.html#wilhelm-steinitz-vs-augustus-mongredien-1862",
+    "title": "Sources",
+    "section": "1862 · Wilhelm Steinitz vs Augustus Mongredien, 1862",
+    "text": "1862 · Wilhelm Steinitz vs Augustus Mongredien, 1862\n\nWilhelm Steinitz vs Augustus Mongredien (1862) (chessgames.com) — move list, date and event",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
     "objectID": "sources.html#the-immortal-draw",
     "href": "sources.html#the-immortal-draw",
     "title": "Sources",
     "section": "1872 · The Immortal Draw",
     "text": "1872 · The Immortal Draw\n\nImmortal Draw (Wikipedia) — move list and the editorial marks\nCarl Hamppe vs Philipp Meitner (1872) (chessgames.com) — move list and place",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
+    "objectID": "sources.html#victor-knorre-vs-mikhail-chigorin-1874",
+    "href": "sources.html#victor-knorre-vs-mikhail-chigorin-1874",
+    "title": "Sources",
+    "section": "1874 · Victor Knorre vs Mikhail Chigorin, 1874",
+    "text": "1874 · Victor Knorre vs Mikhail Chigorin, 1874\n\nVictor Knorre vs Mikhail Chigorin (1874) (chessgames.com) — move list, date and event",
     "crumbs": [
       "Appendices",
       "Sources"
@@ -997,7 +1107,7 @@
     "href": "sources.html#where-the-moves-came-from-counted",
     "title": "Sources",
     "section": "Where the moves came from, counted",
-    "text": "Where the moves came from, counted\n\n\n\nSite\nGames cited\n\n\n\n\nen.wikipedia.org\n41\n\n\nchessgames.com\n37\n\n\nlichess.org\n1",
+    "text": "Where the moves came from, counted\n\n\n\nSite\nGames cited\n\n\n\n\nchessgames.com\n42\n\n\nen.wikipedia.org\n41\n\n\nlichess.org\n1",
     "crumbs": [
       "Appendices",
       "Sources"

@@ -10,8 +10,7 @@ eco: B32
 orientation: black
 
 why: >
-  La Bourdonnais finishes with three connected passed pawns on the second
-  rank.
+  Perhaps the most famous win of their matches (considered an unofficial world championship), La Bourdonnais shows how a rolling pawn mass can overwhelm all of his opponent's major pieces (Wikipedia).
 
 moves: |
   1. e4 c5 2. Nf3 Nc6 3. d4 cxd4 4. Nxd4 e5 5. Nxc6 bxc6 6. Bc4 Nf6 7. Bg5
