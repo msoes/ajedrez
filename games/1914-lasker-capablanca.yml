@@ -1,0 +1,31 @@
+title: The Game That Won St Petersburg
+white: Emanuel Lasker
+black: José Raúl Capablanca
+result: "1-0"
+date: 1914-05-18
+event: St Petersburg tournament, round 7 of the final
+site: St Petersburg, Russia
+opening: Ruy Lopez, Exchange Variation
+eco: C68
+
+why: >
+  Lasker beats Capablanca from an early queen exchange, and takes the
+  tournament.
+
+moves: |
+  1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Bxc6 dxc6 5. d4 exd4 6. Qxd4 Qxd4
+  7. Nxd4 Bd6 8. Nc3 Ne7 9. O-O O-O 10. f4 Re8 11. Nb3 f6 12. f5! b6
+  13. Bf4 Bb7 14. Bxd6 cxd6 15. Nd4 Rad8 16. Ne6 Rd7 17. Rad1 Nc8
+  18. Rf2 b5 19. Rfd2 Rde7 20. b4 Kf7 21. a3 Ba8 22. Kf2 Ra7 23. g4 h6
+  24. Rd3 a5 25. h4 axb4 26. axb4 Rae7 27. Kf3 Rg8 28. Kf4 g6 29. Rg3 g5+
+  30. Kf3 Nb6 31. hxg5 hxg5 32. Rh3 Rd7 33. Kg3 Ke8 34. Rdh1 Bb7 35. e5!
+  dxe5 36. Ne4 Nd5 37. N6c5 Bc8 38. Nxd7 Bxd7 39. Rh7 Rf8 40. Ra1 Kd8
+  41. Ra8+ Bc8 42. Nc5
+
+sources:
+  - title: Emanuel Lasker vs José Raúl Capablanca (1914) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1258181
+    note: move list, round and date
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry on the game and its place in the tournament

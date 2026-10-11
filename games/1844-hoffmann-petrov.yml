@@ -1,0 +1,28 @@
+title: Petrov's Immortal
+white: Alexander Hoffmann
+black: Alexander Petrov
+result: "0-1"
+date: 1844-11
+event: Match game
+site: Warsaw, Poland (then the Russian Empire)
+opening: Giuoco Piano
+eco: C53
+orientation: black
+
+why: >
+  Petrov wins with a queen sacrifice and a king hunt. Known as Petrov's
+  Immortal.
+
+moves: |
+  1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. e5 Ne4 7. Bd5
+  Nxf2 8. Kxf2 dxc3+ 9. Kg3 cxb2 10. Bxb2 Ne7 11. Ng5 Nxd5 12. Nxf7 O-O
+  13. Nxd8 Bf2+ 14. Kh3 d6+ 15. e6 Nf4+ 16. Kg4 Nxe6 17. Nxe6 Bxe6+
+  18. Kg5 Rf5+ 19. Kg4 h5+ 20. Kh3 Rf3#
+
+sources:
+  - title: F. Alexander Hoffmann vs Alexander Petrov (1844) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1257910
+    note: move list, date and place
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry naming the game Petrov's Immortal

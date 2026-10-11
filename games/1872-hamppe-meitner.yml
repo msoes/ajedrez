@@ -1,0 +1,31 @@
+title: The Immortal Draw
+white: Carl Hamppe
+black: Philipp Meitner
+result: "1/2-1/2"
+date: 1872
+event: Casual game
+site: Vienna, Austria
+opening: Vienna Game, Hamppe-Meitner Variation
+eco: C25
+
+why: >
+  Meitner gives up bishop, queen and knight; the game is drawn by
+  perpetual check. Known as the Immortal Draw.
+
+result_note: >
+  Drawn by perpetual check. Later analysis holds that White was winning at
+  several points.
+
+moves: |
+  1. e4 e5 2. Nc3 Bc5 3. Na4?! Bxf2+!? 4. Kxf2 Qh4+ 5. Ke3 Qf4+ 6. Kd3 d5
+  7. Kc3! Qxe4? 8. Kb3? Na6? 9. a3!? Qxa4+!! 10. Kxa4 Nc5+ 11. Kb4? a5+!
+  12. Kxc5 Ne7! 13. Bb5+ Kd8 14. Bc6 b6+ 15. Kb5 Nxc6 16. Kxc6 Bb7+
+  17. Kb5 Ba6+ 18. Kc6
+
+sources:
+  - title: Immortal Draw (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Immortal_Draw
+    note: move list and the editorial marks
+  - title: Carl Hamppe vs Philipp Meitner (1872) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1250160
+    note: move list and place

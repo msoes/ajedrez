@@ -1,0 +1,30 @@
+title: Polgár Against the Attacker
+white: Alexey Shirov
+black: Judit Polgár
+result: "0-1"
+date: 1994-10
+event: Sicilian theme tournament, round 8
+site: Buenos Aires, Argentina
+opening: Sicilian Defence, Four Knights Variation
+eco: B45
+orientation: black
+
+why: >
+  Polgár answers Shirov's attack with counter-sacrifices; White resigns
+  with his king on c4.
+
+moves: |
+  1. e4 c5 2. Nf3 e6 3. d4 cxd4 4. Nxd4 Nc6 5. Nc3 d6 6. g4 a6 7. Be3
+  Nge7 8. Nb3 b5 9. f4 Bb7 10. Qf3 g5! 11. fxg5 Ne5 12. Qg2 b4 13. Ne2
+  h5 14. gxh5 Nf5 15. Bf2 Qxg5 16. Na5 Ne3 17. Qg3 Qxg3 18. Nxg3 Nxc2+
+  19. Kd1 Nxa1 20. Nxb7 b3! 21. axb3 Nxb3 22. Kc2 Nc5 23. Nxc5 dxc5
+  24. Be1 Nf3 25. Bc3 Nd4+ 26. Kd3 Bd6 27. Bg2 Be5 28. Kc4 Ke7 29. Ra1
+  Nc6
+
+sources:
+  - title: Alexey Shirov vs Judit Polgár (1994) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1111195
+    note: move list, round and date
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry on Polgár's play in this game

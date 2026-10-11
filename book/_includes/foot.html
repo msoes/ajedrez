@@ -1,0 +1,137 @@
+<script type="module">
+// One initialiser for the whole book. A game page carries a board div with its
+// PGN inside, and a JSON blob holding the moves and the notes keyed to them;
+// the wiring between the two lives here, so a change lands on every chapter
+// at once.
+// Quarto resolves the link in the head for the depth of the page; a path
+// written here it would leave alone.
+const { default: LichessPgnViewer } =
+  await import(document.getElementById('lpv-module').href);
+
+function wire(boardEl) {
+  const src = boardEl.querySelector('script[type="text/pgn"]');
+  if (!src || boardEl.dataset.mounted) return;
+  boardEl.dataset.mounted = '1';
+
+  const host = document.createElement('div');
+  boardEl.appendChild(host);
+
+  const lpv = LichessPgnViewer(host, {
+    pgn: src.textContent,
+    showPlayers: false,
+    showClocks: false,
+    showMoves: false,
+    showControls: true,
+    scrollToMove: false,
+    keyboardToMove: true,
+    orientation: boardEl.dataset.orientation || 'white',
+    drawArrows: false,
+    lichess: false,
+    menu: { getPgn: { enabled: true } }
+  });
+
+  // The viewer ships prev, menu and next. With no move list on the page those
+  // three are the only way through a game, which is a long way round in a
+  // game of 136 moves, so the ends of it get a button each. They are given
+  // the viewer's own button class, so they are styled by it.
+  const controls = boardEl.querySelector('.lpv__controls');
+  if (controls) {
+    const jump = (where, icon, label, before) => {
+      const btn = document.createElement('button');
+      btn.className = 'lpv__fbt lpv-jump';
+      btn.title = label;
+      btn.setAttribute('aria-label', label);
+      // Two of the viewer's own chevrons rather than a character of our own,
+      // so the ends of the bar are drawn in the same weight as the middle.
+      for (let i = 0; i < 2; i++) {
+        const g = document.createElement('span');
+        g.className = 'lpv__icon lpv__icon-' + icon;
+        btn.appendChild(g);
+      }
+      btn.addEventListener('click', () => lpv.goTo(where));
+      controls.insertBefore(btn, before);
+    };
+    jump('first', 'left-open', 'Go to the start of the game', controls.firstChild);
+    jump('last', 'right-open', 'Go to the end of the game', null);
+  }
+
+  // The viewer binds the left and right arrows itself; these are the two it
+  // leaves, and they are what a reader expects of a player's controls.
+  boardEl.addEventListener('keydown', e => {
+    const to = (e.key === 'Home' || e.key === 'ArrowUp') ? 'first'
+             : (e.key === 'End' || e.key === 'ArrowDown') ? 'last' : null;
+    if (!to) return;
+    e.preventDefault();
+    lpv.goTo(to);
+  });
+
+  const column = boardEl.parentElement;
+  const blob = column.querySelector('script.game-data');
+  const panel = column.querySelector('.move-text');
+  if (!blob || !panel) return;
+  const game = JSON.parse(blob.textContent);
+
+  const box = panel.querySelector('.move-text__move');
+  const out = panel.querySelector('.move-text__notes');
+
+  // The move being shown, named as a game score names it, with whatever note
+  // belongs to it. There is no move list on the page, so this is where a
+  // reader finds both.
+  function show() {
+    // Path.size() is the number of plies played, so the ply now on the board
+    // is one less than that, and a size of 0 is the opening position.
+    const i = lpv.path.size() - 1;
+    box.textContent = '';
+    if (i < 0 || i >= game.san.length) {
+      box.textContent = 'The opening position.';
+    } else {
+      const tag = document.createElement('span');
+      tag.className = 'move-text__no';
+      tag.textContent = (Math.floor(i / 2) + 1) + (i % 2 ? '... ' : '. ');
+      box.appendChild(tag);
+      box.appendChild(document.createTextNode(game.san[i]));
+      const mark = game.marks[i];
+      if (mark) {
+        const m = document.createElement('span');
+        m.className = 'mark';
+        m.textContent = mark;
+        box.appendChild(m);
+      }
+    }
+    out.textContent = '';
+    (game.notes[i] || []).forEach(note => {
+      const p = document.createElement('p');
+      p.textContent = note.text;
+      if (note.by) {
+        const by = document.createElement('span');
+        by.className = 'move-text__by';
+        by.textContent = ' — ' + note.by;
+        p.appendChild(by);
+      }
+      out.appendChild(p);
+    });
+    panel.classList.toggle('has-note', out.childElementCount > 0);
+    panel.scrollTop = 0;
+  }
+
+  // Every navigation -- click, keyboard, the controls -- funnels through
+  // toPath, so wrapping it is enough to follow the board wherever it goes.
+  const toPath = lpv.toPath;
+  lpv.toPath = function (path, focus) {
+    toPath.call(lpv, path, focus);
+    show();
+  };
+
+  show();
+}
+
+function mount() {
+  document.querySelectorAll('.pgn-board').forEach(wire);
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', mount);
+} else {
+  mount();
+}
+</script>

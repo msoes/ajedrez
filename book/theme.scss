@@ -1,0 +1,238 @@
+/*-- scss:defaults --*/
+
+// ---------------------------------------------------------------------------
+// Everything the book looks like is set here. The game pages are generated and
+// carry no styling of their own, so changing this file restyles all of them.
+// ---------------------------------------------------------------------------
+
+// Colours come from the Bootswatch theme named in _quarto.yml, so swapping the
+// theme there restyles the book. Only what Bootstrap has no word for is set
+// outright.
+$board-light: #eeeed2 !default;
+$board-dark:  #769656 !default;
+$coord:       #2f3a2a !default;   // the file and rank letters on the board
+
+// The board, and with it everything in its column. Wide enough to read the
+// pieces, narrow enough that a line of prose beside it is not a mile long.
+$board-width: 29rem !default;
+
+$font-size-root: 16px !default;
+$line-height-base: 1.6 !default;
+
+
+/*-- scss:rules --*/
+
+// Bootstrap's palette exists by now, so the book's working colours can be
+// drawn from it rather than guessed alongside it.
+$muted:  $gray-600;
+$rule:   $gray-300;
+$panel:  $gray-100;
+$accent: $primary;
+
+
+// --- The head of a chapter ------------------------------------------------
+
+.game-meta {
+  font-size: .8rem;
+  color: $muted;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.game-players {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .5rem;
+  margin: .35rem 0 .15rem 0;
+  font-size: 1.05rem;
+
+  .player { font-weight: 600; }
+  .versus { color: $muted; font-size: .85rem; }
+
+  // The score, in the mono face so 1-0 and 1/2-1/2 line up down the book.
+  .score {
+    font-family: var(--bs-font-monospace, monospace);
+    font-size: .85rem;
+    padding: .1rem .45rem;
+    border: 1px solid $rule;
+    border-radius: 3px;
+    background: $panel;
+    color: $muted;
+    cursor: help;
+  }
+}
+
+.game-where { color: $muted; font-size: .92rem; }
+
+.game-rule {
+  border: 0;
+  border-top: 1px solid $rule;
+  margin: .6rem 0 1.2rem 0;
+}
+
+.game-why {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: .6rem;
+}
+
+.game-summary { margin-bottom: .6rem; }
+
+.game-note {
+  margin: 1rem 0;
+  padding: .7rem .9rem;
+  border-left: 3px solid $rule;
+  background: $panel;
+  font-size: .9rem;
+  color: $muted;
+}
+
+
+// --- The board, and the box that follows it -------------------------------
+// There is no move list on the page: the board is the move list, and the box
+// underneath says which move is on it and carries the note for that move.
+
+.game-board {
+  max-width: $board-width;
+  margin: 1.6rem auto 0 auto;
+}
+
+.move-text {
+  margin-top: .8rem;
+  padding: .75rem .9rem;
+  border: 1px solid $rule;
+  border-left: 3px solid $rule;
+  border-radius: 4px;
+  background: $panel;
+  min-height: 3.4rem;
+  max-height: 14rem;
+  overflow-y: auto;      // a long note scrolls rather than pushing the page
+  font-size: .92rem;
+  line-height: 1.55;
+
+  // Marked when the move being shown has something said about it, so a reader
+  // stepping through can see a note arrive without reading for it.
+  &.has-note { border-left-color: $accent; }
+
+  .move-text__move {
+    margin: 0;
+    font-family: var(--bs-font-monospace, monospace);
+    font-weight: 700;
+  }
+  .move-text__no { color: $muted; font-variant-numeric: tabular-nums; }
+
+  // An editor's mark on a move, in the body face: it is a judgement, not
+  // notation, and should not read as part of the move.
+  .mark {
+    font-family: var(--bs-font-sans-serif, sans-serif);
+    color: $accent;
+    margin-left: .1em;
+  }
+
+  .move-text__notes p { margin: .55rem 0 0 0; }
+  .move-text__notes .move-text__by {
+    color: $muted;
+    font-size: .85em;
+    font-style: italic;
+  }
+}
+
+
+// --- The board viewer -----------------------------------------------------
+
+.lpv {
+  --c-lpv-bg:          #{$body-bg};
+  --c-lpv-bg-pane:     #{$body-bg};
+  --c-lpv-bg-controls: #{$panel};
+  --c-lpv-font:        #{$body-color};
+  --c-lpv-font-shy:    #{$muted};
+  --c-lpv-border:      #{$rule};
+  --c-lpv-side-border: #{$rule};
+  --c-lpv-accent:      #{$accent};
+  --c-lpv-accent-over: #ffffff;
+
+  border: 1px solid $rule;
+
+  &:focus, &:focus-visible { outline: 2px solid $accent; outline-offset: 2px; }
+
+  // Squares are painted in CSS, so the viewer fetches no board image.
+  cg-board {
+    background-color: $board-light;
+    background-image:
+      repeating-conic-gradient($board-dark 0% 25%, $board-light 0% 50%);
+    background-size: 25% 25%;
+  }
+
+  // Chessground sets the coordinates in white at 9px, which is unreadable on
+  // a light square. A dark letter with a pale halo reads on either colour,
+  // and keeps reading if the board is flipped.
+  .cg-wrap coords {
+    opacity: 1;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 600;
+    color: $coord;
+    text-shadow:
+       0  1px 0 rgba(255, 255, 255, .85),
+       0 -1px 0 rgba(255, 255, 255, .85),
+       1px 0  0 rgba(255, 255, 255, .85),
+      -1px 0  0 rgba(255, 255, 255, .85);
+  }
+  .cg-wrap coords.ranks { width: 14px; }
+  .cg-wrap coords.files { height: 14px; }
+
+  .lpv__controls { background: $panel; border-top: 1px solid $rule; }
+
+  // The start and end buttons added to the control bar. Each is two of the
+  // viewer's own chevrons, pulled together so the pair reads as one mark.
+  .lpv-jump .lpv__icon + .lpv__icon { margin-left: -.2em; }
+}
+
+
+// --- Sources --------------------------------------------------------------
+
+.game-sources {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid $rule;
+  font-size: .9rem;
+
+  h2 {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: $muted;
+    margin: 0 0 .6rem 0;
+  }
+
+  ul { padding-left: 1.2rem; margin: 0; }
+  li { margin-bottom: .3rem; }
+  .source-note { color: $muted; }
+  .source-note::before { content: " \2014 "; }
+}
+
+
+// --- Download buttons -----------------------------------------------------
+
+.downloads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+  margin: 2rem 0 1rem 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid $rule;
+}
+
+.download {
+  display: inline-block;
+  padding: .45rem .9rem;
+  border: 1px solid $rule;
+  border-radius: 4px;
+  background: $panel;
+  color: $body-color;
+  font-size: .85rem;
+  text-decoration: none;
+
+  &:hover { border-color: $accent; color: $accent; }
+}

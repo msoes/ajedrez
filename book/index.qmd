@@ -1,0 +1,5 @@
+
+# Introduction {.unnumbered}
+
+This is companion to my transcription of 
+[Philidor's *Analysis of the Game of Chess*](https://twaclaw.github.io/philidor/). A compilation of historically significant chess games for pedagogical purposes.

@@ -1,0 +1,28 @@
+title: The Opera Game
+white: Paul Morphy
+black: Duke Karl of Brunswick and Count Isouard
+result: "1-0"
+date: 1858
+event: Informal consultation game, played in a box at the Italian opera
+site: Salle Ventadour, Paris, France
+opening: Philidor Defence
+eco: C41
+orientation: white
+
+why: >
+  Morphy mates on move 17 after sacrificing his queen. Known as the Opera
+  Game.
+
+moves: |
+  1. e4 e5 2. Nf3 d6 3. d4 Bg4 4. dxe5 Bxf3 5. Qxf3 dxe5 6. Bc4 Nf6
+  7. Qb3 Qe7 8. Nc3 c6 9. Bg5 b5? 10. Nxb5 cxb5 11. Bxb5+ Nbd7
+  12. O-O-O Rd8 13. Rxd7 Rxd7 14. Rd1 Qe6 15. Bxd7+ Nxd7 16. Qb8+ Nxb8
+  17. Rd8#
+
+sources:
+  - title: Opera Game (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Opera_Game
+    note: move list and occasion
+  - title: Paul Morphy vs Duke of Brunswick and Count Isouard (1858) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1233404
+    note: move list and place; it dates the game only to 1858

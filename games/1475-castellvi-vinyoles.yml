@@ -1,0 +1,26 @@
+title: Francesco di Castellvi vs Narciso Vinyoles, 1475
+white: Francesco di Castellvi
+black: Narciso Vinyoles
+result: "1-0"
+date: 1475
+event: Valencia
+site: Valencia ESP
+eco: B01
+
+why: >
+  The first documented chess game played with the modern queen and bishop moves; the moves were described in the poem Scachs d'amor (Wikipedia).
+
+moves: |
+  1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8 4. Bc4 Nf6 5. Nf3 Bg4 6. h3 Bxf3 7.
+  Qxf3 e6 8. Qxb7 Nbd7 9. Nb5 Rc8 10. Nxa7 Nb6 11. Nxc8 Nxc8 12. d4 Nd6
+  13. Bb5+ Nxb5 14. Qxb5+ Nd7 15. d5 exd5 16. Be3 Bd6 17. Rd1 Qf6 18. Rxd5
+  Qg6 19. Bf4 Bxf4 20. Qxd7+ Kf8 21. Qd8#
+
+sources:
+  - title: Francesco di Castellvi vs Narciso Vinyoles (1475) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1259987
+    note: move list, date and event
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+

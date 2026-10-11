@@ -1,0 +1,32 @@
+title: The Immortal Game
+white: Adolf Anderssen
+black: Lionel Kieseritzky
+result: "1-0"
+date: 1851-06-21
+event: Informal game, played during the London international tournament
+site: London, England
+opening: King's Gambit Accepted, Bishop's Gambit (Bryan Countergambit)
+eco: C33
+
+why: >
+  Anderssen gives up both rooks and his queen and mates with three minor
+  pieces. Known as the Immortal Game.
+
+result_note: >
+  Kieseritzky is thought to have resigned at about move twenty, so the
+  last three moves may never have been played.
+
+moves: |
+  1. e4 e5 2. f4 exf4 3. Bc4 Qh4+ 4. Kf1 b5 5. Bxb5 Nf6 6. Nf3 Qh6
+  7. d3 Nh5 8. Nh4 Qg5 9. Nf5 c6 10. g4 Nf6 11. Rg1 cxb5 12. h4 Qg6
+  13. h5 Qg5 14. Qf3 Ng8 15. Bxf4 Qf6 16. Nc3 Bc5 17. Nd5 Qxb2
+  18. Bd6 Bxg1 19. e5 Qxa1+ 20. Ke2 Na6 21. Nxg7+ Kd8 22. Qf6+ Nxf6
+  23. Be7#
+
+sources:
+  - title: Immortal Game (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Immortal_Game
+    note: move list and date
+  - title: Adolf Anderssen vs Lionel Kieseritzky (1851) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1018910
+    note: move list and date

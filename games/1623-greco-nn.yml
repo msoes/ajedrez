@@ -1,0 +1,31 @@
+title: Greco's Lesson
+white: Gioachino Greco
+black: NN
+result: "1-0"
+date: 1623
+event: Casual game
+site: London, England
+opening: Owen's Defence
+eco: B00
+
+why: >
+  Greco mates on the eighth move with a queen sacrifice.
+
+result_note: >
+  Greco's manuscripts name no opponent. Hooper and Whyld hold the games in
+  them to be quite possibly constructs rather than records of play.
+
+moves: |
+  1. e4 b6 2. d4 Bb7 3. Bd3 f5 4. exf5 Bxg2 5. Qh5+ g6 6. fxg6 Nf6
+  7. gxh7 Nxh5 8. Bg6#
+
+sources:
+  - title: Gioachino Greco (Wikipedia)
+    url: https://en.wikipedia.org/wiki/Gioachino_Greco
+    note: the manuscripts, and the question of whether the games were played
+  - title: Gioachino Greco vs NN (1623) "When in Rome" (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1243022
+    note: move list, date and place
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry that names the game
