@@ -1,0 +1,14 @@
+[Event "Casual game"]
+[Site "Café de la Régence, Paris, France"]
+[Date "1750.??.??"]
+[Round "-"]
+[White "Kermur Sire de Légal"]
+[Black "Saint Brie"]
+[Result "1-0"]
+[ECO "C41"]
+[Opening "Philidor Defence, Légal Trap"]
+[Source "Légal Trap (Wikipedia)"]
+[SourceURL "https://en.wikipedia.org/wiki/L%C3%A9gal_Trap"]
+[ResultNote "The date is a tradition; 1787 is more likely than 1750. The move order here is the one taken to be original, and a later version transposes the knight moves to remove a flaw in it."]
+
+1. e4 e5 2. Bc4 d6 3. Nf3 Nc6 4. Nc3 Bg4 5. Nxe5 Bxd1 6. Bxf7+ Ke7 7. Nd5# 1-0

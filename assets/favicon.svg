@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Pawn">
+  <!-- The board's own two colours, so the tab icon belongs to the book. -->
+  <rect width="64" height="64" rx="12" fill="#769656"/>
+  <!-- One pawn, built from overlapping pieces that merge into a single
+       silhouette: at 16px a shape with gaps in it turns to mush. -->
+  <g fill="#eeeed2">
+    <circle cx="32" cy="17.5" r="9"/>
+    <rect x="19.5" y="25" width="25" height="6" rx="3"/>
+    <path d="M26 31c.5 8.5-2.5 13-6 17.5h24c-3.5-4.5-6.5-9-6-17.5z"/>
+    <rect x="12" y="47.5" width="40" height="9" rx="3.5"/>
+  </g>
+</svg>
