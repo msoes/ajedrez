@@ -7,6 +7,13 @@ BUILD := scripts/build
 # enough: the records, the PGN and the chapters all follow from it.
 RECORDS := $(wildcard games/*.yml)
 
+# The chapters and the downloads are committed, so the book renders and
+# publishes on its own. Where the build scripts are present, rendering waits
+# on them as usual.
+ifneq ($(wildcard $(BUILD)/build_book.py),)
+CHAPTERS := book/games/.stamp
+endif
+
 CYAN  := \033[36m
 BOLD  := \033[1m
 RESET := \033[0m
@@ -55,7 +62,7 @@ chapters: book/games/.stamp
 # file it did not write this time, which fails with a bare "NotFound"; both
 # are cleared first so a build is always reproducible.
 ## Render the book into _site
-site: book/games/.stamp
+site: $(CHAPTERS)
 	rm -rf book/.quarto book/site_libs _site/site_libs
 	find book/games -name '*.html' -delete
 	cd book && quarto render
@@ -63,7 +70,7 @@ site: book/games/.stamp
 book: site
 
 ## Serve the book with live reload
-preview: book/games/.stamp
+preview: $(CHAPTERS)
 	cd book && quarto preview
 
 ## Push the rendered book to GitHub Pages

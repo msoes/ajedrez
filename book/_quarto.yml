@@ -10,6 +10,7 @@ book:
   author: Diego Sandoval
   date: last-modified
   search: true
+  site-url: https://twaclaw.github.io/ajedrez/
   favicon: assets/favicon.png
   description: Famous chess games.
   open-graph: true
@@ -20,7 +21,7 @@ book:
   page-footer:
     left: Licensed [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.html), as is the [board viewer](https://github.com/lichess-org/pgn-viewer)
       this book embeds.
-    right: '[Source](https://github.com/twaclaw/chess_games)'
+    right: '[Source](https://github.com/twaclaw/ajedrez)'
   chapters:
   - index.qmd
   - timeline.qmd

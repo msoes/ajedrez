@@ -39,6 +39,13 @@ never overwritten, and every move is replayed on a board at import and again
 at build, so a PGN that did not copy cleanly is refused rather than published.
 
 
+## Publishing
+
+```
+git add -A && git commit -m "..." && git push
+make publish
+```
+
 ## Sources
 
 The selection started from Wikipedia's
