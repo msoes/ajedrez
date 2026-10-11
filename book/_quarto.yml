@@ -6,7 +6,7 @@ project:
   - downloads
 book:
   title: Historical Chess Games
-  subtitle: Famous games in algebraic notation, with their sources and notes, playable on a board
+  subtitle: Famous games in algebraic notation
   author: Diego Sandoval
   date: last-modified
   search: true
@@ -34,13 +34,18 @@ book:
     - games/1790-smith-philidor.qmd
   - part: The romantic era
     chapters:
+    - games/1834-bourdonnais-mcdonnell.qmd
     - games/1834-mcdonnell-labourdonnais.qmd
+    - games/1843-amant-staunton.qmd
     - games/1844-hoffmann-petrov.qmd
     - games/1851-anderssen-kieseritzky.qmd
     - games/1852-anderssen-dufresne.qmd
+    - games/1857-schulten-morphy.qmd
     - games/1857-paulsen-morphy.qmd
     - games/1858-morphy-brunswick-isouard.qmd
+    - games/1862-steinitz-mongredien.qmd
     - games/1872-hamppe-meitner.qmd
+    - games/1874-knorre-chigorin.qmd
   - part: The classical era
     chapters:
     - games/1883-zukertort-blackburne.qmd
@@ -80,7 +85,6 @@ book:
     - games/2023-nepomniachtchi-ding.qmd
   appendices:
   - sources.qmd
-  - adding-a-game.qmd
 format:
   html:
     number-sections: false

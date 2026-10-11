@@ -1,0 +1,28 @@
+# Written by `make import` from game_1001153.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell, 1834
+white: Louis Charles Mahe De La Bourdonnais
+black: Alexander McDonnell
+result: "0-1"
+date: 1834
+event: La Bourdonnais - McDonnell 4th Casual Match
+site: London ENG
+eco: D20
+
+why: >
+  Reuben Fine in The World's Great Chess Games described it as the first great immortal game of chess. McDonnell sacrifices his queen for two minor pieces (Wikipedia).
+
+moves: |
+  1. d4 d5 2. c4 dxc4 3. e4 e5 4. d5 f5 5. Nc3 Nf6 6. Bxc4 Bc5 7. Nf3 Qe7
+  8. Bg5 Bxf2+ 9. Kf1 Bb6 10. Qe2 f4 11. Rd1 Bg4 12. d6 cxd6 13. Nd5 Nxd5
+  14. Bxe7 Ne3+ 15. Ke1 Kxe7 16. Qd3 Rd8 17. Rd2 Nc6 18. b3 Ba5 19. a3
+  Rac8 20. Rg1 b5 21. Bxb5 Bxf3 22. gxf3 Nd4 23. Bc4 Nxf3+ 24. Kf2 Nxd2
+  25. Rxg7+ Kf6 26. Rf7+ Kg6 27. Rb7 Ndxc4 28. bxc4 Rxc4 29. Qb1 Bb6 30.
+  Kf3 Rc3 31. Qa2 Nc4+ 32. Kg4 Rg8 33. Rxb6 axb6 34. Kh4 Kf6 35. Qe2 Rg6
+  36. Qh5 Ne3
+
+sources:
+  - title: Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell (1834) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1001153
+    note: move list, date and event
+

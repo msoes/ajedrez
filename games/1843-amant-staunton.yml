@@ -1,0 +1,28 @@
+# Written by `make import` from game_1001194.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Pierre Charles Fournier de Saint Amant vs Howard Staunton, 1843
+white: Pierre Charles Fournier de Saint Amant
+black: Howard Staunton
+result: "0-1"
+date: 1843-11-21
+event: Staunton - Saint Amant
+site: Paris FRA
+eco: B21
+
+# why: >
+#   One sentence on why the game is in the book.
+
+moves: |
+  1. e4 c5 2. f4 e6 3. Nf3 Nc6 4. c3 d5 5. e5 Qb6 6. Bd3 Bd7 7. Bc2 Rc8 8.
+  O-O Nh6 9. h3 Be7 10. Kh2 f5 11. a3 a5 12. a4 Nf7 13. d4 h6 14. Re1 g6
+  15. Na3 cxd4 16. Nxd4 Nxd4 17. cxd4 g5 18. Nb5 Bxb5 19. axb5 Rc4 20. Bd3
+  Rc8 21. Be2 gxf4 22. Rf1 Ng5 23. Bxf4 Ne4 24. Rc1 Rxc1 25. Qxc1 Kd7 26.
+  Qe3 Bg5 27. Bd3 Rg8 28. Bxe4 dxe4 29. Bxg5 hxg5 30. Qb3 g4 31. Rd1 gxh3
+  32. Qxh3 Qd8 33. d5 Kc8 34. Qc3+ Kb8 35. d6 f4 36. Qc5 e3 37. Qc2 Qh4+
+  38. Kg1 Rc8 39. Qe2 Rh8
+
+sources:
+  - title: Pierre Charles Fournier de Saint Amant vs Howard Staunton (1843) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1001194
+    note: move list, date and event
+

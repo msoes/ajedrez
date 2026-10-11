@@ -26,11 +26,6 @@ move list can be taken from the article instead, and cited to it.
 
 | Year | Game | PGN from |
 | ---: | --- | --- |
-| 1475 | Francesc de Castellví vs Narcís de Vinyoles, Valencia 1475 | [1259987](https://www.chessgames.com/perl/chessgame?gid=1259987) |
-| 1834 | Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell, Match 4, Round 4, London **W** | [1001153](https://www.chessgames.com/perl/chessgame?gid=1001153) |
-| 1843 | Pierre de Saint Amant vs Howard Staunton, 5th Match Game, Paris | [1001194](https://www.chessgames.com/perl/chessgame?gid=1001194) |
-| 1857 | John William Schulten vs Paul Morphy, New York | [1075588](https://www.chessgames.com/perl/chessgame?gid=1075588) |
-| 1862 | Wilhelm Steinitz vs Augustus Mongredien, London | [1001497](https://www.chessgames.com/perl/chessgame?gid=1001497) |
 | 1874 | Viktor Knorre vs Mikhail Chigorin, St | [1337259](https://www.chessgames.com/perl/chessgame?gid=1337259) |
 | 1895 | Harry Nelson Pillsbury vs Siegbert Tarrasch, Hastings | [1109079](https://www.chessgames.com/perl/chessgame?gid=1109079) |
 | 1895 | Harry Nelson Pillsbury vs Isidor Gunsberg, Hastings | [1054736](https://www.chessgames.com/perl/chessgame?gid=1054736) |
