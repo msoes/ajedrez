@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Historical Chess Games",
     "section": "",
-    "text": "Introduction\nThis is companion to my transcription of Philidor’s Analysis of the Game of Chess. A compilation of historically significant chess games for pedagogical purposes.",
+    "text": "Introduction\nA compilation of historically significant chess games for pedagogical purposes.\nThis is companion to my transcription of Philidor’s Analysis of the Game of Chess.",
     "crumbs": [
       "Introduction"
     ]
@@ -1001,61 +1001,6 @@
     "crumbs": [
       "Appendices",
       "Sources"
-    ]
-  },
-  {
-    "objectID": "adding-a-game.html",
-    "href": "adding-a-game.html",
-    "title": "Adding a game",
-    "section": "",
-    "text": "The record\nThe book is built from games/, one file per game. Nothing else is written by hand: the chapter, the PGN, the place in the chronology, the era it falls in, the contents and the list of sources are all derived. Adding a game is one file and one command.\nThe file name is the slug, which is also the chapter’s URL, so it is worth choosing: year first keeps games/ in the order the book publishes them.\ntitle, white, black, result, date and moves are required, and so is at least one source: a game whose moves cannot be traced to a published record does not go in the book. Everything else is optional. An unknown field is an error rather than being ignored, because a misspelt key is easier to catch at build time than to find in a rendered page.\nTwo more fields exist for the unusual cases: circa: true, for a date that is a tradition rather than a record, and orientation: black, which turns the board round for a game that is about what Black did. start_fen publishes a position rather than a game from the first move.",
-    "crumbs": [
-      "Appendices",
-      "Adding a game"
-    ]
-  },
-  {
-    "objectID": "adding-a-game.html#the-record",
-    "href": "adding-a-game.html#the-record",
-    "title": "Adding a game",
-    "section": "",
-    "text": "title: The Game of the Century      # how the game is known\nwhite: Donald Byrne\nblack: Bobby Fischer\nresult: \"0-1\"                       # 1-0, 0-1 or 1/2-1/2\ndate: 1956-10-17                    # 1956, 1956-10 or 1956-10-17\nevent: Third Rosenwald Trophy tournament\nsite: Marshall Chess Club, New York, United States\nopening: Grünfeld Defence\neco: D92\n\nwhy: &gt;                              # one sentence; the chapter's subtitle\n  Fischer was thirteen.\n\nsummary: &gt;                          # a paragraph for the head of the chapter\n  Donald Byrne was an international master...\n\nmoves: |\n  1. Nf3 Nf6 2. c4 g6 3. Nc3 Bg7 4. d4 O-O 5. Bf4 d5 6. Qb3 dxc4\n  7. Qxc4 c6 8. e4 Nbd7 9. Rd1 Nb6 10. Qc5 Bg4 11. Bg5? Na4!!\n\nsources:\n  - title: The Game of the Century (Wikipedia)\n    url: https://en.wikipedia.org/wiki/The_Game_of_the_Century_(chess)\n    note: move list, tournament details\n\nannotations:\n  - at: 17b                         # 17w, 17b, or 17 for White\n    by: Jonathan Rowson             # whose judgement, if it is not this book's\n    text: &gt;\n      Rowson called it one of the most powerful moves of all time.",
-    "crumbs": [
-      "Appendices",
-      "Adding a game"
-    ]
-  },
-  {
-    "objectID": "adding-a-game.html#the-moves",
-    "href": "adding-a-game.html#the-moves",
-    "title": "Adding a game",
-    "section": "The moves",
-    "text": "The moves\nWritten as they are played, in algebraic notation. Move numbers are ignored, 0-0 is read as castling, and !, ?, !! and ?! after a move are kept as the annotator’s marks and shown apart from the notation. Variations in brackets are refused: the book publishes the game as played, and an alternative line belongs in an annotation where it can be read.\nEvery move is replayed on a board when the record is read. An illegal move stops the build and names the game, the move number and the position:\n1 game(s) will not build:\n  games/1851-anderssen-kieseritzky.yml: move 6... 'Qh7': illegal san: 'Qh7'\n    position: rnb1kb1r/p1pp1ppp/5n2/1B6/4Pp1q/5N2/PPPP2PP/RNBQ1K1R b kq - 2 6",
-    "crumbs": [
-      "Appendices",
-      "Adding a game"
-    ]
-  },
-  {
-    "objectID": "adding-a-game.html#the-notes",
-    "href": "adding-a-game.html#the-notes",
-    "title": "Adding a game",
-    "section": "The notes",
-    "text": "The notes\nat: 18w is White’s eighteenth move, at: 18b Black’s reply. The build puts each note in the box under the board, where it appears as the board reaches that move, and as a comment on that move in the published PGN. Several notes can point at the same move; they are shown in the order they are written.\nby is whose judgement the note reports. Leave it empty for a note written for this book. Fill it in whenever the assessment belongs to someone else, and list the source it was read in with the game. That convention is the only thing keeping the book’s own opinions distinguishable from other people’s.",
-    "crumbs": [
-      "Appendices",
-      "Adding a game"
-    ]
-  },
-  {
-    "objectID": "adding-a-game.html#where-the-game-lands",
-    "href": "adding-a-game.html#where-the-game-lands",
-    "title": "Adding a game",
-    "section": "Where the game lands",
-    "text": "Where the game lands\nNothing says where a chapter goes. The games are sorted by date, and grouped into parts by the year: the eras are a table at the top of scripts/build/records.py, and a game added to games/ takes its place in the contents without any list being edited. The timeline, the counts on it and the list of sources are all rewritten on every build.",
-    "crumbs": [
-      "Appendices",
-      "Adding a game"
     ]
   }
 ]
