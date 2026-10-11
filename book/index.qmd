@@ -3,4 +3,6 @@
 
 A compilation of historically significant chess games for pedagogical purposes.
 
-This is companion to my transcription of [Philidor's *Analysis of the Game of Chess*](https://twaclaw.github.io/philidor/). 
+It is companion to my transcription of [Philidor's *Analysis of the Game of Chess*](https://twaclaw.github.io/philidor/). 
+
+The brief descriptions of each game were taken directly from [Wikipedia's List of chess games](https://en.wikipedia.org/wiki/List_of_chess_games).
