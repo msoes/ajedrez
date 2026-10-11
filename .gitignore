@@ -1,0 +1,18 @@
+/_site/
+book/site_libs/
+
+# All rebuilt from games/ by `make all`, in a second, so none of it is kept
+# in the repository.
+/games.json
+/pgn/
+/book/games/
+/book/downloads/
+/book/timeline.qmd
+/book/sources.qmd
+
+# Staging for `make import`: once a PGN is imported its record carries the
+# moves and the page they came from, so the download itself is transient.
+/drafts/*.pgn
+
+__pycache__/
+.venv/

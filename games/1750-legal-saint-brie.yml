@@ -1,0 +1,27 @@
+title: Légal's Mate
+white: Kermur Sire de Légal
+black: Saint Brie
+result: "1-0"
+date: 1750
+circa: true
+event: Casual game
+site: Café de la Régence, Paris, France
+opening: Philidor Defence, Légal Trap
+eco: C41
+
+why: >
+  The earliest example of the mating pattern that carries Légal's name.
+
+result_note: >
+  The date is a tradition; 1787 is more likely than 1750. The move order
+  here is the one taken to be original, and a later version transposes the
+  knight moves to remove a flaw in it.
+
+moves: |
+  1. e4 e5 2. Bc4 d6 3. Nf3 Nc6 4. Nc3 Bg4 5. Nxe5 Bxd1 6. Bxf7+ Ke7
+  7. Nd5#
+
+sources:
+  - title: Légal Trap (Wikipedia)
+    url: https://en.wikipedia.org/wiki/L%C3%A9gal_Trap
+    note: both move orders, the dating, and the account of the alteration

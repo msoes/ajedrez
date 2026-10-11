@@ -1,0 +1,29 @@
+title: The End of an Unbeaten Run
+white: Richard Réti
+black: José Raúl Capablanca
+result: "1-0"
+date: 1924-03-22
+event: New York tournament, round 5
+site: New York, United States
+opening: Réti Opening
+eco: A15
+
+why: >
+  The game that ended Capablanca's eight-year unbeaten run in tournament
+  play.
+
+moves: |
+  1. Nf3 Nf6 2. c4 g6 3. b4 Bg7 4. Bb2 O-O 5. g3 b6 6. Bg2 Bb7 7. O-O d6
+  8. d3 Nbd7 9. Nbd2 e5 10. Qc2 Re8 11. Rfd1 a5 12. a3 h6 13. Nf1 c5
+  14. b5 Nf8 15. e3 Qc7 16. d4! Be4 17. Qc3 exd4 18. exd4 N6d7 19. Qd2
+  cxd4 20. Bxd4 Qxc4 21. Bxg7 Kxg7 22. Qb2+ Kg8 23. Rxd6 Qc5 24. Rad1
+  Ra7 25. Ne3 Qh5 26. Nd4 Bxg2 27. Kxg2 Qe5 28. Nc4 Qc5 29. Nc6 Rc7
+  30. Ne3 Ne5 31. R1d5
+
+sources:
+  - title: Richard Réti vs José Raúl Capablanca (1924) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1102101
+    note: move list, round and date
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry noting that this game ended Capablanca's unbeaten run

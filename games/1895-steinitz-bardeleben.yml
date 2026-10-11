@@ -1,0 +1,33 @@
+title: The Mate Steinitz Demonstrated
+white: Wilhelm Steinitz
+black: Curt von Bardeleben
+result: "1-0"
+date: 1895-08-17
+event: Hastings international tournament, round 10
+site: Hastings, England
+opening: Italian Game, Giuoco Piano
+eco: C54
+
+why: >
+  Steinitz gives four consecutive rook checks with the rook en prise
+  throughout.
+
+result_note: >
+  Von Bardeleben did not resign over the board. By the usual account he
+  left the hall and lost on time, and Steinitz demonstrated the mate
+  afterwards.
+
+moves: |
+  1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. c3 Nf6 5. d4 exd4 6. cxd4 Bb4+ 7. Nc3
+  d5 8. exd5 Nxd5 9. O-O Be6 10. Bg5 Be7 11. Bxd5 Bxd5 12. Nxd5 Qxd5
+  13. Bxe7 Nxe7 14. Re1 f6 15. Qe2 Qd7 16. Rac1 c6 17. d5! cxd5 18. Nd4
+  Kf7 19. Ne6 Rhc8 20. Qg4 g6 21. Ng5+ Ke8 22. Rxe7+ Kf8 23. Rf7+ Kg8
+  24. Rg7+ Kh8 25. Rxh7+
+
+sources:
+  - title: Wilhelm Steinitz vs Curt von Bardeleben (1895) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1132699
+    note: move list, round and date
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry on the ten-move mate and the circumstances of the finish
