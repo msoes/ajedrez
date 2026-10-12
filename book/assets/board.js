@@ -15,6 +15,13 @@ import { Chess } from './chess.js';
 const DEPTH = 10;       // deep enough to tell a blunder from a choice, and quick
 const MATE = 10000;     // a mate outscores any amount of material
 
+// What the engine plays like as an opponent. Skill Level is Stockfish's own
+// handicap and a shallow search blunts it further: the point is a game a child
+// can win, not a good one. Level 0 is no opponent at all.
+const LEVELS = [null, { skill: 0, depth: 4 },
+                      { skill: 3, depth: 8 },
+                      { skill: 8, depth: 12 }];
+
 
 // --- The engine ------------------------------------------------------------
 // A megabyte and a half of WebAssembly, so it is started by the first guess
@@ -56,13 +63,20 @@ function stockfish() {
     return result;
   };
 
+  // Skill Level sticks until it is set again, so every search says what it
+  // wants: judging a guess is always done at full strength.
+  const search = (fen, skill, depth) => {
+    worker.postMessage('setoption name Skill Level value ' + skill);
+    worker.postMessage('position fen ' + fen);
+    return ask('go depth ' + depth, /^bestmove/);
+  };
+
   engine = {
     // What the engine makes of a position, in centipawns, from the point of
     // view of whoever is to move in it.
     score(fen) {
       return queued(async () => {
-        worker.postMessage('position fen ' + fen);
-        const lines = await ask('go depth ' + DEPTH, /^bestmove/);
+        const lines = await search(fen, 20, DEPTH);
         // The last line carrying a score is the deepest the search reached;
         // the bestmove line that ends it carries none.
         for (let i = lines.length - 1; i >= 0; i--) {
@@ -72,6 +86,20 @@ function stockfish() {
           return m[1] === 'cp' ? n : n > 0 ? MATE - n : -MATE - n;
         }
         return 0;
+      });
+    },
+
+    // The move the engine would play, as the two squares it moves between.
+    // Nothing comes back from a position that is already over.
+    reply(fen, level) {
+      const { skill, depth } = LEVELS[level];
+      return queued(async () => {
+        const lines = await search(fen, skill, depth);
+        for (let i = lines.length - 1; i >= 0; i--) {
+          const m = /^bestmove (\S+)/.exec(lines[i]);
+          if (m) return m[1] === '(none)' ? null : m[1];
+        }
+        return null;
       });
     }
   };
@@ -122,7 +150,16 @@ function askPromotion(host, options, colour) {
 
 // --- The two modes ---------------------------------------------------------
 
+const LEVEL_KEY = 'chess-engine-level';
+
+function storedLevel() {
+  try {
+    return Math.max(0, Math.min(LEVELS.length - 1, +localStorage.getItem(LEVEL_KEY)));
+  } catch { return 0; }
+}
+
 const colourOf = chess => (chess.turn() === 'w' ? 'white' : 'black');
+const other = colour => (colour === 'white' ? 'black' : 'white');
 const bare = san => san.replace(/[!?]+$/, '');
 
 function button(label, title) {
@@ -145,6 +182,7 @@ export function attach({ boardEl, lpv, game }) {
   const guessBtn = button('Guess', 'Guess the next move');
   const exploreBtn = button('Explore', 'Play on from this position');
   const undoBtn = button('↶', 'Take the move back');
+  const vsBtn = button('vs', 'Let the engine answer');
   const backBtn = button('↩', 'Back to the game');
   const verdict = document.createElement('span');
   verdict.className = 'verdict';
@@ -156,6 +194,9 @@ export function attach({ boardEl, lpv, game }) {
   let square = null;  // the board inside it
   let answer = null;  // in guess mode, the move the game actually made
   let resume = null;  // where the viewer was when the mode was entered
+  let level = storedLevel();   // how strong the opponent is, 0 for none
+  let side = null;    // the colour the engine answers as
+  let turn = 0;       // bumped to drop an answer that is no longer wanted
 
   function paint() {
     bar.textContent = '';
@@ -163,7 +204,11 @@ export function attach({ boardEl, lpv, game }) {
       bar.append(guessBtn, exploreBtn);
       guessBtn.disabled = !game.san[lpv.path.size()];
     } else if (mode === 'explore') {
-      bar.append(undoBtn, backBtn);
+      vsBtn.textContent = 'vs' + (level ? ' ' + '•'.repeat(level) : '');
+      vsBtn.setAttribute('aria-pressed', level ? 'true' : 'false');
+      vsBtn.title = level ? 'The engine answers; again for a stronger one'
+                          : 'Let the engine answer';
+      bar.append(undoBtn, vsBtn, backBtn);
       undoBtn.disabled = !chess.history().length;
       verdict.textContent = chess.history().join(' ');
       verdict.className = 'verdict verdict--line';
@@ -220,6 +265,24 @@ export function attach({ boardEl, lpv, game }) {
     if (right) setTimeout(() => leave(1), 700);
   }
 
+  // The engine's answer, if one was asked for. It is fetched while the board
+  // is frozen, and dropped if the reader takes the move back or leaves in the
+  // meantime -- the first answer of all has a megabyte and a half to load.
+  async function engineReply() {
+    if (!level || chess.isGameOver() || colourOf(chess) !== side) return;
+    const mine = ++turn;
+    ground.set({ movable: { color: undefined } });
+    verdict.textContent = chess.history().join(' ') + ' …';
+    const uci = await stockfish().reply(chess.fen(), level);
+    if (mine !== turn || mode !== 'explore') return;
+    if (uci) {
+      const from = uci.slice(0, 2), to = uci.slice(2, 4);
+      chess.move({ from, to, promotion: uci.slice(4, 5) || undefined });
+      sync([from, to]);
+    }
+    paint();
+  }
+
   async function moved(orig, dest) {
     const fen = chess.fen();
     const options = promotionsFor(chess, orig, dest);
@@ -235,6 +298,7 @@ export function attach({ boardEl, lpv, game }) {
       await guessed(fen, move);
     }
     paint();
+    if (mode === 'explore') engineReply();
   }
 
   function enter(which) {
@@ -272,6 +336,8 @@ export function attach({ boardEl, lpv, game }) {
       drawable: { enabled: false }
     });
     column.classList.add('is-' + which);
+    // The engine takes the side the reader is not about to move.
+    side = which === 'explore' ? other(colourOf(chess)) : null;
     verdict.textContent = '';
     verdict.className = 'verdict';
     if (which === 'guess') {
@@ -286,6 +352,7 @@ export function attach({ boardEl, lpv, game }) {
   // how a right guess becomes the move the reader goes on to read about.
   function leave(forward) {
     if (!mode) return;
+    turn++;
     ground.destroy();
     host.remove();
     viewer().style.display = '';
@@ -300,10 +367,21 @@ export function attach({ boardEl, lpv, game }) {
   guessBtn.addEventListener('click', () => enter('guess'));
   exploreBtn.addEventListener('click', () => enter('explore'));
   backBtn.addEventListener('click', () => leave(0));
+  vsBtn.addEventListener('click', () => {
+    level = (level + 1) % LEVELS.length;
+    try { localStorage.setItem(LEVEL_KEY, level); } catch { /* private window */ }
+    if (level === 1) side = other(colourOf(chess));
+    paint();
+  });
+
   undoBtn.addEventListener('click', () => {
-    const undone = chess.undo();
-    if (!undone) return;
-    sync(chess.history().length ? undefined : null);
+    turn++;
+    if (!chess.undo()) return;
+    // Against an opponent a take-back undoes its answer too, so what comes
+    // back is the reader's own move rather than the engine's.
+    if (level && colourOf(chess) === side) chess.undo();
+    const last = chess.history({ verbose: true }).slice(-1)[0];
+    sync(last ? [last.from, last.to] : null);
     paint();
   });
 
