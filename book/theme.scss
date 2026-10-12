@@ -236,9 +236,12 @@ $accent: $primary;
   &:focus-visible { outline: 2px solid $accent; outline-offset: 2px; }
 }
 
-// The mark on a guess. The colour says it; the word is only the tooltip.
+// The answer to a guess, in the bar and again over the board, where it is
+// large enough to read from across a room. Three ways of saying one thing:
+// the face, the colour, and the tooltip for whoever wants the word.
 .verdict {
   margin-left: .2rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 .verdict--ask, .verdict--thinking { color: $muted; font-weight: 400; }
@@ -247,6 +250,37 @@ $accent: $primary;
 .verdict--same  { color: #1565c0; }
 .verdict--fair  { color: #b26a00; }
 .verdict--weak  { color: #c62828; }
+
+.flash {
+  position: absolute;
+  inset: 0;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7rem;
+  pointer-events: none;
+  animation: flash 1.5s ease-out forwards;
+}
+
+// A tint alone is lost on a board already carrying a colour of its own, so
+// each verdict also rings the board in its own.
+.flash--right { background: rgba(46, 125, 50, .30);  box-shadow: inset 0 0 0 .5rem #2e7d32; }
+.flash--same  { background: rgba(21, 101, 192, .26); box-shadow: inset 0 0 0 .5rem #1565c0; }
+.flash--fair  { background: rgba(178, 106, 0, .26);  box-shadow: inset 0 0 0 .5rem #b26a00; }
+.flash--weak  { background: rgba(198, 40, 40, .30);  box-shadow: inset 0 0 0 .5rem #c62828; }
+
+@keyframes flash {
+  0%   { opacity: 0; transform: scale(.5); }
+  12%  { opacity: 1; transform: scale(1); }
+  72%  { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flash { animation: none; opacity: 1; }
+}
+
 
 // What a pawn becomes, asked over the board it is about to land on.
 .promo {

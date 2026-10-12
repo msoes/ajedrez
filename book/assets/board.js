@@ -158,6 +158,15 @@ function storedLevel() {
   } catch { return 0; }
 }
 
+// How a guess is answered. The face is thrown over the board big enough to
+// read from across a room, and says the same thing as the colour.
+const GRADES = {
+  right: { face: '🎉', why: 'the move the game made' },
+  same:  { face: '👍', why: 'as good as the move the game made' },
+  fair:  { face: '🤔', why: 'playable, but not what was played' },
+  weak:  { face: '❌', why: 'it costs material' }
+};
+
 const colourOf = chess => (chess.turn() === 'w' ? 'white' : 'black');
 const other = colour => (colour === 'white' ? 'black' : 'white');
 const bare = san => san.replace(/[!?]+$/, '');
@@ -254,15 +263,21 @@ export function attach({ boardEl, lpv, game }) {
       : chess.isCheckmate() ? 'same'
       : await judge(fen, chess);
 
-    const mark = { right: '✓', same: '=', fair: '~', weak: '✗' }[grade];
+    const { face, why } = GRADES[grade];
     verdict.className = 'verdict verdict--' + grade;
-    verdict.textContent = right ? mark + ' ' + answer
-                                : mark + ' ' + move.san + '  → ' + answer;
-    verdict.title = { right: 'the move the game made', same: 'as good',
-                      fair: 'playable', weak: 'it costs material' }[grade];
-    // A right guess carries on by itself; a wrong one waits, so the board it
-    // led to can be looked at before the game takes over again.
-    if (right) setTimeout(() => leave(1), 700);
+    verdict.textContent = right ? face + ' ' + answer
+                                : face + ' ' + move.san + '  → ' + answer;
+    verdict.title = why;
+
+    const flash = document.createElement('div');
+    flash.className = 'flash flash--' + grade;
+    flash.textContent = face;
+    square.appendChild(flash);
+    setTimeout(() => flash.remove(), 1500);
+
+    // A right guess carries on by itself, once it has been seen; a wrong one
+    // waits, so the board it led to can be looked at before the game resumes.
+    if (right) setTimeout(() => leave(1), 1300);
   }
 
   // The engine's answer, if one was asked for. It is fetched while the board
