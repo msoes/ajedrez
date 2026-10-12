@@ -18,7 +18,7 @@ CYAN  := \033[36m
 BOLD  := \033[1m
 RESET := \033[0m
 
-.PHONY: help all book site preview publish check new import clean clean-data
+.PHONY: help all book site preview publish check new import vendor clean clean-data
 .DEFAULT_GOAL := help
 
 ## Show this help
@@ -76,6 +76,12 @@ preview: $(CHAPTERS)
 ## Push the rendered book to GitHub Pages
 publish: site
 	cd book && quarto publish gh-pages --no-render
+
+# --- Vendoring -------------------------------------------------------------
+
+## Refetch the board, engine and piece assets into book/assets
+vendor:
+	$(PY) $(BUILD)/vendor.py
 
 # --- Adding and checking games --------------------------------------------
 

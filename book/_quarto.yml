@@ -19,8 +19,8 @@ book:
     style: docked
     collapse-level: 1
   page-footer:
-    left: Licensed [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.html), as is the [board viewer](https://github.com/lichess-org/pgn-viewer)
-      this book embeds.
+    left: Licensed [GPL-3.0-or-later](https://www.gnu.org/licenses/gpl-3.0.html), as are the [board viewer](https://github.com/lichess-org/pgn-viewer)
+      and the [engine](https://github.com/nmrugg/stockfish.js) this book embeds.
     right: '[Source](https://github.com/twaclaw/ajedrez)'
   chapters:
   - index.qmd

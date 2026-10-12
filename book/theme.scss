@@ -156,11 +156,29 @@ $accent: $primary;
 
   &:focus, &:focus-visible { outline: 2px solid $accent; outline-offset: 2px; }
 
-  // Squares are painted in CSS, so the viewer fetches no board image.
+  .lpv__controls { background: $panel; border-top: 1px solid $rule; }
+
+  // The start and end buttons added to the control bar. Each is two of the
+  // viewer's own chevrons, pulled together so the pair reads as one mark.
+  .lpv-jump .lpv__icon + .lpv__icon { margin-left: -.2em; }
+}
+
+
+// --- The squares, under either board --------------------------------------
+// The viewer and the playable board are both chessground, so one set of rules
+// paints them both. The two colours are properties rather than values so that
+// a mode can change them: play off the game's score and the board says so,
+// which is the whole of the announcement.
+
+.game-board {
+  --sq-light: #{$board-light};
+  --sq-dark:  #{$board-dark};
+
+  // Squares are painted in CSS, so neither board fetches an image.
   cg-board {
-    background-color: $board-light;
+    background-color: var(--sq-light);
     background-image:
-      repeating-conic-gradient($board-dark 0% 25%, $board-light 0% 50%);
+      repeating-conic-gradient(var(--sq-dark) 0% 25%, var(--sq-light) 0% 50%);
     background-size: 25% 25%;
   }
 
@@ -181,12 +199,77 @@ $accent: $primary;
   }
   .cg-wrap coords.ranks { width: 14px; }
   .cg-wrap coords.files { height: 14px; }
+}
 
-  .lpv__controls { background: $panel; border-top: 1px solid $rule; }
+.lpv.sandbox {
+  // No controls row: the frame holds the board and nothing else.
+  grid-template-rows: auto;
+}
 
-  // The start and end buttons added to the control bar. Each is two of the
-  // viewer's own chevrons, pulled together so the pair reads as one mark.
-  .lpv-jump .lpv__icon + .lpv__icon { margin-left: -.2em; }
+.game-board.is-explore { --sq-light: #e9e4f2; --sq-dark: #7a6aa6; }
+.game-board.is-guess   { --sq-light: #f5ecd7; --sq-dark: #b2893c; }
+
+
+// --- The controls under the board -----------------------------------------
+
+.board-bar {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .5rem;
+  font-size: .85rem;
+}
+
+.board-bar__btn {
+  padding: .2rem .55rem;
+  border: 1px solid $rule;
+  border-radius: 3px;
+  background: $panel;
+  color: $body-color;
+  line-height: 1.5;
+  cursor: pointer;
+
+  &:hover:not(:disabled) { border-color: $accent; color: $accent; }
+  &:disabled { opacity: .4; cursor: default; }
+  &:focus-visible { outline: 2px solid $accent; outline-offset: 2px; }
+}
+
+// The mark on a guess. The colour says it; the word is only the tooltip.
+.verdict {
+  margin-left: .2rem;
+  font-weight: 600;
+}
+.verdict--ask, .verdict--thinking { color: $muted; font-weight: 400; }
+.verdict--line { color: $muted; font-weight: 400; font-size: .8rem; }
+.verdict--right { color: #2e7d32; }
+.verdict--same  { color: #1565c0; }
+.verdict--fair  { color: #b26a00; }
+.verdict--weak  { color: #c62828; }
+
+// What a pawn becomes, asked over the board it is about to land on.
+.promo {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+  justify-content: center;
+  background: rgba($board-light, .9);
+}
+
+.promo__pick {
+  width: 3rem;
+  padding: .25rem;
+  border: 1px solid $rule;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+
+  &:hover { border-color: $accent; }
+  .cg-wrap { pointer-events: none; }
+  // The pieces are the viewer's own, which sizes them to a square of a board.
+  .cg-wrap piece { width: 100%; height: 100%; }
 }
 
 

@@ -7,6 +7,8 @@
 // written here it would leave alone.
 const { default: LichessPgnViewer } =
   await import(document.getElementById('lpv-module').href);
+const { attach } =
+  await import(document.getElementById('board-module').href);
 
 function wire(boardEl) {
   const src = boardEl.querySelector('script[type="text/pgn"]');
@@ -71,6 +73,10 @@ function wire(boardEl) {
   if (!blob || !panel) return;
   const game = JSON.parse(blob.textContent);
 
+  // Guessing and exploring both start from whatever the viewer is showing, so
+  // the playable board is handed the viewer rather than the page.
+  const sandbox = attach({ boardEl, lpv, game });
+
   const box = panel.querySelector('.move-text__move');
   const out = panel.querySelector('.move-text__notes');
 
@@ -112,6 +118,8 @@ function wire(boardEl) {
     });
     panel.classList.toggle('has-note', out.childElementCount > 0);
     panel.scrollTop = 0;
+    // Whether there is a move left to guess follows from where the viewer is.
+    sandbox.refresh();
   }
 
   // Every navigation -- click, keyboard, the controls -- funnels through
