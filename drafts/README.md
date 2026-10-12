@@ -26,12 +26,6 @@ move list can be taken from the article instead, and cited to it.
 
 | Year | Game | PGN from |
 | ---: | --- | --- |
-| 1874 | Viktor Knorre vs Mikhail Chigorin, St | [1337259](https://www.chessgames.com/perl/chessgame?gid=1337259) |
-| 1895 | Harry Nelson Pillsbury vs Siegbert Tarrasch, Hastings | [1109079](https://www.chessgames.com/perl/chessgame?gid=1109079) |
-| 1895 | Harry Nelson Pillsbury vs Isidor Gunsberg, Hastings | [1054736](https://www.chessgames.com/perl/chessgame?gid=1054736) |
-| 1896 | Harry Nelson Pillsbury vs Emanuel Lasker, Saint Petersburg | [1109097](https://www.chessgames.com/perl/chessgame?gid=1109097) |
-| 1904 | Emanuel Lasker vs William Ewart Napier, Cambridge Springs | [1036787](https://www.chessgames.com/perl/chessgame?gid=1036787) |
-| 1909 | Akiba Rubinstein vs Emanuel Lasker, Saint Petersburg | [1119726](https://www.chessgames.com/perl/chessgame?gid=1119726) |
 | 1912 | Edward Lasker vs Sir George Thomas, London | [1259009](https://www.chessgames.com/perl/chessgame?gid=1259009) |
 | 1918 | Akiba Rubinstein vs Milan Vidmar, Berlin | [1119780](https://www.chessgames.com/perl/chessgame?gid=1119780) |
 | 1920 | Edwin Ziegler Adams vs Carlos Torre Repetto, New Orleans | [1143989](https://www.chessgames.com/perl/chessgame?gid=1143989) |
