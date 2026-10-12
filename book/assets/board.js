@@ -192,7 +192,9 @@ export function attach({ boardEl, lpv, game }) {
   const exploreBtn = button('Explore', 'Play on from this position');
   const undoBtn = button('↶', 'Take the move back');
   const vsBtn = button('vs', 'Let the engine answer');
-  const backBtn = button('↩', 'Back to the game');
+  const onBtn = button('▸', 'Play the move and read on');
+  const againBtn = button('▸?', 'Play the move and guess the next one');
+  const backBtn = button('↩︎', 'Back to the game');
   const verdict = document.createElement('span');
   verdict.className = 'verdict';
 
@@ -206,6 +208,7 @@ export function attach({ boardEl, lpv, game }) {
   let level = storedLevel();   // how strong the opponent is, 0 for none
   let side = null;    // the colour the engine answers as
   let turn = 0;       // bumped to drop an answer that is no longer wanted
+  let answered = false;   // a guess has been made and judged
 
   function paint() {
     bar.textContent = '';
@@ -222,6 +225,12 @@ export function attach({ boardEl, lpv, game }) {
       verdict.textContent = chess.history().join(' ');
       verdict.className = 'verdict verdict--line';
       bar.appendChild(verdict);
+    } else if (answered) {
+      // The game is one move further on than the board: either way out of
+      // here plays it, so a reader can read on or go straight to the next
+      // question without first going back.
+      againBtn.disabled = !game.san[resume.size() + 1];
+      bar.append(onBtn, againBtn, backBtn, verdict);
     } else {
       bar.append(backBtn, verdict);
     }
@@ -275,9 +284,7 @@ export function attach({ boardEl, lpv, game }) {
     square.appendChild(flash);
     setTimeout(() => flash.remove(), 1500);
 
-    // A right guess carries on by itself, once it has been seen; a wrong one
-    // waits, so the board it led to can be looked at before the game resumes.
-    if (right) setTimeout(() => leave(1), 1300);
+    answered = true;
   }
 
   // The engine's answer, if one was asked for. It is fetched while the board
@@ -317,6 +324,7 @@ export function attach({ boardEl, lpv, game }) {
   }
 
   function enter(which) {
+    if (which === 'guess' && !game.san[lpv.path.size()]) return;
     mode = which;
     resume = lpv.path;
     chess = new Chess(lpv.curData().fen);
@@ -355,6 +363,7 @@ export function attach({ boardEl, lpv, game }) {
     side = which === 'explore' ? other(colourOf(chess)) : null;
     verdict.textContent = '';
     verdict.className = 'verdict';
+    answered = false;
     if (which === 'guess') {
       answer = game.san[lpv.path.size()];
       verdict.className = 'verdict verdict--ask';
@@ -380,6 +389,8 @@ export function attach({ boardEl, lpv, game }) {
   }
 
   guessBtn.addEventListener('click', () => enter('guess'));
+  onBtn.addEventListener('click', () => leave(1));
+  againBtn.addEventListener('click', () => { leave(1); enter('guess'); });
   exploreBtn.addEventListener('click', () => enter('explore'));
   backBtn.addEventListener('click', () => leave(0));
   vsBtn.addEventListener('click', () => {

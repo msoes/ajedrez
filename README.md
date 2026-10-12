@@ -44,7 +44,8 @@ at build, so a PGN that did not copy cleanly is refused rather than published.
 A game page shows a read-only viewer. Two modes take it over and give it back
 where they found it, each recolouring the board while it has it: `Guess` asks
 for the move the game made next, and judges any other legal move with
-Stockfish; `Explore` hands the position over to play on, with `vs` setting the
+Stockfish, then plays it and either reads on (`▸`) or asks the next one
+(`▸?`); `Explore` hands the position over to play on, with `vs` setting the
 engine to answer at one of three strengths, and a take-back that undoes its
 reply along with your move.
 
