@@ -46,7 +46,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-a905ce424c203b595e36af43d978b145.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-0b62619a7a7d208e84612bce44b81e70.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,6 +77,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="../assets/lichess-pgn-viewer.css">
 <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 <link rel="modulepreload" id="lpv-module" href="../assets/lichess-pgn-viewer.min.js">
+<link rel="modulepreload" id="board-module" href="../assets/board.js">
 
 
 <meta property="og:title" content="The Twenty-First Century Immortal, Wei Yi vs Lázaro Bruzón, 2015">
@@ -516,6 +517,8 @@ Qa8+ 33. Kg1 Bg5 34. Qe2+ Kh4 35. Bf2+ Kh3 36. Be1 1-0
 // written here it would leave alone.
 const { default: LichessPgnViewer } =
   await import(document.getElementById('lpv-module').href);
+const { attach } =
+  await import(document.getElementById('board-module').href);
 
 function wire(boardEl) {
   const src = boardEl.querySelector('script[type="text/pgn"]');
@@ -580,6 +583,10 @@ function wire(boardEl) {
   if (!blob || !panel) return;
   const game = JSON.parse(blob.textContent);
 
+  // Guessing and exploring both start from whatever the viewer is showing, so
+  // the playable board is handed the viewer rather than the page.
+  const sandbox = attach({ boardEl, lpv, game });
+
   const box = panel.querySelector('.move-text__move');
   const out = panel.querySelector('.move-text__notes');
 
@@ -621,6 +628,8 @@ function wire(boardEl) {
     });
     panel.classList.toggle('has-note', out.childElementCount > 0);
     panel.scrollTop = 0;
+    // Whether there is a move left to guess follows from where the viewer is.
+    sandbox.refresh();
   }
 
   // Every navigation -- click, keyboard, the controls -- funnels through
@@ -1065,7 +1074,7 @@ if (document.readyState === 'loading') {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Licensed <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0-or-later</a>, as is the <a href="https://github.com/lichess-org/pgn-viewer">board viewer</a> this book embeds.</p>
+<p>Licensed <a href="https://www.gnu.org/licenses/gpl-3.0.html">GPL-3.0-or-later</a>, as are the <a href="https://github.com/lichess-org/pgn-viewer">board viewer</a> and the <a href="https://github.com/nmrugg/stockfish.js">engine</a> this book embeds.</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
