@@ -14,7 +14,7 @@
     "href": "timeline.html",
     "title": "The games",
     "section": "",
-    "text": "The early game\n46 games, 1475 to 2023, oldest first. Every one of them has been replayed move by move on a board before being published here, and every one names the source its moves were read from.\nChess before the tournament: games recorded because someone thought them worth writing down.",
+    "text": "The early game\n51 games, 1475 to 2023, oldest first. Every one of them has been replayed move by move on a board before being published here, and every one names the source its moves were read from.\nChess before the tournament: games recorded because someone thought them worth writing down.",
     "crumbs": [
       "The games"
     ]
@@ -44,7 +44,7 @@
     "href": "timeline.html#the-classical-era",
     "title": "The games",
     "section": "The classical era",
-    "text": "The classical era\nPosition before combination. The world championship begins, and with it the idea that a game can be won by accumulation.\n\n\n\nYear\nGame\nPlayers\nResult\nMoves\n\n\n\n\n1883\nZukertort’s Immortal\nJohannes Zukertort – Joseph Henry Blackburne\n1-0\n33\n\n\n1889\nThe Double Bishop Sacrifice\nEmanuel Lasker – Johann Hermann Bauer\n1-0\n38\n\n\n1895\nThe Mate Steinitz Demonstrated\nWilhelm Steinitz – Curt von Bardeleben\n1-0\n25\n\n\n1907\nRubinstein’s Immortal\nGersz Rotlewi – Akiba Rubinstein\n0-1\n25\n\n\n1912\nThe Gold Coins Game\nStepan Levitsky – Frank Marshall\n0-1\n23\n\n\n1914\nThe Game That Won St Petersburg\nEmanuel Lasker – José Raúl Capablanca\n1-0\n42\n\n\n1918\nThe Marshall Attack, Refuted at the Board\nJosé Raúl Capablanca – Frank Marshall\n1-0\n36\n\n\n1922\nAlekhine at Hastings\nEfim Bogoljubov – Alexander Alekhine\n0-1\n53\n\n\n1923\nThe Immortal Zugzwang Game\nFriedrich Sämisch – Aron Nimzowitsch\n0-1\n25\n\n\n1924\nThe End of an Unbeaten Run\nRichard Réti – José Raúl Capablanca\n1-0\n31",
+    "text": "The classical era\nPosition before combination. The world championship begins, and with it the idea that a game can be won by accumulation.\n\n\n\nYear\nGame\nPlayers\nResult\nMoves\n\n\n\n\n1883\nZukertort’s Immortal\nJohannes Zukertort – Joseph Henry Blackburne\n1-0\n33\n\n\n1889\nThe Double Bishop Sacrifice\nEmanuel Lasker – Johann Hermann Bauer\n1-0\n38\n\n\n1895\nHarry Nelson Pillsbury vs Siegbert Tarrasch, 1895\nHarry Nelson Pillsbury – Siegbert Tarrasch\n1-0\n52\n\n\n1895\nThe Mate Steinitz Demonstrated\nWilhelm Steinitz – Curt von Bardeleben\n1-0\n25\n\n\n1895\nHarry Nelson Pillsbury vs Isidor Gunsberg, 1895\nHarry Nelson Pillsbury – Isidor Gunsberg\n1-0\n40\n\n\n1896\nHarry Nelson Pillsbury vs Emanuel Lasker, 1896\nHarry Nelson Pillsbury – Emanuel Lasker\n0-1\n30\n\n\n1904\nEmanuel Lasker vs William Ewart Napier, 1904\nEmanuel Lasker – William Ewart Napier\n1-0\n35\n\n\n1907\nRubinstein’s Immortal\nGersz Rotlewi – Akiba Rubinstein\n0-1\n25\n\n\n1909\nAkiba Rubinstein vs Emanuel Lasker, 1909\nAkiba Rubinstein – Emanuel Lasker\n1-0\n40\n\n\n1912\nThe Gold Coins Game\nStepan Levitsky – Frank Marshall\n0-1\n23\n\n\n1914\nThe Game That Won St Petersburg\nEmanuel Lasker – José Raúl Capablanca\n1-0\n42\n\n\n1918\nThe Marshall Attack, Refuted at the Board\nJosé Raúl Capablanca – Frank Marshall\n1-0\n36\n\n\n1922\nAlekhine at Hastings\nEfim Bogoljubov – Alexander Alekhine\n0-1\n53\n\n\n1923\nThe Immortal Zugzwang Game\nFriedrich Sämisch – Aron Nimzowitsch\n0-1\n25\n\n\n1924\nThe End of an Unbeaten Run\nRichard Réti – José Raúl Capablanca\n1-0\n31",
     "crumbs": [
       "The games"
     ]
@@ -289,6 +289,17 @@
     ]
   },
   {
+    "objectID": "games/1895-pillsbury-tarrasch.html",
+    "href": "games/1895-pillsbury-tarrasch.html",
+    "title": "1895 · Harry Nelson Pillsbury vs Siegbert Tarrasch, 1895",
+    "section": "",
+    "text": "6 August 1895 · The classical era · D63Harry Nelson PillsburyvsSiegbert Tarrasch1-0Hastings, Hastings ENGPillsbury's kingside attack breaks through by a single tempo against the strong Tarrasch's queenside play (Wikipedia).\n\n\n\n\n\nSource of the movesHarry Nelson Pillsbury vs Siegbert Tarrasch (1895) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The classical era",
+      "<span class='chapter-number'>20</span>  <span class='chapter-title'>1895 · Harry Nelson Pillsbury vs Siegbert Tarrasch, 1895</span>"
+    ]
+  },
+  {
     "objectID": "games/1895-steinitz-bardeleben.html",
     "href": "games/1895-steinitz-bardeleben.html",
     "title": "1895 · The Mate Steinitz Demonstrated",
@@ -296,7 +307,40 @@
     "text": "17 August 1895 · The classical era · Italian Game, Giuoco Piano (C54)Wilhelm SteinitzvsCurt von Bardeleben1-0Hastings international tournament, round 10, Hastings, EnglandSteinitz gives four consecutive rook checks with the rook en prise throughout.Von Bardeleben did not resign over the board. By the usual account he left the hall and lost on time, and Steinitz demonstrated the mate afterwards.\n\n\n\n\n\nSource of the movesWilhelm Steinitz vs Curt von Bardeleben (1895) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the ten-move mate and the circumstances of the finish\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>20</span>  <span class='chapter-title'>1895 · The Mate Steinitz Demonstrated</span>"
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>1895 · The Mate Steinitz Demonstrated</span>"
+    ]
+  },
+  {
+    "objectID": "games/1895-pillsbury-gunsberg.html",
+    "href": "games/1895-pillsbury-gunsberg.html",
+    "title": "1895 · Harry Nelson Pillsbury vs Isidor Gunsberg, 1895",
+    "section": "",
+    "text": "2 September 1895 · The classical era · D10Harry Nelson PillsburyvsIsidor Gunsberg1-0Hastings, Hastings ENGIn the final round of this prestigious tournament, Pillsbury secures overall victory by triumphing in an instructive endgame (Wikipedia).\n\n\n\n\n\nSource of the movesHarry Nelson Pillsbury vs Isidor Gunsberg (1895) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The classical era",
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>1895 · Harry Nelson Pillsbury vs Isidor Gunsberg, 1895</span>"
+    ]
+  },
+  {
+    "objectID": "games/1896-pillsbury-lasker.html",
+    "href": "games/1896-pillsbury-lasker.html",
+    "title": "1896 · Harry Nelson Pillsbury vs Emanuel Lasker, 1896",
+    "section": "",
+    "text": "4 January 1896 · The classical era · D50Harry Nelson PillsburyvsEmanuel Lasker0-1St. Petersburg Quadrangular 1895/96, St. Petersburg RUELasker won the brilliancy prize for this game by exposing Pillsbury's king with the sacrifice of both rooks on the same square (Wikipedia).\n\n\n\n\n\nSource of the movesHarry Nelson Pillsbury vs Emanuel Lasker (1896) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The classical era",
+      "<span class='chapter-number'>23</span>  <span class='chapter-title'>1896 · Harry Nelson Pillsbury vs Emanuel Lasker, 1896</span>"
+    ]
+  },
+  {
+    "objectID": "games/1904-lasker-napier.html",
+    "href": "games/1904-lasker-napier.html",
+    "title": "1904 · Emanuel Lasker vs William Ewart Napier, 1904",
+    "section": "",
+    "text": "28 April 1904 · The classical era · B72Emanuel LaskervsWilliam Ewart Napier1-0Cambridge Springs, Cambridge Springs, PA USABoth players show great ingenuity. After a complicated web of tactics, Lasker simplifies into a winning endgame (Wikipedia).\n\n\n\n\n\nSource of the movesEmanuel Lasker vs William Ewart Napier (1904) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The classical era",
+      "<span class='chapter-number'>24</span>  <span class='chapter-title'>1904 · Emanuel Lasker vs William Ewart Napier, 1904</span>"
     ]
   },
   {
@@ -307,7 +351,18 @@
     "text": "26 December 1907 · The classical era · Tarrasch Defence, Symmetrical Variation (D32)Gersz RotlewivsAkiba Rubinstein0-1Lodz tournament, round 6, Łódź, Poland (then the Russian Empire)Rubinstein sacrifices queen and rook and forces mate. Known as Rubinstein's Immortal.\n\n\n\n\n\nSource of the movesRotlewi versus Rubinstein (Wikipedia) move list and the editorial marksGersz Rotlewi vs Akiba Rubinstein (1907) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>21</span>  <span class='chapter-title'>1907 · Rubinstein's Immortal</span>"
+      "<span class='chapter-number'>25</span>  <span class='chapter-title'>1907 · Rubinstein's Immortal</span>"
+    ]
+  },
+  {
+    "objectID": "games/1909-rubinstein-lasker.html",
+    "href": "games/1909-rubinstein-lasker.html",
+    "title": "1909 · Akiba Rubinstein vs Emanuel Lasker, 1909",
+    "section": "",
+    "text": "18 February 1909 · The classical era · D30Akiba RubinsteinvsEmanuel Lasker1-0St. Petersburg, St. Petersburg RUERubinstein's brilliant play culminates in 18.Qc1!!, subsequently forcing Lasker to enter a rook endgame down a pawn that Rubinstein wins in masterly fashion (Wikipedia).\n\n\n\n\n\nSource of the movesAkiba Rubinstein vs Emanuel Lasker (1909) (chessgames.com) move list, date and event\nPGN, with the notes as move commentsSource record",
+    "crumbs": [
+      "The classical era",
+      "<span class='chapter-number'>26</span>  <span class='chapter-title'>1909 · Akiba Rubinstein vs Emanuel Lasker, 1909</span>"
     ]
   },
   {
@@ -318,7 +373,7 @@
     "text": "20 July 1912 · The classical era · French Defence, Marshall Variation (C10)Stepan LevitskyvsFrank Marshall0-1Eighteenth DSB Congress, round 6, Breslau, GermanyMarshall's 23...Qg3 places his queen en prise in three different ways.Marshall wrote that spectators threw gold pieces onto the board. His wife denied it, and others said the coins were bets being settled.\n\n\n\n\n\nSource of the movesLevitsky versus Marshall (Wikipedia) move list and the editorial marksStepan Levitsky vs Frank James Marshall (1912) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>22</span>  <span class='chapter-title'>1912 · The Gold Coins Game</span>"
+      "<span class='chapter-number'>27</span>  <span class='chapter-title'>1912 · The Gold Coins Game</span>"
     ]
   },
   {
@@ -329,7 +384,7 @@
     "text": "18 May 1914 · The classical era · Ruy Lopez, Exchange Variation (C68)Emanuel LaskervsJosé Raúl Capablanca1-0St Petersburg tournament, round 7 of the final, St Petersburg, RussiaLasker beats Capablanca from an early queen exchange, and takes the tournament.\n\n\n\n\n\nSource of the movesEmanuel Lasker vs José Raúl Capablanca (1914) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the game and its place in the tournament\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>23</span>  <span class='chapter-title'>1914 · The Game That Won St Petersburg</span>"
+      "<span class='chapter-number'>28</span>  <span class='chapter-title'>1914 · The Game That Won St Petersburg</span>"
     ]
   },
   {
@@ -340,7 +395,7 @@
     "text": "23 October 1918 · The classical era · Ruy Lopez, Marshall Attack (C89)José Raúl CapablancavsFrank Marshall1-0New York tournament, round 1, New York, United StatesMarshall unveils the gambit that bears his name; Capablanca accepts it and defends successfully.\n\n\n\n\n\nSource of the movesJosé Raúl Capablanca vs Frank James Marshall (1918) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Marshall's prepared gambit and Capablanca's acceptance of it\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>24</span>  <span class='chapter-title'>1918 · The Marshall Attack, Refuted at the Board</span>"
+      "<span class='chapter-number'>29</span>  <span class='chapter-title'>1918 · The Marshall Attack, Refuted at the Board</span>"
     ]
   },
   {
@@ -351,7 +406,7 @@
     "text": "21 September 1922 · The classical era · Dutch Defence (A90)Efim BogoljubovvsAlexander Alekhine0-1Hastings tournament, round 10, Hastings, EnglandAlekhine promotes two pawns, with a third advancing when White resigns.\n\n\n\n\n\nSource of the movesEfim Bogoljubov vs Alexander Alekhine (1922) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the game\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>25</span>  <span class='chapter-title'>1922 · Alekhine at Hastings</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>1922 · Alekhine at Hastings</span>"
     ]
   },
   {
@@ -362,7 +417,7 @@
     "text": "9 March 1923 · The classical era · Queen's Indian Defence (E18)Friedrich SämischvsAron Nimzowitsch0-1Copenhagen tournament, round 6, Copenhagen, DenmarkNimzowitsch's last move leaves White with no move that does not lose material. Known as the Immortal Zugzwang Game.Whether the final position is a true zugzwang is disputed; Soltis notes that White could have moved a piece and played on.\n\n\n\n\n\nSource of the movesImmortal Zugzwang Game (Wikipedia) move list and the editorial marks\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>26</span>  <span class='chapter-title'>1923 · The Immortal Zugzwang Game</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>1923 · The Immortal Zugzwang Game</span>"
     ]
   },
   {
@@ -373,7 +428,7 @@
     "text": "22 March 1924 · The classical era · Réti Opening (A15)Richard RétivsJosé Raúl Capablanca1-0New York tournament, round 5, New York, United StatesThe game that ended Capablanca's eight-year unbeaten run in tournament play.\n\n\n\n\n\nSource of the movesRichard Réti vs José Raúl Capablanca (1924) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry noting that this game ended Capablanca's unbeaten run\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The classical era",
-      "<span class='chapter-number'>27</span>  <span class='chapter-title'>1924 · The End of an Unbeaten Run</span>"
+      "<span class='chapter-number'>32</span>  <span class='chapter-title'>1924 · The End of an Unbeaten Run</span>"
     ]
   },
   {
@@ -384,7 +439,7 @@
     "text": "22 November 1938 · The Soviet school · Nimzo-Indian Defence (E40)Mikhail BotvinnikvsJosé Raúl Capablanca1-0AVRO tournament, round 11, Rotterdam, NetherlandsBotvinnik gives up bishop and knight to promote his e-pawn.\n\n\n\n\n\nSource of the movesMikhail Botvinnik vs José Raúl Capablanca (1938) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Botvinnik's initiative and the combination\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>28</span>  <span class='chapter-title'>1938 · Botvinnik's Combination</span>"
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>1938 · Botvinnik's Combination</span>"
     ]
   },
   {
@@ -395,7 +450,7 @@
     "text": "17 October 1956 · The Soviet school · Grünfeld Defence (D92)Donald ByrnevsBobby Fischer0-1Third Rosenwald Trophy tournament, Marshall Chess Club, New York, United StatesFischer, aged 13, sacrifices his queen on move 17. Known as the Game of the Century.\n\n\n\n\n\nSource of the movesThe Game of the Century (Wikipedia) move list, tournament details and the editorial marksDonald Byrne vs Robert James Fischer (1956) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>29</span>  <span class='chapter-title'>1956 · The Game of the Century</span>"
+      "<span class='chapter-number'>34</span>  <span class='chapter-title'>1956 · The Game of the Century</span>"
     ]
   },
   {
@@ -406,7 +461,7 @@
     "text": "June 1958 · The Soviet school · Old Indian Defence (A53)Lev PolugaevskyvsRashid Nezhmetdinov0-1Russian Championship, Sochi, Soviet UnionNezhmetdinov sacrifices his queen on move 24 and mates with three pieces.\n\n\n\n\n\nSource of the movesLev Polugaevsky vs Rashid Nezhmetdinov (1958) (chessgames.com) move list, event and dateList of chess games (Wikipedia) the entry on the queen sacrifice on move twenty-four\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>1958 · Nezhmetdinov's Queen</span>"
+      "<span class='chapter-number'>35</span>  <span class='chapter-title'>1958 · Nezhmetdinov's Queen</span>"
     ]
   },
   {
@@ -417,7 +472,7 @@
     "text": "20 February 1960 · The Soviet school · King's Gambit, Accepted (C36)Boris SpasskyvsDavid Bronstein1-0USSR Championship, round 16, Leningrad, Soviet UnionA King's Gambit, and the game the chess scene in From Russia with Love was built from.\n\n\n\n\n\nSource of the movesBoris Spassky vs David Bronstein (1960) (chessgames.com) move list, round and date1960 USSR Chess Championship (Wikipedia) the tournament, and the use of this game in From Russia with Love\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>1960 · The Game in the Bond Film</span>"
+      "<span class='chapter-number'>36</span>  <span class='chapter-title'>1960 · The Game in the Bond Film</span>"
     ]
   },
   {
@@ -428,7 +483,7 @@
     "text": "15 March 1960 · The Soviet school · French Defence, Winawer Variation (C18)Mikhail TalvsMikhail Botvinnik1-0World Championship match, game 1, Moscow, Soviet UnionThe first game of the match in which Tal took the world title at 23.\n\n\n\n\n\nSource of the movesMikhail Tal vs Mikhail Botvinnik (1960), match game 1 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Tal's style against Botvinnik's logic\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>32</span>  <span class='chapter-title'>1960 · Tal Takes the Title</span>"
+      "<span class='chapter-number'>37</span>  <span class='chapter-title'>1960 · Tal Takes the Title</span>"
     ]
   },
   {
@@ -439,7 +494,7 @@
     "text": "23 July 1972 · The Soviet school · Queen's Gambit Declined, Tartakower Variation (D59)Bobby FischervsBoris Spassky1-0World Championship match, game 6, Reykjavík, IcelandFischer opens 1.c4 for the first time in the match; Spassky applauded at the end.\n\n\n\n\n\nSource of the movesRobert James Fischer vs Boris Spassky (1972), match game 6 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Fischer's opening surprise in this game\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The Soviet school",
-      "<span class='chapter-number'>33</span>  <span class='chapter-title'>1972 · The Game Spassky Applauded</span>"
+      "<span class='chapter-number'>38</span>  <span class='chapter-title'>1972 · The Game Spassky Applauded</span>"
     ]
   },
   {
@@ -450,7 +505,7 @@
     "text": "2 November 1978 · The modern era · Pirc Defence (B07)Liu WenzhevsJan Hein Donner1-0Chess Olympiad, round 8, Buenos Aires, ArgentinaLiu sacrifices his queen on move 16 and mates on move 20. Known as the Chinese Immortal.\n\n\n\n\n\nSource of the movesLiu Wenzhe vs Jan Hein Donner (1978) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry naming the game the Chinese Immortal\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>34</span>  <span class='chapter-title'>1978 · The Chinese Immortal</span>"
+      "<span class='chapter-number'>39</span>  <span class='chapter-title'>1978 · The Chinese Immortal</span>"
     ]
   },
   {
@@ -461,7 +516,7 @@
     "text": "15 October 1985 · The modern era · Sicilian Defence, Taimanov Variation (B44)Anatoly KarpovvsGarry Kasparov0-1World Championship match, game 16, Moscow, Soviet UnionKasparov's knight occupies d3 from move 16 to the end of the game.\n\n\n\n\n\nSource of the movesAnatoly Karpov vs Garry Kasparov (1985), match game 16 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the gambit and the dominating knight\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>35</span>  <span class='chapter-title'>1985 · The Knight on d3</span>"
+      "<span class='chapter-number'>40</span>  <span class='chapter-title'>1985 · The Knight on d3</span>"
     ]
   },
   {
@@ -472,7 +527,7 @@
     "text": "18 December 1987 · The modern era · English Opening (A13)Garry KasparovvsAnatoly Karpov1-0World Championship match, game 24, Seville, SpainKasparov had to win the final game of the match to keep the title, and did.\n\n\n\n\n\nSource of the movesGarry Kasparov vs Anatoly Karpov (1987), match game 24 (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the final game of the Seville match\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>36</span>  <span class='chapter-title'>1987 · The Game He Had to Win</span>"
+      "<span class='chapter-number'>41</span>  <span class='chapter-title'>1987 · The Game He Had to Win</span>"
     ]
   },
   {
@@ -483,7 +538,7 @@
     "text": "24 August 1991 · The modern era · King's Indian Defence, Fianchetto Variation (E67)Vasyl IvanchukvsArtur Yusupov0-1Candidates match, tiebreak game, Brussels, BelgiumYusupov sacrifices a knight to win a must-win tiebreak game.\n\n\n\n\n\nSource of the movesVassily Ivanchuk vs Artur Yusupov (1991), tiebreak game (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the knight sacrifice in the tiebreak\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>37</span>  <span class='chapter-title'>1991 · The Tiebreak</span>"
+      "<span class='chapter-number'>42</span>  <span class='chapter-title'>1991 · The Tiebreak</span>"
     ]
   },
   {
@@ -494,7 +549,7 @@
     "text": "October 1994 · The modern era · Sicilian Defence, Four Knights Variation (B45)Alexey ShirovvsJudit Polgár0-1Sicilian theme tournament, round 8, Buenos Aires, ArgentinaPolgár answers Shirov's attack with counter-sacrifices; White resigns with his king on c4.\n\n\n\n\n\nSource of the movesAlexey Shirov vs Judit Polgár (1994) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on Polgár's play in this game\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The modern era",
-      "<span class='chapter-number'>38</span>  <span class='chapter-title'>1994 · Polgár Against the Attacker</span>"
+      "<span class='chapter-number'>43</span>  <span class='chapter-title'>1994 · Polgár Against the Attacker</span>"
     ]
   },
   {
@@ -505,7 +560,7 @@
     "text": "10 February 1996 · The computer age · Sicilian Defence, Alapin Variation (B22)Deep BluevsGarry Kasparov1-0Deep Blue versus Kasparov 1996, game 1, Philadelphia, United StatesThe first game in which a computer beat a reigning world champion at tournament time controls.\n\n\n\n\n\nSource of the movesDeep Blue versus Kasparov, 1996, Game 1 (Wikipedia) move list and the editorial marks\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>39</span>  <span class='chapter-title'>1996 · The First Machine to Beat a World Champion</span>"
+      "<span class='chapter-number'>44</span>  <span class='chapter-title'>1996 · The First Machine to Beat a World Champion</span>"
     ]
   },
   {
@@ -516,7 +571,7 @@
     "text": "11 May 1997 · The computer age · Caro-Kann Defence, Steinitz Variation (B17)Deep BluevsGarry Kasparov1-0Deep Blue versus Kasparov rematch, game 6, New York, United StatesDeep Blue wins in 19 moves, the first computer to beat a reigning world champion in a match.\n\n\n\n\n\nSource of the movesDeep Blue versus Kasparov, 1997, Game 6 (Wikipedia) move list and the editorial marks\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>40</span>  <span class='chapter-title'>1997 · Nineteen Moves</span>"
+      "<span class='chapter-number'>45</span>  <span class='chapter-title'>1997 · Nineteen Moves</span>"
     ]
   },
   {
@@ -527,7 +582,7 @@
     "text": "4 March 1998 · The computer age · Grünfeld Defence, Exchange Variation (D85)Veselin TopalovvsAlexey Shirov0-1Linares tournament, round 10, Linares, SpainShirov's 47...Bh3 gives away a bishop to gain a single tempo in a bishop endgame.\n\n\n\n\n\nSource of the movesVeselin Topalov vs Alexey Shirov (1998) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry describing move 47 as the best move of all time\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>41</span>  <span class='chapter-title'>1998 · The Best Move of All Time</span>"
+      "<span class='chapter-number'>46</span>  <span class='chapter-title'>1998 · The Best Move of All Time</span>"
     ]
   },
   {
@@ -538,7 +593,7 @@
     "text": "20 January 1999 · The computer age · Pirc Defence (B07)Garry KasparovvsVeselin Topalov1-0Hoogovens tournament, round 4, Wijk aan Zee, NetherlandsKasparov sacrifices a rook on move 24 and drives the black king from b8 to d1. Known as Kasparov's Immortal.The soundness of the combination is disputed. Topalov could have declined the rook with 24...Kb6.\n\n\n\n\n\nSource of the movesKasparov's Immortal (Wikipedia) move list and the editorial marksGarry Kasparov vs Veselin Topalov (1999) (chessgames.com) move list, round and dateLichess analysis board of the game the game, playable, as linked from the Wikipedia article\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>42</span>  <span class='chapter-title'>1999 · Kasparov's Immortal</span>"
+      "<span class='chapter-number'>47</span>  <span class='chapter-title'>1999 · Kasparov's Immortal</span>"
     ]
   },
   {
@@ -549,7 +604,7 @@
     "text": "15 January 2013 · The computer age · Semi-Slav Defence, Meran Variation (D47)Levon AronianvsViswanathan Anand0-1Tata Steel tournament, round 4, Wijk aan Zee, NetherlandsAnand sacrifices repeatedly and wins in 23 moves. Known as Anand's Immortal.\n\n\n\n\n\nSource of the movesAnand's Immortal (Wikipedia) move list and the editorial marksLevon Aronian vs Viswanathan Anand (2013) (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>43</span>  <span class='chapter-title'>2013 · Anand's Immortal</span>"
+      "<span class='chapter-number'>48</span>  <span class='chapter-title'>2013 · Anand's Immortal</span>"
     ]
   },
   {
@@ -560,7 +615,7 @@
     "text": "3 July 2015 · The computer age · Sicilian Defence (B40)Wei YivsLázaro Bruzón1-0Danzhou grandmaster tournament, round 2, Danzhou, ChinaWei Yi's rook sacrifice forces the black king to e4 on move 25.\n\n\n\n\n\nSource of the movesWei Yi vs Lázaro Bruzón Batista (2015) (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry comparing the game to Kasparov's Immortal and the Game of the Century\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>44</span>  <span class='chapter-title'>2015 · The Twenty-First Century Immortal</span>"
+      "<span class='chapter-number'>49</span>  <span class='chapter-title'>2015 · The Twenty-First Century Immortal</span>"
     ]
   },
   {
@@ -571,7 +626,7 @@
     "text": "3 December 2021 · The computer age · Queen's Pawn Game, Pseudo-Catalan (D02)Magnus CarlsenvsIan Nepomniachtchi1-0World Championship 2021, game 6, Dubai, United Arab EmiratesAt 136 moves, the longest game in world championship history.The position was a theoretical draw by the tablebases from move 115. The decisive error was 130...Qe6.\n\n\n\n\n\nSource of the movesCarlsen versus Nepomniachtchi, World Chess Championship 2021, Game 6 (Wikipedia) move list and the editorial marksMagnus Carlsen vs Ian Nepomniachtchi (2021), match game 6 (chessgames.com) move list, round and date\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>45</span>  <span class='chapter-title'>2021 · The Longest Championship Game</span>"
+      "<span class='chapter-number'>50</span>  <span class='chapter-title'>2021 · The Longest Championship Game</span>"
     ]
   },
   {
@@ -582,7 +637,7 @@
     "text": "30 April 2023 · The computer age · Ruy Lopez (C65)Ian NepomniachtchivsDing Liren0-1World Championship 2023, tiebreak game 4 (game 18 of the match), Astana, KazakhstanThe last tiebreak game of the 2023 championship; Ding Liren won the title.\n\n\n\n\n\nSource of the movesIan Nepomniachtchi vs Ding Liren (2023), tiebreak game (chessgames.com) move list, round and dateList of chess games (Wikipedia) the entry on the self-pin at move forty-six and the errors that followed\nPGN, with the notes as move commentsSource record",
     "crumbs": [
       "The computer age",
-      "<span class='chapter-number'>46</span>  <span class='chapter-title'>2023 · The Last Game of the 2023 Championship</span>"
+      "<span class='chapter-number'>51</span>  <span class='chapter-title'>2023 · The Last Game of the 2023 Championship</span>"
     ]
   },
   {
@@ -806,6 +861,17 @@
     ]
   },
   {
+    "objectID": "sources.html#harry-nelson-pillsbury-vs-siegbert-tarrasch-1895",
+    "href": "sources.html#harry-nelson-pillsbury-vs-siegbert-tarrasch-1895",
+    "title": "Sources",
+    "section": "1895 · Harry Nelson Pillsbury vs Siegbert Tarrasch, 1895",
+    "text": "1895 · Harry Nelson Pillsbury vs Siegbert Tarrasch, 1895\n\nHarry Nelson Pillsbury vs Siegbert Tarrasch (1895) (chessgames.com) — move list, date and event",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
     "objectID": "sources.html#the-mate-steinitz-demonstrated",
     "href": "sources.html#the-mate-steinitz-demonstrated",
     "title": "Sources",
@@ -817,11 +883,55 @@
     ]
   },
   {
+    "objectID": "sources.html#harry-nelson-pillsbury-vs-isidor-gunsberg-1895",
+    "href": "sources.html#harry-nelson-pillsbury-vs-isidor-gunsberg-1895",
+    "title": "Sources",
+    "section": "1895 · Harry Nelson Pillsbury vs Isidor Gunsberg, 1895",
+    "text": "1895 · Harry Nelson Pillsbury vs Isidor Gunsberg, 1895\n\nHarry Nelson Pillsbury vs Isidor Gunsberg (1895) (chessgames.com) — move list, date and event",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
+    "objectID": "sources.html#harry-nelson-pillsbury-vs-emanuel-lasker-1896",
+    "href": "sources.html#harry-nelson-pillsbury-vs-emanuel-lasker-1896",
+    "title": "Sources",
+    "section": "1896 · Harry Nelson Pillsbury vs Emanuel Lasker, 1896",
+    "text": "1896 · Harry Nelson Pillsbury vs Emanuel Lasker, 1896\n\nHarry Nelson Pillsbury vs Emanuel Lasker (1896) (chessgames.com) — move list, date and event",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
+    "objectID": "sources.html#emanuel-lasker-vs-william-ewart-napier-1904",
+    "href": "sources.html#emanuel-lasker-vs-william-ewart-napier-1904",
+    "title": "Sources",
+    "section": "1904 · Emanuel Lasker vs William Ewart Napier, 1904",
+    "text": "1904 · Emanuel Lasker vs William Ewart Napier, 1904\n\nEmanuel Lasker vs William Ewart Napier (1904) (chessgames.com) — move list, date and event",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
     "objectID": "sources.html#rubinsteins-immortal",
     "href": "sources.html#rubinsteins-immortal",
     "title": "Sources",
     "section": "1907 · Rubinstein’s Immortal",
     "text": "1907 · Rubinstein’s Immortal\n\nRotlewi versus Rubinstein (Wikipedia) — move list and the editorial marks\nGersz Rotlewi vs Akiba Rubinstein (1907) (chessgames.com) — move list, round and date",
+    "crumbs": [
+      "Appendices",
+      "Sources"
+    ]
+  },
+  {
+    "objectID": "sources.html#akiba-rubinstein-vs-emanuel-lasker-1909",
+    "href": "sources.html#akiba-rubinstein-vs-emanuel-lasker-1909",
+    "title": "Sources",
+    "section": "1909 · Akiba Rubinstein vs Emanuel Lasker, 1909",
+    "text": "1909 · Akiba Rubinstein vs Emanuel Lasker, 1909\n\nAkiba Rubinstein vs Emanuel Lasker (1909) (chessgames.com) — move list, date and event",
     "crumbs": [
       "Appendices",
       "Sources"
@@ -1107,7 +1217,7 @@
     "href": "sources.html#where-the-moves-came-from-counted",
     "title": "Sources",
     "section": "Where the moves came from, counted",
-    "text": "Where the moves came from, counted\n\n\n\nSite\nGames cited\n\n\n\n\nchessgames.com\n42\n\n\nen.wikipedia.org\n41\n\n\nlichess.org\n1",
+    "text": "Where the moves came from, counted\n\n\n\nSite\nGames cited\n\n\n\n\nchessgames.com\n47\n\n\nen.wikipedia.org\n41\n\n\nlichess.org\n1",
     "crumbs": [
       "Appendices",
       "Sources"

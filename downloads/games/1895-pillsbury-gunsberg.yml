@@ -1,0 +1,28 @@
+# Written by `make import` from game_1054736.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Harry Nelson Pillsbury vs Isidor Gunsberg, 1895
+white: Harry Nelson Pillsbury
+black: Isidor Gunsberg
+result: "1-0"
+date: 1895-09-02
+event: Hastings
+site: Hastings ENG
+eco: D10
+
+why: >
+  In the final round of this prestigious tournament, Pillsbury secures overall victory by triumphing in an instructive endgame (Wikipedia).
+
+moves: |
+  1. d4 d5 2. c4 c6 3. e3 g6 4. Nc3 Bg7 5. Nf3 Nf6 6. Bd3 O-O 7. Ne5 dxc4
+  8. Bxc4 Nd5 9. f4 Be6 10. Qb3 b5 11. Bxd5 Bxd5 12. Nxd5 Qxd5 13. Qxd5
+  cxd5 14. Nd3 Nd7 15. Bd2 Rfc8 16. Ke2 e6 17. Rhc1 Bf8 18. Rxc8 Rxc8 19.
+  Rc1 Rxc1 20. Bxc1 Bd6 21. Bd2 Kf8 22. Bb4 Ke7 23. Bc5 a6 24. b4 f6 25.
+  g4 Bxc5 26. bxc5 Nb8 27. f5 g5 28. Nb4 a5 29. c6 Kd6 30. fxe6 Nxc6 31.
+  Nxc6 Kxc6 32. e4 dxe4 33. d5+ Kd6 34. Ke3 b4 35. Kxe4 a4 36. Kd4 h5 37.
+  gxh5 a3 38. Kc4 f5 39. h6 f4 40. h7
+
+sources:
+  - title: Harry Nelson Pillsbury vs Isidor Gunsberg (1895) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1054736
+    note: move list, date and event
+
