@@ -7,8 +7,10 @@
 // written here it would leave alone.
 const { default: LichessPgnViewer } =
   await import(document.getElementById('lpv-module').href);
-const { attach } =
+const { attach, initPieces } =
   await import(document.getElementById('board-module').href);
+
+initPieces();
 
 function wire(boardEl) {
   const src = boardEl.querySelector('script[type="text/pgn"]');

@@ -11,6 +11,7 @@
 
 import { Chessground } from './chessground.min.js';
 import { Chess } from './chess.js';
+import { SETS } from './pieces/sets.js';
 
 const DEPTH = 10;       // deep enough to tell a blunder from a choice, and quick
 const MATE = 10000;     // a mate outscores any amount of material
@@ -148,6 +149,81 @@ function askPromotion(host, options, colour) {
   });
 }
 
+// --- The pieces ------------------------------------------------------------
+// The set is a class on the document and a line in localStorage, so a reader
+// who prefers another keeps it across the whole book. Each set but the default
+// is one stylesheet, fetched the first time it is chosen; a reader who never
+// chooses fetches none, because the viewer's own stylesheet carries that one.
+
+const PIECE_KEY = 'chess-pieces';
+const DEFAULT_SET = SETS[0].id;
+const fetched = new Set();
+
+function storedSet() {
+  try {
+    const saved = localStorage.getItem(PIECE_KEY);
+    return SETS.some(s => s.id === saved) ? saved : DEFAULT_SET;
+  } catch { return DEFAULT_SET; }
+}
+
+function usePieces(id) {
+  if (id !== DEFAULT_SET && !fetched.has(id)) {
+    fetched.add(id);
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = new URL('./pieces/' + id + '.css', import.meta.url);
+    document.head.appendChild(link);
+  }
+  for (const s of SETS)
+    document.documentElement.classList.toggle('pieces-' + s.id, s.id === id);
+}
+
+export function initPieces() {
+  usePieces(storedSet());
+}
+
+// The picker, and beside it whoever drew what is on the board: three of these
+// sets are CC BY, which asks for the name, and the rest ask that their notice
+// travel with them.
+function picker() {
+  const row = document.createElement('div');
+  row.className = 'board-pieces';
+
+  const mark = document.createElement('span');
+  mark.className = 'board-pieces__mark';
+  mark.textContent = '\u265F';
+
+  const select = document.createElement('select');
+  select.title = 'The pieces';
+  select.setAttribute('aria-label', 'Piece set');
+  for (const set of SETS) {
+    const option = document.createElement('option');
+    option.value = set.id;
+    option.textContent = set.id;
+    select.appendChild(option);
+  }
+
+  const credit = document.createElement('span');
+  credit.className = 'board-pieces__by';
+
+  function show() {
+    const set = SETS.find(s => s.id === select.value) || SETS[0];
+    credit.textContent = set.by + ' \u00B7 ' + set.licence;
+  }
+  select.value = storedSet();
+  show();
+
+  select.addEventListener('change', () => {
+    usePieces(select.value);
+    try { localStorage.setItem(PIECE_KEY, select.value); } catch { /* private */ }
+    show();
+  });
+
+  row.append(mark, select, credit);
+  return row;
+}
+
+
 // --- The two modes ---------------------------------------------------------
 
 const LEVEL_KEY = 'chess-engine-level';
@@ -193,6 +269,9 @@ export function attach({ boardEl, lpv, game }) {
   const bar = document.createElement('div');
   bar.className = 'board-bar';
   boardEl.after(bar);
+  // Its own row, below the controls: the set is a preference, not a move, and
+  // it stays put whichever mode the board is in.
+  bar.after(picker());
 
   const guessBtn = button('Guess', 'Guess the next move');
   const exploreBtn = button('Explore', 'Play on from this position');
