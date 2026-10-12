@@ -45,9 +45,9 @@ A game page shows a read-only viewer. Two modes take it over and give it back
 where they found it, each recolouring the board while it has it: `Guess` asks
 for the move the game made next, and judges any other legal move with
 Stockfish, then plays it and either reads on (`▸`) or asks the next one
-(`▸?`); `Explore` hands the position over to play on, with `vs` setting the
-engine to answer at one of three strengths, and a take-back that undoes its
-reply along with your move.
+(`▸?`); `Explore` hands the position over to play on against the engine,
+which answers at the gentlest of three strengths until `vs` says otherwise or
+turns it off, and takes back its reply along with your move.
 
 The viewer and the engine live in `book/assets` and are committed.
 `make vendor` refetches them, from the pins in `scripts/build/vendor.py`; the

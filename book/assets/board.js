@@ -152,10 +152,16 @@ function askPromotion(host, options, colour) {
 
 const LEVEL_KEY = 'chess-engine-level';
 
+// Exploring is for playing on, so the engine answers from the start, at the
+// gentlest strength it has. Nothing saved means nobody has chosen yet, which
+// is not the same as having turned the opponent off.
 function storedLevel() {
   try {
-    return Math.max(0, Math.min(LEVELS.length - 1, +localStorage.getItem(LEVEL_KEY)));
-  } catch { return 0; }
+    const saved = localStorage.getItem(LEVEL_KEY);
+    if (saved === null) return 1;
+    const n = Number(saved);
+    return Number.isInteger(n) && n >= 0 && n < LEVELS.length ? n : 1;
+  } catch { return 1; }
 }
 
 // How a guess is answered. The face is thrown over the board big enough to
