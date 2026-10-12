@@ -50,8 +50,13 @@ book:
     chapters:
     - games/1883-zukertort-blackburne.qmd
     - games/1889-lasker-bauer.qmd
+    - games/1895-pillsbury-tarrasch.qmd
     - games/1895-steinitz-bardeleben.qmd
+    - games/1895-pillsbury-gunsberg.qmd
+    - games/1896-pillsbury-lasker.qmd
+    - games/1904-lasker-napier.qmd
     - games/1907-rotlewi-rubinstein.qmd
+    - games/1909-rubinstein-lasker.qmd
     - games/1912-levitsky-marshall.qmd
     - games/1914-lasker-capablanca.qmd
     - games/1918-capablanca-marshall.qmd
