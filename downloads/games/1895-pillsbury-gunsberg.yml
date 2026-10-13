@@ -10,7 +10,8 @@ site: Hastings ENG
 eco: D10
 
 why: >
-  In the final round of this prestigious tournament, Pillsbury secures overall victory by triumphing in an instructive endgame (Wikipedia).
+  In the final round of this prestigious tournament, Pillsbury secures overall
+  victory by triumphing in an instructive endgame.
 
 moves: |
   1. d4 d5 2. c4 c6 3. e3 g6 4. Nc3 Bg7 5. Nf3 Nf6 6. Bd3 O-O 7. Ne5 dxc4
@@ -25,4 +26,9 @@ sources:
   - title: Harry Nelson Pillsbury vs Isidor Gunsberg (1895) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1054736
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

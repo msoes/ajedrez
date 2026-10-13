@@ -10,7 +10,8 @@ site: London ENG
 eco: D20
 
 why: >
-  Reuben Fine in The World's Great Chess Games described it as the first great immortal game of chess. McDonnell sacrifices his queen for two minor pieces (Wikipedia).
+  Reuben Fine in The World's Great Chess Games described it as the first great
+  immortal game of chess. McDonnell sacrifices his queen for two minor pieces.
 
 moves: |
   1. d4 d5 2. c4 dxc4 3. e4 e5 4. d5 f5 5. Nc3 Nf6 6. Bxc4 Bc5 7. Nf3 Qe7
@@ -25,4 +26,9 @@ sources:
   - title: Louis Charles Mahe De La Bourdonnais vs Alexander McDonnell (1834) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1001153
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

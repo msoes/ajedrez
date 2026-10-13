@@ -1,0 +1,31 @@
+# Written by `make import` from game_1106864.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Boris Spassky vs Tigran Vartanovich Petrosian, 1969
+white: Boris Spassky
+black: Tigran Vartanovich Petrosian
+result: "1-0"
+date: 1969-06-04
+event: Petrosian - Spassky World Championship Match
+site: Moscow URS
+eco: B94
+
+why: >
+  Having fought his way to a World Championship rematch with Petrosian,
+  Spassky wins the match decisively.
+
+moves: |
+  1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 a6 6. Bg5 Nbd7 7. Bc4
+  Qa5 8. Qd2 h6 9. Bxf6 Nxf6 10. O-O-O e6 11. Rhe1 Be7 12. f4 O-O 13. Bb3
+  Re8 14. Kb1 Bf8 15. g4 Nxg4 16. Qg2 Nf6 17. Rg1 Bd7 18. f5 Kh8 19. Rdf1
+  Qd8 20. fxe6 fxe6 21. e5 dxe5 22. Ne4 Nh5 23. Qg6 exd4 24. Ng5
+
+sources:
+  - title: Boris Spassky vs Tigran Vartanovich Petrosian (1969) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1106864
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

@@ -10,7 +10,8 @@ site: St. Petersburg RUE
 eco: D50
 
 why: >
-  Lasker won the brilliancy prize for this game by exposing Pillsbury's king with the sacrifice of both rooks on the same square (Wikipedia).
+  Lasker won the brilliancy prize for this game by exposing Pillsbury's king
+  with the sacrifice of both rooks on the same square.
 
 moves: |
   1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Nf3 c5 5. Bg5 cxd4 6. Qxd4 Nc6 7. Qh4
@@ -24,4 +25,9 @@ sources:
   - title: Harry Nelson Pillsbury vs Emanuel Lasker (1896) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1109097
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

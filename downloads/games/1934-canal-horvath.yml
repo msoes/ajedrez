@@ -1,0 +1,30 @@
+# Written by `make import` from game_1264050.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Esteban Canal vs Horvath, 1934
+white: Esteban Canal
+black: Horvath
+result: "1-0"
+date: 1934
+event: Simul
+site: Budapest HUN
+eco: B01
+
+why: >
+  Known as the "Peruvian Immortal". Peruvian master Canal demolishes his
+  amateur opponent with the sacrifice of two rooks and a queen.
+
+moves: |
+  1. e4 d5 2. exd5 Qxd5 3. Nc3 Qa5 4. d4 c6 5. Nf3 Bg4 6. Bf4 e6 7. h3
+  Bxf3 8. Qxf3 Bb4 9. Be2 Nd7 10. a3 O-O-O 11. axb4 Qxa1+ 12. Kd2 Qxh1 13.
+  Qxc6+
+
+sources:
+  - title: Esteban Canal vs Horvath (1934) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1264050
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

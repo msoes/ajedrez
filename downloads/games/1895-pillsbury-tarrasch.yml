@@ -10,7 +10,8 @@ site: Hastings ENG
 eco: D63
 
 why: >
-  Pillsbury's kingside attack breaks through by a single tempo against the strong Tarrasch's queenside play (Wikipedia).
+  Pillsbury's kingside attack breaks through by a single tempo against the
+  strong Tarrasch's queenside play.
 
 moves: |
   1. d4 d5 2. c4 e6 3. Nc3 Nf6 4. Bg5 Be7 5. Nf3 Nbd7 6. Rc1 O-O 7. e3 b6
@@ -27,4 +28,9 @@ sources:
   - title: Harry Nelson Pillsbury vs Siegbert Tarrasch (1895) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1109079
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

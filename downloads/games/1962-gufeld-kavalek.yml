@@ -1,0 +1,35 @@
+# Written by `make import` from game_1261710.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Eduard Gufeld vs Lubomir Kavalek, 1962
+white: Eduard Gufeld
+black: Lubomir Kavalek
+result: "0-1"
+date: 1962-07-20
+event: World Student Team Championship
+site: Marianske Lazne CSR
+eco: C64
+
+why: >
+  Kavalek sacrifices a piece, then one exchange, then the other exchange to
+  push his avalanche of pawns down the board. By the end of the game, he has
+  lost all seven of his pieces but kept all eight of his pawns, which roll
+  over Gufeld's remaining rook and three pawns.
+
+moves: |
+  1. e4 e5 2. Nf3 Nc6 3. Bb5 Bc5 4. c3 f5 5. d4 fxe4 6. Ng5 Bb6 7. d5 e3
+  8. Ne4 Qh4 9. Qf3 Nf6 10. Nxf6+ gxf6 11. dxc6 exf2+ 12. Kd1 dxc6 13. Be2
+  Be6 14. Qh5+ Qxh5 15. Bxh5+ Ke7 16. b3 Bd5 17. Ba3+ Ke6 18. Bg4+ f5 19.
+  Bh3 Rhg8 20. Nd2 Bxg2 21. Bxg2 Rxg2 22. Rf1 Rd8 23. Ke2 Rxd2+ 24. Kxd2
+  e4 25. Bf8 f4 26. b4 Rg5 27. Bc5 Rxc5 28. bxc5 Bxc5 29. Rab1 f3 30. Rb4
+  Kf5 31. Rd4 Bxd4 32. cxd4 Kf4
+
+sources:
+  - title: Eduard Gufeld vs Lubomir Kavalek (1962) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1261710
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

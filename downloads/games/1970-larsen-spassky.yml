@@ -1,0 +1,31 @@
+# Written by `make import` from game_1128831.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Bent Larsen vs Boris Spassky, 1970
+white: Bent Larsen
+black: Boris Spassky
+result: "0-1"
+date: 1970-03-31
+event: USSR vs. Rest of the World
+site: Belgrade YUG
+eco: A01
+
+why: >
+  Spassky finds an immediate punishment for Larsen's opening experiments,
+  sacrificing a knight and a rook to create a passed pawn, winning the game in
+  just 17 moves.
+
+moves: |
+  1. b3 e5 2. Bb2 Nc6 3. c4 Nf6 4. Nf3 e4 5. Nd4 Bc5 6. Nxc6 dxc6 7. e3
+  Bf5 8. Qc2 Qe7 9. Be2 O-O-O 10. f4 Ng4 11. g3 h5 12. h3 h4 13. hxg4 hxg3
+  14. Rg1 Rh1 15. Rxh1 g2 16. Rf1 Qh4+ 17. Kd1 gxf1=Q+
+
+sources:
+  - title: Bent Larsen vs Boris Spassky (1970) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1128831
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

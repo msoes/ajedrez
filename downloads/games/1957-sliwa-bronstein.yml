@@ -1,0 +1,32 @@
+# Written by `make import` from game_1252391.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Bogdan Sliwa vs David Bronstein, 1957
+white: Bogdan Sliwa
+black: David Bronstein
+result: "1-0"
+date: 1957-09
+event: Gotha
+site: Gotha GDR
+eco: A81
+
+why: >
+  Known as the "Immortal Losing Game". Bronstein has a lost game, but sets
+  some elegant traps in attempting to snatch victory from the jaws of defeat.
+
+moves: |
+  1. d4 f5 2. g3 g6 3. Bg2 Bg7 4. Nc3 Nf6 5. Bg5 Nc6 6. Qd2 d6 7. h4 e6 8.
+  O-O-O h6 9. Bf4 Bd7 10. e4 fxe4 11. Nxe4 Nd5 12. Ne2 Qe7 13. c4 Nb6 14.
+  c5 dxc5 15. Bxc7 O-O 16. Bd6 Qf7 17. Bxf8 Rxf8 18. dxc5 Nd5 19. f4 Rd8
+  20. N2c3 Ndb4 21. Nd6 Qf8 22. Nxb7 Nd4 23. Nxd8 Bb5 24. Nxe6 Bd3 25. Bd5
+  Qf5 26. Nxd4+ Qxd5 27. Nc2 Bxc3 28. bxc3 Qxa2 29. cxb4
+
+sources:
+  - title: Bogdan Sliwa vs David Bronstein (1957) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1252391
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

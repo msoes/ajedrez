@@ -9,8 +9,8 @@ event: B.C.A. Grand Tourney
 site: London ENG
 eco: B01
 
-# why: >
-#   One sentence on why the game is in the book.
+why: >
+  Steinitz won the tournament's brilliancy prize for this game.
 
 moves: |
   1. e4 d5 2. exd5 Qxd5 3. Nc3 Qd8 4. d4 e6 5. Nf3 Nf6 6. Bd3 Be7 7. O-O
@@ -23,4 +23,9 @@ sources:
   - title: Wilhelm Steinitz vs Augustus Mongredien (1862) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1001497
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

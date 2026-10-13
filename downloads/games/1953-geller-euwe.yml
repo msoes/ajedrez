@@ -1,0 +1,34 @@
+# Written by `make import` from game_1042835.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Efim Geller vs Max Euwe, 1953
+white: Efim Geller
+black: Max Euwe
+result: "0-1"
+date: 1953-08-31
+event: Zurich Candidates
+site: Zuerich SUI
+eco: E26
+
+why: >
+  Geller's attack seems to be sweeping Euwe off the board, but the former
+  World Champion has everything under control, uncorking an amazing sacrifice
+  on move 22 to begin a counterattack that wins the game in only four more
+  moves.
+
+moves: |
+  1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. e3 c5 5. a3 Bxc3+ 6. bxc3 b6 7. Bd3 Bb7
+  8. f3 Nc6 9. Ne2 O-O 10. O-O Na5 11. e4 Ne8 12. Ng3 cxd4 13. cxd4 Rc8
+  14. f4 Nxc4 15. f5 f6 16. Rf4 b5 17. Rh4 Qb6 18. e5 Nxe5 19. fxe6 Nxd3
+  20. Qxd3 Qxe6 21. Qxh7+ Kf7 22. Bh6 Rh8 23. Qxh8 Rc2 24. Rc1 Rxg2+ 25.
+  Kf1 Qb3 26. Ke1 Qf3
+
+sources:
+  - title: Efim Geller vs Max Euwe (1953) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1042835
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

@@ -1,0 +1,32 @@
+# Written by `make import` from game_1259009.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Edward Lasker vs George Alan Thomas, 1912
+white: Edward Lasker
+black: George Alan Thomas
+result: "1-0"
+date: 1912-10-29
+event: Casual game
+site: London ENG
+eco: A40
+
+why: >
+  With a queen sacrifice, Edward Lasker (third cousin twice removed of the
+  more well-known Emanuel Lasker) exposes Thomas' king and with a series of
+  checks drives it all the way to the other side of the board before
+  checkmating with an advance of his king.
+
+moves: |
+  1. d4 e6 2. Nf3 f5 3. Nc3 Nf6 4. Bg5 Be7 5. Bxf6 Bxf6 6. e4 fxe4 7. Nxe4
+  b6 8. Ne5 O-O 9. Bd3 Bb7 10. Qh5 Qe7 11. Qxh7+ Kxh7 12. Nxf6+ Kh6 13.
+  Neg4+ Kg5 14. h4+ Kf4 15. g3+ Kf3 16. Be2+ Kg2 17. Rh2+ Kg1 18. Kd2#
+
+sources:
+  - title: Edward Lasker vs George Alan Thomas (1912) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1259009
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

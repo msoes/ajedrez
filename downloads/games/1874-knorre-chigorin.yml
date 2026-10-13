@@ -10,7 +10,9 @@ site: St. Petersburg
 eco: C50
 
 why: >
-  Knorre's premature castling on the kingside combined with an ineffective pin allows Chigorin to strike back with a violent counterattack culminating in a brilliant queen sacrifice and subsequent checkmate (Wikipedia).
+  Knorre's premature castling on the kingside combined with an ineffective pin
+  allows Chigorin to strike back with a violent counterattack culminating in a
+  brilliant queen sacrifice and subsequent checkmate.
 
 moves: |
   1. e4 e5 2. Nf3 Nc6 3. Bc4 Bc5 4. O-O Nf6 5. d3 d6 6. Bg5 h6 7. Bh4 g5
@@ -21,4 +23,9 @@ sources:
   - title: Victor Knorre vs Mikhail Chigorin (1874) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1337259
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

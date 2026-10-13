@@ -1,0 +1,40 @@
+# Written by `make import` from game_1240662.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Ruslan Ponomariov vs Vassily Ivanchuk, 2002
+white: Ruslan Ponomariov
+black: Vassily Ivanchuk
+result: "1-0"
+date: 2002-01-21
+event: FIDE World Championship Knockout Tournament 2001/02
+site: Moscow RUS
+eco: C84
+
+why: >
+  Down a point in the World Championship final, Ivanchuk has a large advantage
+  but can't find a winning continuation. 18-year-old Ponomariov equalizes,
+  counterattacks and wins to take a decisive match lead on his way to becoming
+  the youngest World Champion in history.
+
+moves: |
+  1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 O-O
+  8. h3 Bb7 9. d3 d6 10. a3 Nb8 11. Nbd2 Nbd7 12. Nf1 Re8 13. Ng3 c6 14.
+  Nh2 d5 15. Qf3 g6 16. Ba2 Bf8 17. Bg5 h6 18. Bd2 Bg7 19. Ng4 Nxg4 20.
+  hxg4 Nc5 21. Rad1 Rc8 22. Nf1 Ne6 23. Qg3 Kh7 24. Nh2 f6 25. Nf3 c5 26.
+  Qh2 Nd4 27. Nxd4 cxd4 28. c3 dxc3 29. bxc3 dxe4 30. dxe4 Qe7 31. a4 bxa4
+  32. Qh3 Red8 33. Qf3 Rc7 34. Bc1 Rcd7 35. Bb1 Qe6 36. Rxd7 Rxd7 37. Bc2
+  Bc6 38. Rd1 Qa2 39. Rxd7 Bxd7 40. Qd1 Bb5 41. Be3 Qc4 42. Kh2 Bc6 43.
+  Qa1 Bf8 44. Bb1 a3 45. f3 Qb3 46. Qa2 Ba4 47. Kg3 Kg7 48. Qd2 g5 49. Ba2
+  Qb7 50. Qd3 Be8 51. Qd5 Qxd5 52. exd5 a5 53. c4 Bb4 54. c5 Kf8 55. Kf2
+  Bb5 56. c6 Ke7 57. Ba7 Kd8 58. Bb6+ Kc8 59. Ke3 a4 60. Ke4 Be2 61. Kf5
+  e4 62. Ke6 exf3 63. d6 Bxd6 64. Kxd6
+
+sources:
+  - title: Ruslan Ponomariov vs Vassily Ivanchuk (2002) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1240662
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+
