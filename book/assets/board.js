@@ -480,17 +480,29 @@ export function attach({ boardEl, lpv, game }) {
 
   function renderCrumb() {
     crumb.textContent = '';
+    // The root names the move that produced the position Explore began at,
+    // rather than a home icon, so the breadcrumb reads as a game line. At the
+    // very start of a game there is no such move, and the icon stands in.
     const start = document.createElement('button');
-    start.className = 'crumb__node';
-    start.textContent = '\u2302';
+    start.className = 'crumb__node crumb__root';
     start.title = 'the position you started from';
+    if (entryPly > 0) {
+      const ply = entryPly - 1;
+      start.textContent = (Math.floor(ply / 2) + 1) + (ply % 2 ? '…' : '.')
+        + game.san[ply];
+    } else {
+      start.textContent = '\u2302';
+    }
     start.disabled = path.length === 0;
     start.addEventListener('click', () => goTo(0));
     crumb.appendChild(start);
+    // Numbered by the move's real ply in the game, not by its place here, so a
+    // reader who entered mid-game sees the moves they actually are.
     path.forEach((move, i) => {
+      const ply = entryPly + i;
       const node = document.createElement('button');
       node.className = 'crumb__node';
-      node.textContent = (Math.floor(i / 2) + 1) + (i % 2 ? '…' : '.') + move.san;
+      node.textContent = (Math.floor(ply / 2) + 1) + (ply % 2 ? '…' : '.') + move.san;
       node.disabled = i === path.length - 1;
       node.addEventListener('click', () => goTo(i + 1));
       crumb.appendChild(node);
@@ -499,11 +511,17 @@ export function attach({ boardEl, lpv, game }) {
 
   // The move the game itself made from this position, if the reader is still
   // on the game's line: once they play something else, there is no such move.
+  // It comes back as UCI too, so it can be played like any proposal.
   function gameMove() {
     for (let i = 0; i < path.length; i++)
       if (bare(path[i].san) !== bare(game.san[entryPly + i] || '')) return null;
     const ply = entryPly + path.length;
-    return ply < game.san.length ? bare(game.san[ply]) : null;
+    if (ply >= game.san.length) return null;
+    const wanted = bare(game.san[ply]);
+    for (const move of chess.moves({ verbose: true }))
+      if (bare(move.san) === wanted)
+        return { uci: move.from + move.to + (move.promotion || ''), san: move.san };
+    return null;
   }
 
   function renderTree(node) {
@@ -514,11 +532,14 @@ export function attach({ boardEl, lpv, game }) {
     head.textContent = (node.white ? 'White' : 'Black')
       + ' to move \u2014 proposed by Stockfish';
     const played = gameMove();
+    const playedSan = played ? bare(played.san) : null;
+    let playedListed = false;
     node.candidates.forEach((candidate, i) => {
       const li = document.createElement('li');
       li.className = 'tree__cand' + (i === 0 ? ' tree__cand--best' : '');
-      li.appendChild(row(candidate.san, candidate.score, node.white,
-                         played && bare(candidate.san) === played));
+      const game = playedSan !== null && bare(candidate.san) === playedSan;
+      if (game) playedListed = true;
+      li.appendChild(row(candidate.san, candidate.score, node.white, game));
       // Hovering a candidate draws it; hovering a reply draws it and the
       // candidate it hangs under, so the parent is never lost.
       const mine = [arrow(candidate.uci, 'blue')];
@@ -547,6 +568,18 @@ export function attach({ boardEl, lpv, game }) {
       }
       list.appendChild(li);
     });
+    // The engine did not propose the move the game played. It is still the
+    // game's move, so it gets a row of its own, played the same way.
+    if (played && !playedListed) {
+      const li = document.createElement('li');
+      li.className = 'tree__cand tree__game-move';
+      li.appendChild(row(played.san, null, node.white, true));
+      li.addEventListener('click', () => advance([played.uci]));
+      li.addEventListener('mouseenter', () =>
+        ground.setAutoShapes([arrow(played.uci, 'blue')]));
+      li.addEventListener('mouseleave', () => ground.setAutoShapes([]));
+      list.appendChild(li);
+    }
     renderCrumb();
   }
 

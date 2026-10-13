@@ -295,6 +295,8 @@ $accent: $primary;
     // The move now on the board: a place, not a way back to it.
     &:disabled { color: $body-color; cursor: default; }
   }
+  // The move the game played to reach the position Explore began at.
+  .crumb__root { color: #7a6aa6; }
 
   .board-tree__list, .tree__replies {
     list-style: none;
@@ -344,6 +346,8 @@ $accent: $primary;
   }
   // The game's own move, where the reader is still on its line.
   .tree__game { color: #7a6aa6; font-size: .8em; }
+  // The game's move when the engine did not propose it: a row of its own.
+  .tree__game-move .tree__san { color: #7a6aa6; }
   .tree__eval {
     margin-left: auto;
     font-family: var(--bs-font-monospace, monospace);
