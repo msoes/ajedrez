@@ -210,6 +210,26 @@ $accent: $primary;
 .game-board.is-guess   { --sq-light: #f5ecd7; --sq-dark: #b2893c; }
 
 
+// --- The piece picker -----------------------------------------------------
+// Above the board: choosing a set is a preference, and the credit beside the
+// select is what the sets' licences ask a published book to carry.
+
+.board-pieces {
+  display: flex;
+  align-items: baseline;
+  gap: .5rem;
+  margin-bottom: .5rem;
+  font-size: .8rem;
+  color: $muted;
+
+  .board-pieces__label {
+    text-transform: uppercase;
+    letter-spacing: .04em;
+  }
+  select { font-size: .8rem; }
+}
+
+
 // --- The controls under the board -----------------------------------------
 
 .board-bar {
@@ -231,9 +251,106 @@ $accent: $primary;
 
   &:hover:not(:disabled) { border-color: $accent; color: $accent; }
   &:disabled { opacity: .4; cursor: default; }
-  // The opponent, when there is one, and how strong it is set to play.
-  &[aria-pressed="true"] { border-color: $accent; background: $accent; color: #fff; }
   &:focus-visible { outline: 2px solid $accent; outline-offset: 2px; }
+}
+
+
+// --- The exploring tree ---------------------------------------------------
+// While a reader explores, the engine's suggested moves sit below the box that
+// names the current move: four candidates abreast, each with the answers it
+// expects beneath it, under a breadcrumb of how the reader got there.
+
+.board-tree {
+  margin-top: .5rem;
+  font-size: .85rem;
+
+  // The panel is built once and hidden until there is a mode that fills it.
+  &[hidden] { display: none; }
+
+  .board-tree__head {
+    margin-bottom: .3rem;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .04em;
+    color: $muted;
+  }
+
+  .board-tree__crumb {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .15rem;
+    margin-bottom: .35rem;
+    font-family: var(--bs-font-monospace, monospace);
+  }
+  .crumb__node {
+    padding: 0 .25rem;
+    border: 0;
+    border-radius: 3px;
+    background: none;
+    color: $accent;
+    font: inherit;
+    cursor: pointer;
+
+    &:hover:not(:disabled) { background: $panel; }
+    // The move now on the board: a place, not a way back to it.
+    &:disabled { color: $body-color; cursor: default; }
+  }
+
+  .board-tree__list, .tree__replies {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  // The candidates sit four abreast, wrapping to another row on a narrow
+  // column, so the reader moves sideways between them rather than down a list.
+  .board-tree__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    gap: .35rem .6rem;
+    align-items: start;
+  }
+  // The answers sit beneath their move, under a rule that ties them to it.
+  .tree__replies {
+    margin-left: .5rem;
+    padding-left: .4rem;
+    border-left: 1px solid $rule;
+  }
+
+  .tree__cand, .tree__reply {
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover { background: $panel; }
+  }
+  .tree__cand { padding: .2rem .35rem; }
+  // The engine's first choice, marked by its colour and a dot: a border beside
+  // three sibling columns would read as a divider, not a ranking.
+  .tree__cand--best .tree__san { color: $accent; }
+  .tree__cand--best .tree__san::before { content: "\2022\00a0"; }
+  .tree__reply { padding: .1rem .35rem; }
+  // A reply the engine has not scored yet, from the search still running.
+  .tree__reply--pending { opacity: .5; }
+
+  // The move on the left, its evaluation pushed to the right, so the numbers
+  // line up down the column however much the move is marked.
+  .tree__row {
+    display: flex;
+    align-items: center;
+    gap: .35rem;
+  }
+  .tree__san {
+    font-family: var(--bs-font-monospace, monospace);
+    font-weight: 600;
+  }
+  // The game's own move, where the reader is still on its line.
+  .tree__game { color: #7a6aa6; font-size: .8em; }
+  .tree__eval {
+    margin-left: auto;
+    font-family: var(--bs-font-monospace, monospace);
+    color: $muted;
+    font-variant-numeric: tabular-nums;
+  }
+  .board-tree__none { padding: .2rem .35rem; color: $muted; }
 }
 
 // The answer to a guess, in the bar and again over the board, where it is
