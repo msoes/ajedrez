@@ -348,6 +348,23 @@ $accent: $primary;
   .tree__game { color: #7a6aa6; font-size: .8em; }
   // The game's move when the engine did not propose it: a row of its own.
   .tree__game-move .tree__san { color: #7a6aa6; }
+  // The way back to the game from a move that followed it, skipping the plies
+  // the reader has already walked.
+  .tree__return {
+    display: inline-block;
+    margin-top: .15rem;
+    padding: 0 .3rem;
+    border: 1px solid $rule;
+    border-radius: 3px;
+    background: $panel;
+    color: $accent;
+    font: inherit;
+    font-size: .75rem;
+    cursor: pointer;
+
+    &:hover { border-color: $accent; }
+    &:focus-visible { outline: 2px solid $accent; outline-offset: 1px; }
+  }
   .tree__eval {
     margin-left: auto;
     font-family: var(--bs-font-monospace, monospace);

@@ -478,6 +478,21 @@ export function attach({ boardEl, lpv, game }) {
     return line;
   }
 
+  // A way back to the game at the position explored to, on the game's own
+  // move, when the whole Path followed the game. Offered only once the reader
+  // has actually walked the game forward.
+  function returnButton() {
+    const btn = document.createElement('button');
+    btn.className = 'tree__return';
+    btn.textContent = 'return';
+    btn.title = 'Return to the game, ' + path.length + ' moves on';
+    btn.addEventListener('click', ev => {
+      ev.stopPropagation();
+      leave(path.length);
+    });
+    return btn;
+  }
+
   function renderCrumb() {
     crumb.textContent = '';
     // The root names the move that produced the position Explore began at,
@@ -566,6 +581,7 @@ export function attach({ boardEl, lpv, game }) {
         });
         li.appendChild(ul);
       }
+      if (game && path.length) li.appendChild(returnButton());
       list.appendChild(li);
     });
     // The engine did not propose the move the game played. It is still the
@@ -578,6 +594,7 @@ export function attach({ boardEl, lpv, game }) {
       li.addEventListener('mouseenter', () =>
         ground.setAutoShapes([arrow(played.uci, 'blue')]));
       li.addEventListener('mouseleave', () => ground.setAutoShapes([]));
+      if (path.length) li.appendChild(returnButton());
       list.appendChild(li);
     }
     renderCrumb();
@@ -768,9 +785,10 @@ export function attach({ boardEl, lpv, game }) {
     paint();
   }
 
-  // Back to the game, at the move it was left on -- or one further, which is
-  // how a right guess becomes the move the reader goes on to read about.
-  function leave(forward) {
+  // Back to the game, `steps` plies along the mainline from where Explore was
+  // entered -- 1 for a played move, 0 for none, or the whole explored Path when
+  // it followed the game, so a reader who walked the game forward rejoins it.
+  function leave(steps) {
     if (!mode) return;
     engine && engine.abort();
     seq++;
@@ -785,7 +803,7 @@ export function attach({ boardEl, lpv, game }) {
     chess = null;
     path = [];
     lpv.toPath(resume);
-    if (forward) lpv.goTo('next');
+    for (let i = 0; i < (steps || 0); i++) lpv.goTo('next');
     paint();
   }
 
