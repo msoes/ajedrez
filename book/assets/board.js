@@ -94,12 +94,15 @@ function stockfish() {
     return result;
   };
 
-  // Every search says what it wants: Skill Level and MultiPV both stick.
-  const search = (fen, multipv, depth) => {
+  // Every search says what it wants: MultiPV sticks, and `only` confines the
+  // search to one move, which is how a move the engine would not have chosen
+  // can still be scored from this side.
+  const search = (fen, multipv, depth, only) => {
     worker.postMessage('setoption name MultiPV value ' + multipv);
     worker.postMessage('position fen ' + fen);
     searching = true;
-    return ask('go depth ' + depth, /^bestmove/)
+    return ask('go depth ' + depth + (only ? ' searchmoves ' + only : ''),
+               /^bestmove/)
       .finally(() => { searching = false; });
   };
 
@@ -133,6 +136,12 @@ function stockfish() {
     replies(fen) {
       return queued(async () =>
         pvs(await search(fen, REPLIES, ENRICH_DEPTH)).slice(0, REPLIES));
+    },
+
+    // One named move's own line, whatever the engine thinks of it: the game's
+    // move, when it is not one the engine would have proposed.
+    candidate(fen, uci) {
+      return queued(async () => pvs(await search(fen, 1, ANALYSE_DEPTH, uci))[0] || null);
     },
 
     // Drop everything not yet run and cut the search in flight, so a reader
@@ -548,12 +557,10 @@ export function attach({ boardEl, lpv, game }) {
       + ' to move \u2014 proposed by Stockfish';
     const played = gameMove();
     const playedSan = played ? bare(played.san) : null;
-    let playedListed = false;
     node.candidates.forEach((candidate, i) => {
       const li = document.createElement('li');
       li.className = 'tree__cand' + (i === 0 ? ' tree__cand--best' : '');
       const game = playedSan !== null && bare(candidate.san) === playedSan;
-      if (game) playedListed = true;
       li.appendChild(row(candidate.san, candidate.score, node.white, game));
       // Hovering a candidate draws it; hovering a reply draws it and the
       // candidate it hangs under, so the parent is never lost.
@@ -584,19 +591,6 @@ export function attach({ boardEl, lpv, game }) {
       if (game && path.length) li.appendChild(returnButton());
       list.appendChild(li);
     });
-    // The engine did not propose the move the game played. It is still the
-    // game's move, so it gets a row of its own, played the same way.
-    if (played && !playedListed) {
-      const li = document.createElement('li');
-      li.className = 'tree__cand tree__game-move';
-      li.appendChild(row(played.san, null, node.white, true));
-      li.addEventListener('click', () => advance([played.uci]));
-      li.addEventListener('mouseenter', () =>
-        ground.setAutoShapes([arrow(played.uci, 'blue')]));
-      li.addEventListener('mouseleave', () => ground.setAutoShapes([]));
-      if (path.length) li.appendChild(returnButton());
-      list.appendChild(li);
-    }
     renderCrumb();
   }
 
@@ -610,24 +604,25 @@ export function attach({ boardEl, lpv, game }) {
     renderCrumb();
   }
 
-  // Turn the engine's batch into what the tree draws: the moves for the side
-  // to move, and -- from each line's second move -- one answer apiece, shown
+  // One node of the tree, from one line the engine returned: the move, its
+  // score, and -- from the line's second move -- the first answer, shown
   // before any background search has run.
+  function candidate(fen, line) {
+    const child = positionAfter(fen, line.uci);
+    const reply = line.pv && line.pv[1];
+    return {
+      uci: line.uci,
+      san: sanIn(fen, line.uci),
+      score: line.score,
+      replies: reply
+        ? [{ uci: reply, san: sanIn(child, reply), score: null }]
+        : []
+    };
+  }
+
   function build(fen, batch) {
     const white = colourOf(new Chess(fen)) === 'white';
-    const candidates = batch.map(p => {
-      const child = positionAfter(fen, p.uci);
-      const reply = p.pv[1];
-      return {
-        uci: p.uci,
-        san: sanIn(fen, p.uci),
-        score: p.score,
-        replies: reply
-          ? [{ uci: reply, san: sanIn(child, reply), score: null }]
-          : []
-      };
-    });
-    return { candidates, white, complete: false };
+    return { candidates: batch.map(p => candidate(fen, p)), white, complete: false };
   }
 
   // The background searches: one per candidate, from the position it leaves,
@@ -655,7 +650,13 @@ export function attach({ boardEl, lpv, game }) {
     const sf = stockfish();
     sf.abort();
 
-    const cached = cache.get(fen);
+    // The game's own move here, if the reader is still on its line. It is both
+    // what the tree marks and what it may have to score itself; it is known
+    // without the engine, so it can key the cache too.
+    const played = gameMove();
+    const key = fen + (played ? '|' + played.uci : '');
+
+    const cached = cache.get(key);
     if (cached) {
       renderTree(cached);
       setStatus('');
@@ -669,7 +670,20 @@ export function attach({ boardEl, lpv, game }) {
     if (!batch.length) { renderNone(); setStatus(''); return; }
 
     const node = build(fen, batch);
-    cache.set(fen, node);
+
+    // If the engine would not have played the game's move, it is scored all
+    // the same and takes the weakest place among the four, so the reader can
+    // weigh it on the same footing rather than as an unscored footnote.
+    if (played && !node.candidates.some(c => bare(c.san) === bare(played.san))) {
+      const line = await sf.candidate(fen, played.uci);
+      if (mine !== seq) return;
+      if (line) {
+        node.candidates = node.candidates.slice(0, CANDIDATES - 1);
+        node.candidates.push(candidate(fen, line));
+      }
+    }
+
+    cache.set(key, node);
     renderTree(node);
     setStatus('');
     enrich(fen, node, mine);

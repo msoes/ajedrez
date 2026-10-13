@@ -346,8 +346,6 @@ $accent: $primary;
   }
   // The game's own move, where the reader is still on its line.
   .tree__game { color: #7a6aa6; font-size: .8em; }
-  // The game's move when the engine did not propose it: a row of its own.
-  .tree__game-move .tree__san { color: #7a6aa6; }
   // The way back to the game from a move that followed it, skipping the plies
   // the reader has already walked.
   .tree__return {
