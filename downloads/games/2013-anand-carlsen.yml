@@ -1,0 +1,33 @@
+# Written by `make import` from game_1737896.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Viswanathan Anand vs Magnus Carlsen, 2013
+white: Viswanathan Anand
+black: Magnus Carlsen
+result: "0-1"
+date: 2013-11-21
+event: Anand - Carlsen World Championship Match
+site: Chennai IND
+eco: E25
+
+why: >
+  Two games down with only three to go in the match, Anand develops a
+  dangerous kingside attack only to make a fatal blunder on move 28. One game
+  later, Carlsen would become the 16th undisputed world champion.
+
+moves: |
+  1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. f3 d5 5. a3 Bxc3+ 6. bxc3 c5 7. cxd5
+  exd5 8. e3 c4 9. Ne2 Nc6 10. g4 O-O 11. Bg2 Na5 12. O-O Nb3 13. Ra2 b5
+  14. Ng3 a5 15. g5 Ne8 16. e4 Nxc1 17. Qxc1 Ra6 18. e5 Nc7 19. f4 b4 20.
+  axb4 axb4 21. Rxa6 Nxa6 22. f5 b3 23. Qf4 Nc7 24. f6 g6 25. Qh4 Ne8 26.
+  Qh6 b2 27. Rf4 b1=Q+ 28. Nf1 Qe1
+
+sources:
+  - title: Viswanathan Anand vs Magnus Carlsen (2013) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1737896
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+
