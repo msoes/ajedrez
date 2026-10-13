@@ -493,7 +493,7 @@ export function attach({ boardEl, lpv, game }) {
   function returnButton() {
     const btn = document.createElement('button');
     btn.className = 'tree__return';
-    btn.textContent = 'return';
+    btn.textContent = '↩︎';
     btn.title = 'Return to the game, ' + path.length + ' moves on';
     btn.addEventListener('click', ev => {
       ev.stopPropagation();
