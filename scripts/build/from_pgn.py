@@ -74,7 +74,7 @@ def wrap(moves, width=72):
 def convert(path):
     game = chess.pgn.read_game(open(path, errors="replace"))
     if game is None:
-        return None, "does not parse as a PGN"
+        return None, "does not parse as a PGN", None, ""
     h = game.headers
 
     board = game.board()
@@ -86,11 +86,11 @@ def convert(path):
         board.push(move)
         n += 1
     if n < 2:
-        return None, "holds no moves"
+        return None, "holds no moves", None, ""
 
     date, year = pgn_date(h)
     if not year:
-        return None, "has no usable Date tag"
+        return None, "has no usable Date tag", None, ""
 
     # However the browser named the download: game_1259987.pgn, 1259987.pgn,
     # "1259987 (1).pgn". The id is the long run of digits in it.
@@ -137,7 +137,57 @@ def convert(path):
         src.rstrip(),
         "",
     ]
-    return slug, "\n".join(body) + "\n"
+    return slug, "\n".join(body) + "\n", gid, str(h.get("Round", "")).strip()
+
+
+MOVES_BLOCK = re.compile(r"^moves: \|\n((?:[ \t]+[^\n]*\n)+)", re.M)
+MOVE_NOISE = re.compile(r"\{[^}]*\}|;[^\n]*|\$\d+|\d+\.(?:\.\.)?|[()]|[!?]+")
+SCORES = {"1-0", "0-1", "1/2-1/2", "*"}
+
+
+def move_tokens(text):
+    """The moves of a record or a draft, bare, for comparing one to another."""
+    m = MOVES_BLOCK.search(text)
+    if not m:
+        return []
+    return [t for t in MOVE_NOISE.sub(" ", m.group(1)).split() if t not in SCORES]
+
+
+def already_here():
+    """Every record on disk, indexed by game id and by the moves it holds.
+
+    A game is looked for by both because neither alone is enough: a record
+    written from a source with no id -- a Wikipedia article, say -- cannot be
+    found by id, and the index has to recognise a game whatever slug it was
+    filed under, or importing the same PGN twice would quietly write it twice.
+    """
+    by_gid, by_moves = {}, {}
+    for path in sorted(glob.glob(os.path.join(OUT, "*.yml"))):
+        text = open(path).read()
+        for gid in re.findall(r"gid=(\d+)", text):
+            by_gid.setdefault(gid, path)
+        moves = tuple(move_tokens(text))
+        if moves:
+            by_moves.setdefault(moves, path)
+    return by_gid, by_moves
+
+
+def free_slug(slug, rnd):
+    """A slug of its own for a second game by the same two players in a year.
+
+    Two games of one match share a year and both surnames, so the slug they
+    are given is the same and the second used to be mistaken for the first and
+    quietly left behind. The round tells them apart, which is also how a reader
+    would: Karpov and Kasparov played twenty-four times in 1985.
+    """
+    if rnd and rnd not in ("?", "-"):
+        candidate = "%s-%s" % (slug, ascii_name(rnd))
+        if not os.path.exists(os.path.join(OUT, candidate + ".yml")):
+            return candidate
+    n = 2
+    while os.path.exists(os.path.join(OUT, "%s-%d.yml" % (slug, n))):
+        n += 1
+    return "%s-%d" % (slug, n)
 
 
 def main():
@@ -145,20 +195,34 @@ def main():
     if not paths:
         raise SystemExit("no .pgn files in %s/ -- see %s/README.md"
                          % (DRAFTS, DRAFTS))
+    by_gid, by_moves = already_here()
     written, skipped = 0, []
     for path in paths:
-        slug, body = convert(path)
+        slug, body, gid, rnd = convert(path)
         if slug is None:
             skipped.append("%s: %s" % (os.path.basename(path), body))
             continue
+        moves = tuple(move_tokens(body))
+        held = (by_gid.get(gid) if gid else None) or by_moves.get(moves)
+        if held:
+            skipped.append("%s: %s already exists, left alone"
+                           % (os.path.basename(path), held))
+            continue
         out = os.path.join(OUT, slug + ".yml")
         if os.path.exists(out):
-            skipped.append("%s: %s already exists, left alone"
-                           % (os.path.basename(path), out))
-            continue
+            # The slug is taken, but by a different game: give this one its
+            # own rather than drop it.
+            slug = free_slug(slug, rnd)
+            out = os.path.join(OUT, slug + ".yml")
+            if rnd and rnd not in ("?", "-"):
+                body = re.sub(r"^title: (.*)$", r"title: \1, game %s" % rnd,
+                              body, count=1, flags=re.M)
         with open(out, "w") as fh:
             fh.write(body)
         print("  %-22s -> %s" % (os.path.basename(path), out))
+        if gid:
+            by_gid[gid] = out
+        by_moves[moves] = out
         written += 1
     print("imported %d game(s)" % written)
     if skipped:

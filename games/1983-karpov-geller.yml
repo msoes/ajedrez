@@ -1,0 +1,35 @@
+# Written by `make import` from game_1050206.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Anatoly Karpov vs Efim Geller, 1983
+white: Anatoly Karpov
+black: Efim Geller
+result: "1-0"
+date: 1983-04-14
+event: 50th USSR Championship
+site: Moscow URS
+eco: C84
+
+why: >
+  Although Garry Kasparov's star was rising in the early 1980s, world champion
+  Karpov was still in top form, here using a queen sacrifice to checkmate
+  veteran grandmaster Geller on the way to his second Soviet Championship
+  title.
+
+moves: |
+  1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Re1 b5 7. Bb3 O-O
+  8. d3 Bb7 9. Nbd2 h6 10. Nf1 Re8 11. Ne3 Bf8 12. Bd2 d6 13. a4 Nd7 14.
+  c3 Ne7 15. Qb1 Nc5 16. Bc2 d5 17. exd5 Nxd5 18. Ng4 Nf4 19. Bxf4 exf4
+  20. Nge5 Bd6 21. d4 Bxe5 22. Nxe5 Qg5 23. f3 Rad8 24. axb5 axb5 25. Ra7
+  Bd5 26. Rxc7 Na6 27. Ra7 Nc5 28. Bh7+ Kf8 29. b4 Na4 30. Qd3 Bc4 31.
+  Qxc4
+
+sources:
+  - title: Anatoly Karpov vs Efim Geller (1983) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1050206
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

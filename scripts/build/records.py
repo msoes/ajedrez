@@ -199,6 +199,14 @@ def text(value):
     return " ".join(str(value or "").split())
 
 
+# What a source may carry. `cited_by` names the piece of prose that rests on
+# it, and the only one a reader is shown a reference for is the why: a sentence
+# taken from somewhere else is footnoted where it is read, not only listed at
+# the foot of the page.
+SOURCE_FIELDS = {"title", "url", "note", "cited_by"}
+CITED_BY = {"", "why"}
+
+
 def read_sources(raw):
     if not raw:
         raise Bad("no source: every game must say where its moves came from")
@@ -208,9 +216,18 @@ def read_sources(raw):
             raise Bad("a source is missing its url; if the game was imported "
                       "from a PGN, name the file after the game id so the "
                       "page it came from can be cited")
+        unknown = set(item) - SOURCE_FIELDS
+        if unknown:
+            raise Bad("source %r carries unknown field(s): %s"
+                      % (item["url"].strip(), ", ".join(sorted(unknown))))
+        cited_by = text(item.get("cited_by"))
+        if cited_by not in CITED_BY:
+            raise Bad("source %r is cited_by %r; only `why` is understood"
+                      % (item["url"].strip(), cited_by))
         out.append({"title": text(item.get("title")) or item["url"],
                     "url": item["url"].strip(),
-                    "note": text(item.get("note"))})
+                    "note": text(item.get("note")),
+                    "cited_by": cited_by})
     return out
 
 
@@ -253,6 +270,14 @@ def read_game(path):
         note_for_ply.setdefault(str(ply), []).append(mark)
 
     slug = slugify(os.path.splitext(os.path.basename(path))[0])
+
+    # The reference numbers the why is read with are the positions of its
+    # sources in the list the page prints, so the two cannot disagree.
+    sources = read_sources(raw.get("sources"))
+    why_cites = [i + 1 for i, src in enumerate(sources) if src["cited_by"] == "why"]
+    if why_cites and not text(raw.get("why")):
+        raise Bad("a source is cited_by `why`, but the game has no why")
+
     return {
         "slug": slug,
         "source_file": os.path.relpath(path),
@@ -277,7 +302,8 @@ def read_game(path):
         "marks": marks,
         "notes": notes,
         "note_for_ply": note_for_ply,
-        "sources": read_sources(raw.get("sources")),
+        "sources": sources,
+        "why_cites": why_cites,
         "final_fen": board.fen(),
         "checkmate": board.is_checkmate(),
     }

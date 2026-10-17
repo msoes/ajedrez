@@ -1,0 +1,41 @@
+# Written by `make import` from game_1964305.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Alireza Firouzja vs Murali Karthikeyan, 2019
+white: Alireza Firouzja
+black: Murali Karthikeyan
+result: "0-1"
+date: 2019-06-11
+event: Asian Continental
+site: Xingtai CHN
+eco: E71
+
+why: >
+  Karthikeyan sacrifices his queen for a knight and a bishop on move 9 in a
+  known position against the prodigy Firouzja, leaving the latter's pieces
+  uncoordinated and without decent squares.
+
+moves: |
+  1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. h3 O-O 6. Be3 c5 7. Nf3 Qa5 8.
+  Nd2 cxd4 9. Nb3 Qxc3+ 10. bxc3 dxe3 11. f3 Nh5 12. Qc1 Bh6 13. g4 Nf4
+  14. Kd1 Ne6 15. Kc2 Nc6 16. h4 Bf4 17. Qd1 Ne5 18. Nc1 Bd7 19. a4 Rac8
+  20. Ne2 Bh6 21. g5 Bg7 22. Bh3 Nxf3 23. Qd3 Ne5 24. Qxe3 Nxc4 25. Qf2
+  Rc5 26. Rhb1 Bc6 27. Bg2 f5 28. gxf6 Bxf6 29. Rf1 Bxc3 30. Qxc5 Nxc5 31.
+  Rxf8+ Kxf8 32. Kxc3 Ne5 33. a5 Nxe4+ 34. Bxe4 Bxe4 35. Nd4 Bd5 36. Nb5
+  a6 37. Nc7 Bc6 38. Rf1+ Kg7 39. Ne6+ Kh6 40. Rf8 Kh5 41. Rh8 h6 42. Rh7
+  Kxh4 43. Rxh6+ Kg4 44. Nd4 Kg5 45. Rh2 Bd5 46. Re2 Kf4 47. Rf2+ Nf3 48.
+  Re2 e5 49. Nc2 Be4 50. Ne3 d5 51. Kb4 Nd4 52. Re1 Kf3
+
+sources:
+  - title: Alireza Firouzja vs Murali Karthikeyan (2019) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1964305
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+  - title: The 10 Best Chess Games of 2019
+    url: https://www.chess.com/news/view/the-10-best-chess-games-of-2019
+    note: the page Wikipedia cites for the description
+    cited_by: why
+

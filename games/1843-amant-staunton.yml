@@ -9,8 +9,10 @@ event: Staunton - Saint Amant
 site: Paris FRA
 eco: B21
 
-# why: >
-#   One sentence on why the game is in the book.
+why: >
+  Saint-Amant resigns in this unofficial world championship match game with
+  Staunton, in which Staunton remarked, "The latter portion of this game is
+  conducted with remarkable skill by both parties."
 
 moves: |
   1. e4 c5 2. f4 e6 3. Nf3 Nc6 4. c3 d5 5. e5 Qb6 6. Bd3 Bd7 7. Bc2 Rc8 8.
@@ -25,4 +27,9 @@ sources:
   - title: Pierre Charles Fournier de Saint Amant vs Howard Staunton (1843) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1001194
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

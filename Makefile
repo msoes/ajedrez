@@ -18,7 +18,7 @@ CYAN  := \033[36m
 BOLD  := \033[1m
 RESET := \033[0m
 
-.PHONY: help all book site preview publish check new import vendor clean clean-data
+.PHONY: help all book site preview publish check new import why vendor clean clean-data
 .DEFAULT_GOAL := help
 
 ## Show this help
@@ -88,6 +88,12 @@ vendor:
 ## Turn PGNs saved in drafts/ into game records
 import:
 	$(PY) $(BUILD)/from_pgn.py
+
+# Fetches, like `make vendor`, and for the same reason: what it writes is a
+# record, kept in games/, and the build never goes back for it.
+## Write each why from Wikipedia's list, with its references (ARGS=--dry-run)
+why:
+	$(PY) $(BUILD)/why_from_wikipedia.py $(ARGS)
 
 ## Write a blank game record (SLUG=1960-spassky-bronstein)
 new:

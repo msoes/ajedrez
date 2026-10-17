@@ -1,0 +1,33 @@
+# Written by `make import` from game_1139475.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Mikhail Tal vs Vasily Smyslov, 1959
+white: Mikhail Tal
+black: Vasily Smyslov
+result: "1-0"
+date: 1959-09-18
+event: Bled-Zagreb-Belgrade Candidates
+site: Bled, Zagreb & Belgrade YUG
+eco: B10
+
+why: >
+  Tal initiates complications early and obtains a strong attack. Smyslov
+  defends well, but eventually stumbles with one erroneous move, and Tal
+  delivers the winning tactical blow.
+
+moves: |
+  1. e4 c6 2. d3 d5 3. Nd2 e5 4. Ngf3 Nd7 5. d4 dxe4 6. Nxe4 exd4 7. Qxd4
+  Ngf6 8. Bg5 Be7 9. O-O-O O-O 10. Nd6 Qa5 11. Bc4 b5 12. Bd2 Qa6 13. Nf5
+  Bd8 14. Qh4 bxc4 15. Qg5 Nh5 16. Nh6+ Kh8 17. Qxh5 Qxa2 18. Bc3 Nf6 19.
+  Qxf7 Qa1+ 20. Kd2 Rxf7 21. Nxf7+ Kg8 22. Rxa1 Kxf7 23. Ne5+ Ke6 24. Nxc6
+  Ne4+ 25. Ke3 Bb6+ 26. Bd4
+
+sources:
+  - title: Mikhail Tal vs Vasily Smyslov (1959) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1139475
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

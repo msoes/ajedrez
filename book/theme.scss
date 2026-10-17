@@ -77,6 +77,25 @@ $accent: $primary;
   margin-bottom: .6rem;
 }
 
+// The reference after a why that was taken from somewhere else. Quiet enough
+// to be stepped over by a reader who does not care where the sentence is
+// from, and a link for the one who does.
+.game-cite {
+  font-size: .62em;
+  font-weight: 400;
+  line-height: 0;
+  white-space: nowrap;
+
+  a {
+    color: $muted;
+    text-decoration: none;
+    padding-left: .08em;
+  }
+
+  a:hover,
+  a:focus { color: $accent; text-decoration: underline; }
+}
+
 .game-summary { margin-bottom: .6rem; }
 
 .game-note {
@@ -372,6 +391,32 @@ $accent: $primary;
   .board-tree__none { padding: .2rem .35rem; color: $muted; }
 }
 
+// Which pieces the board is drawn with, and whoever drew them.
+.board-pieces {
+  display: flex;
+  align-items: center;
+  gap: .4rem;
+  margin-top: .4rem;
+  font-size: .78rem;
+  color: $muted;
+
+  select {
+    font: inherit;
+    color: $body-color;
+    padding: .05rem .2rem;
+    border: 1px solid $rule;
+    border-radius: 3px;
+    background: $panel;
+
+    &:focus-visible { outline: 2px solid $accent; outline-offset: 2px; }
+  }
+}
+
+.board-pieces__mark { font-size: .95rem; color: $body-color; }
+.board-pieces__by { min-width: 0; overflow: hidden; text-overflow: ellipsis;
+                    white-space: nowrap; }
+
+
 // The answer to a guess, in the bar and again over the board, where it is
 // large enough to read from across a room. Three ways of saying one thing:
 // the face, the colour, and the tooltip for whoever wants the word.
@@ -461,8 +506,16 @@ $accent: $primary;
     margin: 0 0 .6rem 0;
   }
 
-  ul { padding-left: 1.2rem; margin: 0; }
+  ul, ol { padding-left: 1.4rem; margin: 0; }
   li { margin-bottom: .3rem; }
+
+  // Arriving from a reference in the why: say which line was meant.
+  li:target {
+    background: $panel;
+    border-radius: 3px;
+    box-shadow: 0 0 0 .25rem $panel;
+  }
+
   .source-note { color: $muted; }
   .source-note::before { content: " \2014 "; }
 }

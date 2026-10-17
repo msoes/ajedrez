@@ -1,0 +1,42 @@
+# Written by `make import` from game_1006949.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Alexander Alekhine vs Efim Bogoljubov, 1922
+white: Alexander Alekhine
+black: Efim Bogoljubov
+result: "1/2-1/2"
+date: 1922-04-23
+event: Bad Pistyan
+site: Piestany CSR
+eco: C78
+
+why: >
+  This game between Alekhine and Bogoljubow is referred to in the famous
+  novella The Royal Game by Stefan Zweig. In the story, the position after
+  38.d6 is reproduced in a game between the fictional world chess champion as
+  White and a group of outmatched amateur players who are on the verge of
+  promoting their c-pawn as Black, when an unknown spectator frantically
+  intervenes and explains how White will beat them in 9−10 moves after
+  38...c1=Q 39.Bxc1 Nxc1 40.d7. He instead proposes 38...Kh7, correctly
+  predicting that 39.h4 will follow, and after 39...Rc4 he manoeuvres the game
+  for 7−8 more moves until the world champion settles for a draw.
+
+moves: |
+  1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Be7 6. Nc3 b5 7. Bb3 d6
+  8. a4 b4 9. Nd5 Na5 10. Ba2 Nxd5 11. Bxd5 c6 12. Ba2 c5 13. c3 Rb8 14.
+  Bd5 O-O 15. d4 exd4 16. cxd4 c4 17. Be3 Be6 18. Bxe6 fxe6 19. d5 e5 20.
+  Rc1 Qd7 21. Ng5 Bxg5 22. Bxg5 Rbc8 23. Qe2 h6 24. Bh4 Rf7 25. Bg3 Qxa4
+  26. f4 exf4 27. Bxf4 Qb5 28. Bxh6 c3 29. Qg4 Qd7 30. Qxd7 Rxd7 31. bxc3
+  bxc3 32. Bd2 Rdc7 33. Bf4 Nb3 34. Bxd6 Rf7 35. Rxf7 Nxc1 36. Rf1 Nd3 37.
+  Ba3 c2 38. d6 Kh7 39. h4 Rc4 40. e5 Nxe5 41. Bb2 Rc8 42. Rc1 Nd7 43. Kf2
+  Kg6 44. Ke3 Rc6 45. Bd4 Nf6 46. Kd3 Rxd6 47. Rxc2
+
+sources:
+  - title: Alexander Alekhine vs Efim Bogoljubov (1922) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1006949
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

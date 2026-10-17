@@ -58,34 +58,96 @@ book:
     - games/1907-rotlewi-rubinstein.qmd
     - games/1909-rubinstein-lasker.qmd
     - games/1912-levitsky-marshall.qmd
+    - games/1912-lasker-thomas.qmd
     - games/1914-lasker-capablanca.qmd
+    - games/1918-rubinstein-vidmar.qmd
     - games/1918-capablanca-marshall.qmd
+    - games/1920-adams-repetto.qmd
+    - games/1922-alekhine-bogoljubov.qmd
     - games/1922-bogoljubov-alekhine.qmd
     - games/1923-saemisch-nimzowitsch.qmd
     - games/1924-reti-capablanca.qmd
+    - games/1924-capablanca-tartakower.qmd
+    - games/1925-reti-alekhine.qmd
+    - games/1930-glucksberg-najdorf.qmd
+    - games/1932-flohr-euwe.qmd
+    - games/1934-canal-horvath.qmd
   - part: The Soviet school
     chapters:
+    - games/1935-euwe-alekhine.qmd
+    - games/1938-parr-wheatcroft.qmd
     - games/1938-botvinnik-capablanca.qmd
+    - games/1943-molinari-cabral.qmd
+    - games/1946-gusev-auerbach.qmd
+    - games/1953-geller-euwe.qmd
+    - games/1954-botvinnik-smyslov.qmd
     - games/1956-byrne-fischer.qmd
+    - games/1957-sliwa-bronstein.qmd
     - games/1958-polugaevsky-nezhmetdinov.qmd
+    - games/1959-tal-smyslov.qmd
+    - games/1959-fischer-petrosian.qmd
     - games/1960-spassky-bronstein.qmd
     - games/1960-tal-botvinnik.qmd
+    - games/1961-lazarevic-gaprindashvili.qmd
+    - games/1962-gufeld-kavalek.qmd
+    - games/1963-byrne-fischer.qmd
+    - games/1964-portisch-tal.qmd
+    - games/1965-geller-smyslov.qmd
+    - games/1966-petrosian-spassky.qmd
+    - games/1967-fischer-stein.qmd
+    - games/1969-spassky-petrosian.qmd
+    - games/1970-larsen-spassky.qmd
+    - games/1971-harper-zuk.qmd
     - games/1972-fischer-spassky.qmd
+    - games/1972-spassky-fischer.qmd
+    - games/1972-spassky-fischer-13.qmd
+    - games/1973-bronstein-ljubojevic.qmd
+    - games/1974-karpov-spassky.qmd
   - part: The modern era
     chapters:
+    - games/1975-minic-planinc.qmd
+    - games/1976-lputian-kasparov.qmd
+    - games/1977-tatai-karpov.qmd
     - games/1978-liu-donner.qmd
+    - games/1979-ivanov-karpov.qmd
+    - games/1980-karpov-miles.qmd
+    - games/1981-kasparov-gavrikov.qmd
+    - games/1982-kavalek-kasparov.qmd
+    - games/1983-karpov-geller.qmd
+    - games/1984-portisch-pinter.qmd
     - games/1985-karpov-kasparov.qmd
+    - games/1985-karpov-kasparov-24.qmd
+    - games/1986-kasparov-karpov.qmd
     - games/1987-kasparov-karpov.qmd
+    - games/1988-hoi-gulko.qmd
+    - games/1989-piket-kasparov.qmd
+    - games/1990-karpov-kasparov.qmd
     - games/1991-ivanchuk-yusupov.qmd
+    - games/1992-tal-lautier.qmd
+    - games/1992-ivanchuk-anand.qmd
+    - games/1993-short-kasparov.qmd
     - games/1994-shirov-polgar.qmd
+    - games/1995-parada-zvjaginsev.qmd
+    - games/1995-topalov-kramnik.qmd
   - part: The computer age
     chapters:
     - games/1996-deep-blue-kasparov.qmd
     - games/1997-deep-blue-kasparov.qmd
     - games/1998-topalov-shirov.qmd
     - games/1999-kasparov-topalov.qmd
+    - games/1999-kasparov-world.qmd
+    - games/2000-kasparov-kramnik.qmd
+    - games/2002-ponomariov-ivanchuk.qmd
+    - games/2004-kramnik-leko.qmd
+    - games/2005-anand-topalov.qmd
+    - games/2006-karjakin-anand.qmd
+    - games/2006-kramnik-topalov.qmd
     - games/2013-aronian-anand.qmd
+    - games/2013-anand-carlsen.qmd
     - games/2015-wei-yi-bruzon.qmd
+    - games/2016-carlsen-karjakin.qmd
+    - games/2017-bai-liren.qmd
+    - games/2019-firouzja-karthikeyan.qmd
     - games/2021-carlsen-nepomniachtchi.qmd
     - games/2023-nepomniachtchi-ding.qmd
   appendices:

@@ -1,0 +1,35 @@
+# Written by `make import` from game_1278766.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: B Molinari vs Luis Roux Cabral, 1943
+white: B Molinari
+black: Luis Roux Cabral
+result: "0-1"
+date: 1943
+event: Uruguayan Championship
+site: Montevideo URU
+eco: D48
+
+why: >
+  Known as the "Uruguayan Immortal". This game from the 1943 Uruguayan Chess
+  Championship sees Cabral sacrifice the exchange twice, followed by
+  sacrifices of two minor pieces. After 33 moves, all three of his remaining
+  pieces are en prise, but his opponent cannot stop checkmate.
+
+moves: |
+  1. d4 Nf6 2. Nf3 d5 3. c4 c6 4. Nc3 Nbd7 5. e3 e6 6. Bd3 dxc4 7. Bxc4 b5
+  8. Bd3 a6 9. O-O c5 10. b3 Bb7 11. Qe2 Qb6 12. Rd1 Be7 13. a4 b4 14. Nb1
+  Rc8 15. Nbd2 cxd4 16. Nc4 Qa7 17. Nxd4 O-O 18. Bd2 a5 19. Nb5 Qa8 20.
+  Nbd6 Bxg2 21. Nxc8 Rxc8 22. Re1 Bf3 23. Qf1 Qd5 24. e4 Rxc4 25. bxc4 Qh5
+  26. Bf4 Ng4 27. Be2 Nde5 28. h3 Bc5 29. Bg3 Nxf2 30. Bxf2 Qg5+ 31. Kh2
+  Qf4+ 32. Bg3 Bg1+ 33. Qxg1 Ng4+
+
+sources:
+  - title: B Molinari vs Luis Roux Cabral (1943) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1278766
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

@@ -26,13 +26,23 @@ From a downloaded PGN:
 ```
 # save the game as drafts/<game id>.pgn, then
 make import                         # -> games/<year>-<white>-<black>.yml
+make why                            # fills the why in, where Wikipedia has one
 $EDITOR games/1862-steinitz-mongredien.yml
 make all
 ```
 
 The id is the number at the end of the game's URL, and the file name is how
 the record learns which page to cite. Players, date, event, opening code,
-result and moves are taken from the PGN; `title` and `why` must be manually edited.
+result and moves are taken from the PGN; `title` must be manually edited.
+
+`make why` reads Wikipedia's [list of chess
+games](https://en.wikipedia.org/wiki/List_of_chess_games), finds the game by
+the same id, and writes the sentence it gives as the record's `why`, together
+with the two pages the sentence rests on: Wikipedia's own, and the one
+Wikipedia cites for it. Both are marked `cited_by: why`, which is what puts
+the reference after the sentence on the page. A why written for this book is
+never written over, and `make why ARGS=--dry-run` says what would change
+without changing it.
 
 Several PGNs can be dropped in and imported at once, an existing record is
 never overwritten, and every move is replayed on a board at import and again
@@ -49,7 +59,12 @@ Stockfish, then plays it and either reads on (`▸`) or asks the next one
 which answers at the gentlest of three strengths until `vs` says otherwise or
 turns it off, and takes back its reply along with your move.
 
-The viewer and the engine live in `book/assets` and are committed.
+Under the board, `♟` picks the pieces from eleven sets, each under a licence
+this book can publish and each credited beside the picker. The choice follows
+the reader through the book, and only the chosen set is ever fetched.
+
+The viewer, the engine and the piece sets live in `book/assets` and are
+committed.
 `make vendor` refetches them, from the pins in `scripts/build/vendor.py`; the
 build itself fetches nothing.
 
@@ -70,6 +85,8 @@ article of its own, from Wikipedia, with the two compared. Every source is
 listed in the chapter that uses it and collected in the book's
 [Sources](book/sources.qmd) appendix.
 
-Nothing in this repository fetches anything. The game records were collected
-once, by hand, and `games/` is the result; the build reads only what is already
-on disk, so building the book does not go back to the sources it cites.
+The build fetches nothing. The game records were collected once, by hand, and
+`games/` is the result; the build reads only what is already on disk, so
+building the book does not go back to the sources it cites. The two commands
+that do fetch, `make why` and `make vendor`, are run by hand and write what
+they find into the repository, where it is committed and read from then on.
