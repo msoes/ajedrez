@@ -1,0 +1,33 @@
+# Written by `make import` from game_1069989.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Lubomir Kavalek vs Garry Kasparov, 1982
+white: Lubomir Kavalek
+black: Garry Kasparov
+result: "0-1"
+date: 1982-05-17
+event: Bugojno
+site: Bugojno YUG
+eco: E90
+
+why: >
+  By 1982, Kasparov was already ranked #2 in the world and was dominating the
+  world's best players. He would win 15 consecutive tournaments between 1981
+  and 1990.
+
+moves: |
+  1. c4 g6 2. Nc3 Bg7 3. d4 Nf6 4. e4 d6 5. Nf3 O-O 6. h3 e5 7. d5 Na6 8.
+  Be3 Nh5 9. Nh2 Qe8 10. Be2 Nf4 11. Bf3 f5 12. h4 Qe7 13. g3 Nb4 14. Qb3
+  Nfd3+ 15. Ke2 f4 16. Bd2 fxg3 17. fxg3 Rxf3 18. Nxf3 Bg4 19. Raf1 Rf8
+  20. Nd1 Qf7 21. Be3 Bxf3+ 22. Kd2 Qd7 23. Rhg1 Qh3 24. a3 Bxe4 25. Rxf8+
+  Bxf8 26. axb4 Qh2+ 27. Kc3 Nc1
+
+sources:
+  - title: Lubomir Kavalek vs Garry Kasparov (1982) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1069989
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

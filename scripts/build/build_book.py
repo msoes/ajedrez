@@ -83,15 +83,29 @@ def follow_html():
 
 
 def sources_html(rec):
+    """The sources, numbered, because the why refers to them by number."""
     items = []
-    for src in rec["sources"]:
+    for n, src in enumerate(rec["sources"], 1):
         note = (' <span class="source-note">%s</span>' % html.escape(src["note"])
                 if src["note"] else "")
-        items.append('<li><a href="%s">%s</a>%s</li>'
-                     % (html.escape(src["url"], quote=True),
+        items.append('<li id="src-%d"><a href="%s">%s</a>%s</li>'
+                     % (n, html.escape(src["url"], quote=True),
                         html.escape(src["title"]), note))
-    return ('<div class="game-sources"><h2>Source of the moves</h2>'
-            '<ul>%s</ul></div>' % "".join(items))
+    return ('<div class="game-sources"><h2>Sources</h2>'
+            '<ol>%s</ol></div>' % "".join(items))
+
+
+def why_html(rec):
+    """The why, and a reference to each source the sentence rests on.
+
+    The sentence is often not this book's own, and the mark after it says so
+    where it is read. The number is the source's place in the list at the foot
+    of the page, and the link goes to it rather than straight out, so the
+    reader is shown what they are being sent to before they go.
+    """
+    marks = "".join('<a href="#src-%d">[%d]</a>' % (n, n) for n in rec["why_cites"])
+    cite = '<sup class="game-cite">%s</sup>' % marks if marks else ""
+    return '<p class="game-why">%s%s</p>' % (html.escape(rec["why"]), cite)
 
 
 def downloads_html(rec):
@@ -130,7 +144,7 @@ def head_html(rec):
                    % html.escape(", ".join(where)))
     out.append('<hr class="game-rule">')
     if rec["why"]:
-        out.append('<p class="game-why">%s</p>' % html.escape(rec["why"]))
+        out.append(why_html(rec))
     if rec["summary"]:
         out.append('<p class="game-summary">%s</p>' % html.escape(rec["summary"]))
     if rec["result_note"]:

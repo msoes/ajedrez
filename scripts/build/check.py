@@ -17,6 +17,7 @@ import gamespath  # noqa: F401,E402  -- project root on sys.path and as cwd
 import io
 import json
 import os
+import re
 
 import chess
 import chess.pgn
@@ -69,6 +70,15 @@ def check_game(rec, problems):
     for src in rec["sources"]:
         if not src["url"].startswith(("http://", "https://")):
             fail(problems, rec["slug"], "source %r is not a URL" % src["url"])
+    # A sentence borrowed from somewhere else is footnoted, not credited in
+    # passing: `make why` writes the reference, and a bare "(Wikipedia)" left
+    # at the end of a why means it was pasted in by hand and never was.
+    if re.search(r"\((?:from\s+)?Wikipedia\)\s*\.?\s*$", rec["why"], re.I):
+        fail(problems, rec["slug"],
+             "the why credits Wikipedia in passing; run `make why` to replace "
+             "it with a reference to the source it came from")
+    if rec["why"] and not rec["why"].rstrip().endswith((".", "!", "?", '"')):
+        fail(problems, rec["slug"], "the why does not end in a full stop")
     for note in rec["notes"]:
         if len(note["text"]) < 20:
             fail(problems, rec["slug"],

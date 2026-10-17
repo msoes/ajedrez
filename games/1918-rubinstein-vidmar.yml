@@ -1,0 +1,32 @@
+# Written by `make import` from game_1119780.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Akiba Rubinstein vs Milan Vidmar, 1918
+white: Akiba Rubinstein
+black: Milan Vidmar
+result: "0-1"
+date: 1918-04-22
+event: Berlin Four Masters
+site: Berlin GER
+eco: A52
+
+why: >
+  Vidmar surprises Rubinstein by playing the Budapest Gambit, leading to a
+  brilliant victory.
+
+moves: |
+  1. d4 Nf6 2. c4 e5 3. dxe5 Ng4 4. Bf4 Nc6 5. Nf3 Bb4+ 6. Nc3 Qe7 7. Qd5
+  Bxc3+ 8. bxc3 Qa3 9. Rc1 f6 10. exf6 Nxf6 11. Qd2 d6 12. Nd4 O-O 13. e3
+  Nxd4 14. cxd4 Ne4 15. Qc2 Qa5+ 16. Ke2 Rxf4 17. exf4 Bf5 18. Qb2 Re8 19.
+  Kf3 Nd2+ 20. Kg3 Ne4+ 21. Kh4 Re6 22. Be2 Rh6+ 23. Bh5 Rxh5+ 24. Kxh5
+  Bg6+
+
+sources:
+  - title: Akiba Rubinstein vs Milan Vidmar (1918) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1119780
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

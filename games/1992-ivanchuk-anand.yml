@@ -1,0 +1,40 @@
+# Written by `make import` from game_1060292.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Vassily Ivanchuk vs Viswanathan Anand, 1992
+white: Vassily Ivanchuk
+black: Viswanathan Anand
+result: "0-1"
+date: 1992-09
+event: Match
+site: Linares ESP
+eco: B62
+
+why: >
+  Anand breaks all principles of positional chess by getting doubled pawns and
+  trading his good bishop, only to reveal the deep idea later in the game,
+  managing to create 2 passed pawns and eventually winning.
+
+moves: |
+  1. e4 c5 2. Nf3 d6 3. d4 cxd4 4. Nxd4 Nf6 5. Nc3 Nc6 6. Bg5 e6 7. Qd2 a6
+  8. O-O-O h6 9. Be3 Nxd4 10. Bxd4 b5 11. f3 Qa5 12. a3 e5 13. Be3 Be6 14.
+  Kb1 Be7 15. g4 Rb8 16. Nd5 Qxd2 17. Nxf6+ gxf6 18. Rxd2 h5 19. Rg1 hxg4
+  20. fxg4 Bc4 21. b3 Bxf1 22. Rxf1 Rh3 23. Re2 Kd7 24. g5 Ke6 25. gxf6
+  Bxf6 26. Bd2 Be7 27. Be1 f6 28. Bg3 d5 29. exd5+ Kxd5 30. Rf5 Kc6 31.
+  Ref2 Rh6 32. Kb2 Kd7 33. Re2 Bd6 34. Rf3 Rc8 35. Be1 Ke6 36. Rd3 Rh7 37.
+  Rg3 Bc5 38. Ka2 Rd7 39. Rc3 Rcc7 40. h4 Rd1 41. Bf2 Bd6 42. Rg3 e4 43.
+  Rxe4+ Be5 44. Rxe5+ fxe5 45. Kb2 Rd2
+
+sources:
+  - title: Vassily Ivanchuk vs Viswanathan Anand (1992) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1060292
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+  - title: Anand's Positional Chess Masterpiece? Ivanchuk vs. Anand, 1992
+    url: https://www.chess.com/blog/SamCopeland/anands-positional-chess-masterpiece-ivanchuk-vs-anand-1992
+    note: the page Wikipedia cites for the description
+    cited_by: why
+

@@ -1,0 +1,35 @@
+# Written by `make import` from game_1289113.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Bruce Harper vs Robert D Zuk, 1971
+white: Bruce Harper
+black: Robert D Zuk
+result: "0-1"
+date: 1971
+event: Halloween Open
+site: Burnaby, BC
+eco: E97
+
+why: >
+  Known as the "Tomb Game". Zuk exploits two pins to drive Harper's pieces
+  into a corner and toward a position where Harper's only legal move will help
+  Zuk checkmate him.
+
+moves: |
+  1. d4 Nf6 2. c4 g6 3. Nc3 Bg7 4. e4 d6 5. Nf3 O-O 6. Be2 e5 7. O-O Nc6
+  8. d5 Ne7 9. Bd2 Nh5 10. Rc1 c5 11. g3 Nf6 12. a3 Ne8 13. Ne1 f5 14.
+  exf5 Nxf5 15. Bf3 b6 16. Bg2 Nd4 17. f4 Bf5 18. fxe5 Bxe5 19. Bh6 Bg7
+  20. Bxg7 Nxg7 21. Nd3 Qg5 22. Nf4 Rae8 23. Qa4 Qe7 24. Nb5 Nxb5 25. Qxb5
+  Qe3+ 26. Kh1 g5 27. Nh3 Bd3 28. Rxf8+ Rxf8 29. Rg1 Be4 30. Qd7 Bxg2+ 31.
+  Rxg2 Qe4 32. Ng1 h6 33. h4 Rf2 34. Qh3 g4 35. Qh2 h5 36. b4 Rf1 37. b5
+  Kh8 38. a4 Kh7 39. a5 Kg8
+
+sources:
+  - title: Bruce Harper vs Robert D Zuk (1971) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1289113
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

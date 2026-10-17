@@ -1,0 +1,38 @@
+# Written by `make import` from game_1891363.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Jinshi Bai vs Ding Liren, 2017
+white: Jinshi Bai
+black: Ding Liren
+result: "0-1"
+date: 2017-11-04
+event: Chinese Chess League
+site: China CHN
+eco: E21
+
+why: >
+  Ding creates a stunning tactical crush of young compatriot Bai in just 32
+  moves with the black pieces, sacrificing his queen and culminating in a
+  spectacular king hunt.
+
+moves: |
+  1. d4 Nf6 2. c4 e6 3. Nc3 Bb4 4. Nf3 O-O 5. Bg5 c5 6. e3 cxd4 7. Qxd4
+  Nc6 8. Qd3 h6 9. Bh4 d5 10. Rd1 g5 11. Bg3 Ne4 12. Nd2 Nc5 13. Qc2 d4
+  14. Nf3 e5 15. Nxe5 dxc3 16. Rxd8 cxb2+ 17. Ke2 Rxd8 18. Qxb2 Na4 19.
+  Qc2 Nc3+ 20. Kf3 Rd4 21. h3 h5 22. Bh2 g4+ 23. Kg3 Rd2 24. Qb3 Ne4+ 25.
+  Kh4 Be7+ 26. Kxh5 Kg7 27. Bf4 Bf5 28. Bh6+ Kh7 29. Qxb7 Rxf2 30. Bg5 Rh8
+  31. Nxf7 Bg6+ 32. Kxg4 Ne5+
+
+sources:
+  - title: Jinshi Bai vs Ding Liren (2017) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1891363
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+  - title: Ding Liren Game of the Year?
+    url: https://en.chessbase.com/post/ding-liren-plays-brilliancy
+    note: the page Wikipedia cites for the description
+    cited_by: why
+

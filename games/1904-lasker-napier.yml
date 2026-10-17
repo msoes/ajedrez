@@ -10,7 +10,8 @@ site: Cambridge Springs, PA USA
 eco: B72
 
 why: >
-  Both players show great ingenuity. After a complicated web of tactics, Lasker simplifies into a winning endgame (Wikipedia).
+  Both players show great ingenuity. After a complicated web of tactics,
+  Lasker simplifies into a winning endgame.
 
 moves: |
   1. e4 c5 2. Nc3 Nc6 3. Nf3 g6 4. d4 cxd4 5. Nxd4 Bg7 6. Be3 d6 7. h3 Nf6
@@ -24,4 +25,9 @@ sources:
   - title: Emanuel Lasker vs William Ewart Napier (1904) (chessgames.com)
     url: https://www.chessgames.com/perl/chessgame?gid=1036787
     note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
 

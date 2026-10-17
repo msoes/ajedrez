@@ -1,0 +1,35 @@
+# Written by `make import` from game_1049156.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Efim Geller vs Vasily Smyslov, 1965
+white: Efim Geller
+black: Vasily Smyslov
+result: "1-0"
+date: 1965-04-24
+event: Geller - Smyslov Candidates Quarterfinal
+site: Moscow URS
+eco: D87
+
+why: >
+  Though he never managed to play for the World Championship, Efim Geller had
+  a lifetime plus score in over 200 games against world champions, here
+  crushing Smyslov with a queen sacrifice that the former champion couldn't
+  accept.
+
+moves: |
+  1. d4 Nf6 2. c4 g6 3. Nc3 d5 4. cxd5 Nxd5 5. e4 Nxc3 6. bxc3 Bg7 7. Bc4
+  c5 8. Ne2 O-O 9. O-O Nc6 10. Be3 Qc7 11. Rc1 Rd8 12. f4 e6 13. Kh1 b6
+  14. f5 Na5 15. Bd3 exf5 16. exf5 Bb7 17. Qd2 Re8 18. Ng3 Qc6 19. Rf2
+  Rad8 20. Bh6 Bh8 21. Qf4 Rd7 22. Ne4 c4 23. Bc2 Rde7 24. Rcf1 Rxe4 25.
+  fxg6 f6 26. Qg5 Qd7 27. Kg1 Bg7 28. Rxf6 Rg4 29. gxh7+ Kh8 30. Bxg7+
+  Qxg7 31. Qxg4
+
+sources:
+  - title: Efim Geller vs Vasily Smyslov (1965) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1049156
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

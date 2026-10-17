@@ -1,0 +1,32 @@
+# Written by `make import` from game_1143989.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Edwin Ziegler Adams vs Carlos Torre Repetto, 1920
+white: Edwin Ziegler Adams
+black: Carlos Torre Repetto
+result: "1-0"
+date: 1920
+event: New Orleans
+site: New Orleans, LA USA
+eco: C41
+
+why: >
+  Likely composed by Torre as a tribute to his benefactor E. Z. Adams, this
+  game features the most famous back-rank mate combination in chess
+  literature, involving six consecutive offers of the queen.
+
+moves: |
+  1. e4 e5 2. Nf3 d6 3. d4 exd4 4. Qxd4 Nc6 5. Bb5 Bd7 6. Bxc6 Bxc6 7. Nc3
+  Nf6 8. O-O Be7 9. Nd5 Bxd5 10. exd5 O-O 11. Bg5 c6 12. c4 cxd5 13. cxd5
+  Re8 14. Rfe1 a5 15. Re2 Rc8 16. Rae1 Qd7 17. Bxf6 Bxf6 18. Qg4 Qb5 19.
+  Qc4 Qd7 20. Qc7 Qb5 21. a4 Qxa4 22. Re4 Qb5 23. Qxb7
+
+sources:
+  - title: Edwin Ziegler Adams vs Carlos Torre Repetto (1920) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1143989
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+

@@ -1,0 +1,35 @@
+# Written by `make import` from game_1113065.pgn. Fill in the title and the prose,
+# then run `make all`.
+title: Lajos Portisch vs Mikhail Tal, 1964
+white: Lajos Portisch
+black: Mikhail Tal
+result: "1/2-1/2"
+date: 1964-05-21
+event: Amsterdam Interzonal
+site: Amsterdam NED
+eco: E62
+
+why: >
+  One of Tal's most famous games, in which he over-presses and finds himself a
+  rook down in a lost position, but keeps setting problems until Portisch
+  makes a mistake and allows the Magician from Riga to escape with a draw.
+
+moves: |
+  1. Nf3 Nf6 2. g3 d6 3. d4 g6 4. Bg2 Bg7 5. O-O O-O 6. c4 Bg4 7. Nc3 Qc8
+  8. Re1 Re8 9. Qb3 Nc6 10. d5 Na5 11. Qa4 b6 12. Nd2 Bd7 13. Qc2 c6 14.
+  b4 Nxc4 15. Nxc4 cxd5 16. Na3 d4 17. Bxa8 Qxa8 18. Ncb5 Rc8 19. Qd1 Ne4
+  20. f3 a6 21. Nxd4 Qd5 22. Be3 Rc3 23. Ndc2 Qf5 24. g4 Qe6 25. Bd4 h5
+  26. Bxg7 hxg4 27. Nd4 Qd5 28. fxe4 Qxe4 29. Nf3 Qe3+ 30. Kh1 Bc6 31. Rf1
+  Rxa3 32. Qc1 gxf3 33. Qxc6 Qxe2 34. Rg1 Kxg7 35. Rae1 Qd2 36. Rd1 Qe2
+  37. Rde1 Qd2 38. Rd1 Qe2 39. Rde1
+
+sources:
+  - title: Lajos Portisch vs Mikhail Tal (1964) (chessgames.com)
+    url: https://www.chessgames.com/perl/chessgame?gid=1113065
+    note: move list, date and event
+    cited_by: why
+  - title: List of chess games (Wikipedia)
+    url: https://en.wikipedia.org/wiki/List_of_chess_games
+    note: the entry this game's description comes from
+    cited_by: why
+
