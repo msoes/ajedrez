@@ -1,11 +1,12 @@
-// The board a reader can play on: guess the move the game went on to make,
-// or take the position over and analyse it.
+// The board a reader can play on: guess the move the game went on to make, ask
+// Stockfish what it would play from here, or take the position over and play
+// the rest of the game out against it.
 //
-// Both modes need move input, which the viewer the book embeds cannot give.
-// It is read-only by construction: it hard-codes draggable, selectable and
-// movable off after its own options, and binds no drag listeners at all when
-// it starts out view-only, so there is nothing to switch on afterwards. The
-// two modes therefore share a board of their own, mounted over the viewer and
+// All three modes need move input, which the viewer the book embeds cannot
+// give. It is read-only by construction: it hard-codes draggable, selectable
+// and movable off after its own options, and binds no drag listeners at all
+// when it starts out view-only, so there is nothing to switch on afterwards.
+// The modes therefore share a board of their own, mounted over the viewer and
 // handed the position the viewer is showing. Leaving a mode throws that board
 // away and puts the viewer back where it was.
 
@@ -19,6 +20,14 @@ const ENRICH_DEPTH = 10;  // the background replies: shallow, so they land fast
 const CANDIDATES = 4;     // the moves Explore offers for the side to move
 const REPLIES = 3;        // the answers it gathers for each of them
 const MATE = 10000;       // a mate outscores any amount of material
+const FULL = 20;          // the skill level every analysis asks for
+
+// What the engine plays like as an opponent in a game against it. Skill Level
+// is Stockfish's own handicap and a shallow search blunts it further: the point
+// is a game a child can win, not a good one. Level 0 is no opponent at all.
+const LEVELS = [null, { skill: 0, depth: 4 },
+                      { skill: 3, depth: 8 },
+                      { skill: 8, depth: 12 }];
 
 
 // --- The engine ------------------------------------------------------------
@@ -81,9 +90,7 @@ function stockfish() {
 
   // One worker answers one question at a time, so questions wait their turn.
   // A failed one must not jam the queue behind it.
-  let turn = ask('uci', /^uciok/).then(() => ask('isready', /^readyok/)).then(() => {
-    worker.postMessage('setoption name Skill Level value 20');
-  });
+  let turn = ask('uci', /^uciok/).then(() => ask('isready', /^readyok/));
   // A queued question is dropped whole if the reader has moved on by the time
   // its turn comes: it was asked about a position no longer on the board.
   const queued = fn => {
@@ -94,11 +101,14 @@ function stockfish() {
     return result;
   };
 
-  // Every search says what it wants: MultiPV sticks, and `only` confines the
-  // search to one move, which is how a move the engine would not have chosen
-  // can still be scored from this side.
-  const search = (fen, multipv, depth, only) => {
+  // Every search says what it wants, because both options stick until they are
+  // set again: MultiPV, and the skill, which an opponent playing to a handicap
+  // turns down and every analysis puts back. `only` confines the search to one
+  // move, which is how a move the engine would not have chosen can still be
+  // scored from this side.
+  const search = (fen, multipv, depth, only, skill = FULL) => {
     worker.postMessage('setoption name MultiPV value ' + multipv);
+    worker.postMessage('setoption name Skill Level value ' + skill);
     worker.postMessage('position fen ' + fen);
     searching = true;
     return ask('go depth ' + depth + (only ? ' searchmoves ' + only : ''),
@@ -142,6 +152,21 @@ function stockfish() {
     // move, when it is not one the engine would have proposed.
     candidate(fen, uci) {
       return queued(async () => pvs(await search(fen, 1, ANALYSE_DEPTH, uci))[0] || null);
+    },
+
+    // The move the engine plays as an opponent, handicapped to the chosen
+    // level, as the two squares it moves between. Nothing comes back from a
+    // position that is already over.
+    reply(fen, level) {
+      const { skill, depth } = LEVELS[level];
+      return queued(async () => {
+        const lines = await search(fen, 1, depth, null, skill);
+        for (let i = lines.length - 1; i >= 0; i--) {
+          const m = /^bestmove (\S+)/.exec(lines[i]);
+          if (m) return m[1] === '(none)' ? null : m[1];
+        }
+        return null;
+      });
     },
 
     // Drop everything not yet run and cut the search in flight, so a reader
@@ -292,7 +317,21 @@ function picker() {
 }
 
 
-// --- The two modes ---------------------------------------------------------
+// --- The three modes -------------------------------------------------------
+
+const LEVEL_KEY = 'chess-engine-level';
+
+// A game against the engine starts with an opponent, at the gentlest strength
+// it has. Nothing saved means nobody has chosen yet, which is not the same as
+// having turned the opponent off.
+function storedLevel() {
+  try {
+    const saved = localStorage.getItem(LEVEL_KEY);
+    if (saved === null) return 1;
+    const n = Number(saved);
+    return Number.isInteger(n) && n >= 0 && n < LEVELS.length ? n : 1;
+  } catch { return 1; }
+}
 
 // How a guess is answered. The face is thrown over the board big enough to
 // read from across a room, and says the same thing as the colour.
@@ -352,7 +391,10 @@ export function attach({ boardEl, lpv, game }) {
   (column.querySelector('.move-text') || boardEl).after(treeEl);
 
   const guessBtn = button('Guess', 'Guess the next move');
-  const exploreBtn = button('Explore', 'Analyse this position');
+  const exploreBtn = button('Explore', 'See what Stockfish suggests here');
+  const playBtn = button('vs Stockfish',
+                         'Play the rest of the game out against Stockfish');
+  const vsBtn = button('vs', 'Let the engine answer');
   const undoBtn = button('↶', 'Take the move back');
   const onBtn = button('▸', 'Play the move and read on');
   const againBtn = button('▸?', 'Play the move and guess the next one');
@@ -369,22 +411,39 @@ export function attach({ boardEl, lpv, game }) {
   let resume = null;  // where the viewer was when the mode was entered
   let answered = false;   // a guess has been made and judged
 
+  // Playing against the engine: how strong an opponent it is, and the colour
+  // it answers as.
+  let level = storedLevel();
+  let side = null;
+
   // Explore, specifically: the line played from the position it started at,
   // and a cache so stepping back and forth does not re-ask the engine.
   let rootFen = null;
   let path = [];        // [{ uci, san }] from rootFen
   let entryPly = 0;     // where that position sits in the game, for the note
-  let seq = 0;          // bumped on every analysis; drops a stale render
+  let seq = 0;          // bumped whenever engine work in flight stops being
+                        // wanted, so its answer is dropped when it lands
   const cache = new Map();   // fen -> { candidates, complete }
 
   function paint() {
     bar.textContent = '';
     if (!mode) {
-      bar.append(guessBtn, exploreBtn);
+      bar.append(guessBtn, exploreBtn, playBtn);
       guessBtn.disabled = !game.san[lpv.path.size()];
     } else if (mode === 'explore') {
       undoBtn.disabled = path.length === 0;
       bar.append(undoBtn, backBtn, verdict);
+    } else if (mode === 'play') {
+      // One button for the opponent: it says how strong he is, and pressing it
+      // again strengthens him until it comes round to no opponent at all.
+      vsBtn.textContent = 'vs' + (level ? ' ' + '•'.repeat(level) : '');
+      vsBtn.setAttribute('aria-pressed', level ? 'true' : 'false');
+      vsBtn.title = level ? 'The engine answers; again for a stronger one'
+                          : 'Let the engine answer';
+      undoBtn.disabled = !chess.history().length;
+      verdict.textContent = chess.history().join(' ');
+      verdict.className = 'verdict verdict--line';
+      bar.append(undoBtn, vsBtn, backBtn, verdict);
     } else if (answered) {
       // The game is one move further on than the board: either way out of
       // here plays it, so a reader can read on or go straight to the next
@@ -449,6 +508,27 @@ export function attach({ boardEl, lpv, game }) {
     answered = true;
   }
 
+  // --- Playing against the engine ------------------------------------------
+
+  // The engine's answer, if one was asked for. It is fetched while the board
+  // is frozen, and dropped if the reader takes the move back or leaves in the
+  // meantime -- the first answer of all has a megabyte and a half to load.
+  async function engineReply() {
+    if (!level || chess.isGameOver() || colourOf(chess) !== side) return;
+    const mine = ++seq;
+    ground.set({ movable: { color: undefined } });
+    verdict.textContent = chess.history().join(' ') + ' …';
+    verdict.className = 'verdict verdict--line';
+    const uci = await stockfish().reply(chess.fen(), level);
+    if (mine !== seq || mode !== 'play') return;
+    if (uci) {
+      const from = uci.slice(0, 2), to = uci.slice(2, 4);
+      chess.move({ from, to, promotion: uci.slice(4, 5) || undefined });
+      sync([from, to]);
+    }
+    paint();
+  }
+
   // --- Exploring -----------------------------------------------------------
   // Explore shows the engine's suggestions for the position on the board, with
   // its best answers to each, and the reader picks one -- or plays their own
@@ -467,24 +547,39 @@ export function attach({ boardEl, lpv, game }) {
     orig: uci.slice(0, 2), dest: uci.slice(2, 4), brush
   });
 
-  function row(san, score, white, mark) {
-    const line = document.createElement('span');
-    line.className = 'tree__row';
-    if (mark) {
-      const pip = document.createElement('span');
-      pip.className = 'tree__game';
-      pip.textContent = '◆';
-      pip.title = 'the move the game played';
-      line.appendChild(pip);
-    }
-    const text = document.createElement('span');
-    text.className = 'tree__san';
-    text.textContent = san;
-    const value = document.createElement('span');
-    value.className = 'tree__eval';
-    value.textContent = score ? evaluation(score, white) : '';
-    line.append(text, value);
-    return line;
+  // A span with its class and its text, which is most of what the tree is
+  // made of.
+  function span(cls, text) {
+    const el = document.createElement('span');
+    el.className = cls;
+    if (text !== undefined) el.textContent = text;
+    return el;
+  }
+
+  // A score as one number, from the point of view of whoever is to move, with
+  // mate folded in so that two of them compare whatever kind they are.
+  const cp = score =>
+    score.type === 'cp' ? score.n
+      : score.n > 0 ? MATE - score.n : -MATE - score.n;
+
+  // A move written as the move it is in the game, so the tree counts on from
+  // where the reader entered rather than from one.
+  const numbered = (san, ply) =>
+    (Math.floor(ply / 2) + 1) + (ply % 2 ? '\u2026' : '.') + san;
+
+  // Where a candidate stands against the engine's own first choice: the pawns
+  // it gives up, and how much of a bar that leaves it. Four evaluations side
+  // by side are four numbers, and the gap between them is what a reader is
+  // trying to read off them; two pawns behind is as far as the bar goes.
+  function standing(score, best) {
+    const loss = (cp(best) - cp(score)) / 100;
+    if (loss < .005) return { text: 'best', fill: 1 };
+    // A mate on either side of the comparison is off any scale in pawns. The
+    // evaluation beside the move says so itself, and the bar has only to put
+    // the move last.
+    if (score.type === 'mate' || best.type === 'mate')
+      return { text: '', fill: 0 };
+    return { text: '\u2212' + loss.toFixed(2), fill: Math.max(0, 1 - loss / 2) };
   }
 
   // A way back to the game at the position explored to, on the game's own
@@ -495,10 +590,7 @@ export function attach({ boardEl, lpv, game }) {
     btn.className = 'tree__return';
     btn.textContent = '↩︎';
     btn.title = 'Return to the game, ' + path.length + ' moves on';
-    btn.addEventListener('click', ev => {
-      ev.stopPropagation();
-      leave(path.length);
-    });
+    btn.addEventListener('click', () => leave(path.length));
     return btn;
   }
 
@@ -511,9 +603,7 @@ export function attach({ boardEl, lpv, game }) {
     start.className = 'crumb__node crumb__root';
     start.title = 'the position you started from';
     if (entryPly > 0) {
-      const ply = entryPly - 1;
-      start.textContent = (Math.floor(ply / 2) + 1) + (ply % 2 ? '…' : '.')
-        + game.san[ply];
+      start.textContent = numbered(game.san[entryPly - 1], entryPly - 1);
     } else {
       start.textContent = '\u2302';
     }
@@ -526,7 +616,7 @@ export function attach({ boardEl, lpv, game }) {
       const ply = entryPly + i;
       const node = document.createElement('button');
       node.className = 'crumb__node';
-      node.textContent = (Math.floor(ply / 2) + 1) + (ply % 2 ? '…' : '.') + move.san;
+      node.textContent = numbered(move.san, ply);
       node.disabled = i === path.length - 1;
       node.addEventListener('click', () => goTo(i + 1));
       crumb.appendChild(node);
@@ -548,47 +638,96 @@ export function attach({ boardEl, lpv, game }) {
     return null;
   }
 
+  // Each candidate is a card: its place in the engine's order, the move, what
+  // the position is worth after it, and a bar saying how far short of the
+  // engine's own choice it falls. The card's face is one button, so the whole
+  // of it draws the move and plays it, from the keyboard as well as the mouse.
   function renderTree(node) {
     // A re-render replaces the rows the hover was bound to, so any arrow the
     // reader was showing goes with them.
     ground.setAutoShapes([]);
     list.textContent = '';
-    head.textContent = (node.white ? 'White' : 'Black')
-      + ' to move \u2014 proposed by Stockfish';
+    head.textContent = '';
+    head.append(
+      span('board-tree__who', (node.white ? 'White' : 'Black') + ' to move'),
+      // What the cards do, said once. The arrows are drawn on hover, which is
+      // not something a reader can be expected to try.
+      span('board-tree__hint',
+           'Stockfish\u2019s best \u2014 hover a move to see it, click to play it'));
+
     const played = gameMove();
     const playedSan = played ? bare(played.san) : null;
+    const ply = entryPly + path.length;
+    const best = node.candidates[0].score;
+
     node.candidates.forEach((candidate, i) => {
+      const isGame = playedSan !== null && bare(candidate.san) === playedSan;
+      const place = standing(candidate.score, best);
       const li = document.createElement('li');
-      li.className = 'tree__cand' + (i === 0 ? ' tree__cand--best' : '');
-      const game = playedSan !== null && bare(candidate.san) === playedSan;
-      li.appendChild(row(candidate.san, candidate.score, node.white, game));
+      li.className = 'tree__cand' + (i === 0 ? ' tree__cand--best' : '')
+                                  + (isGame ? ' tree__cand--game' : '');
+
+      const pick = document.createElement('button');
+      pick.className = 'tree__pick';
+      pick.title = 'Play ' + candidate.san;
+      const top = span('tree__row');
+      top.append(span('tree__rank', i + 1),
+                 span('tree__san', numbered(candidate.san, ply)),
+                 span('tree__eval', evaluation(candidate.score, node.white)));
+      const gauge = span('tree__gauge');
+      const fill = span('tree__fill');
+      fill.style.width = Math.round(place.fill * 100) + '%';
+      gauge.appendChild(fill);
+      const foot = span('tree__foot');
+      foot.append(gauge, span('tree__delta', place.text));
+      pick.append(top, foot);
+      // The move the game itself made, said in words: among four cards it is
+      // the one a reader is looking for, and a pip did not say which.
+      if (isGame) pick.appendChild(span('tree__tag', 'played in the game'));
+
       // Hovering a candidate draws it; hovering a reply draws it and the
       // candidate it hangs under, so the parent is never lost.
       const mine = [arrow(candidate.uci, 'blue')];
-      li.addEventListener('click', () => advance([candidate.uci]));
-      li.addEventListener('mouseenter', () => ground.setAutoShapes(mine));
-      li.addEventListener('mouseleave', () => ground.setAutoShapes([]));
+      const show = shapes => () => ground.setAutoShapes(shapes);
+      pick.addEventListener('click', () => advance([candidate.uci]));
+      pick.addEventListener('mouseenter', show(mine));
+      pick.addEventListener('mouseleave', show([]));
+      pick.addEventListener('focus', show(mine));
+      pick.addEventListener('blur', show([]));
+      li.appendChild(pick);
+
+      // The answers sit beneath their move and under a heading that says whose
+      // they are, so the nesting does not have to be worked out.
       if (candidate.replies.length) {
+        const answers = document.createElement('div');
+        answers.className = 'tree__answers';
+        answers.appendChild(span('tree__answers-head',
+          (node.white ? 'Black' : 'White') + ' answers'));
         const ul = document.createElement('ul');
         ul.className = 'tree__replies';
         candidate.replies.forEach(reply => {
           const rli = document.createElement('li');
-          rli.className = 'tree__reply'
+          const btn = document.createElement('button');
+          btn.className = 'tree__reply'
             + (reply.score ? '' : ' tree__reply--pending');
-          rli.appendChild(row(reply.san, reply.score, !node.white));
-          rli.addEventListener('click', ev => {
-            ev.stopPropagation();
-            advance([candidate.uci, reply.uci]);
-          });
-          rli.addEventListener('mouseenter', () =>
-            ground.setAutoShapes([...mine, arrow(reply.uci, 'yellow')]));
-          rli.addEventListener('mouseleave', () =>
-            ground.setAutoShapes(mine));
+          btn.title = 'Play ' + candidate.san + ' ' + reply.san;
+          btn.append(span('tree__san', reply.san),
+                     span('tree__eval', reply.score
+                       ? evaluation(reply.score, !node.white) : ''));
+          const both = [...mine, arrow(reply.uci, 'yellow')];
+          btn.addEventListener('click', () =>
+            advance([candidate.uci, reply.uci]));
+          btn.addEventListener('mouseenter', show(both));
+          btn.addEventListener('mouseleave', show(mine));
+          btn.addEventListener('focus', show(both));
+          btn.addEventListener('blur', show([]));
+          rli.appendChild(btn);
           ul.appendChild(rli);
         });
-        li.appendChild(ul);
+        answers.appendChild(ul);
+        li.appendChild(answers);
       }
-      if (game && path.length) li.appendChild(returnButton());
+      if (isGame && path.length) li.appendChild(returnButton());
       list.appendChild(li);
     });
     renderCrumb();
@@ -596,10 +735,11 @@ export function attach({ boardEl, lpv, game }) {
 
   function renderNone() {
     list.textContent = '';
-    head.textContent = 'No moves: the game is over.';
+    head.textContent = '';
+    head.appendChild(span('board-tree__who', 'Nothing to suggest'));
     const li = document.createElement('li');
     li.className = 'board-tree__none';
-    li.textContent = 'No moves: the game is over.';
+    li.textContent = 'No moves: the game is over in this position.';
     list.appendChild(li);
     renderCrumb();
   }
@@ -736,6 +876,9 @@ export function attach({ boardEl, lpv, game }) {
       ground.set({ movable: { color: undefined } });
       await guessed(fen, move);
       paint();
+    } else if (mode === 'play') {
+      paint();
+      engineReply();
     } else if (mode === 'explore') {
       // A move the reader played rather than picked: it joins the line the
       // same way, and the engine is asked afresh from where it left off.
@@ -778,19 +921,22 @@ export function attach({ boardEl, lpv, game }) {
       },
       draggable: { enabled: true, showGhost: true },
       selectable: { enabled: true },
-      // Drawing is on only while exploring, where the hover arrows need it and
-      // a reader's own right-click arrows are a help rather than a distraction.
+      // Drawing is on only while exploring, where the arrows the tree draws
+      // need it and a reader's own right-click arrows are a help rather than a
+      // distraction.
       drawable: { enabled: which === 'explore' }
     });
     column.classList.add('is-' + which);
     verdict.textContent = '';
     verdict.className = 'verdict';
     answered = false;
+    // The engine takes the side the reader is not about to move.
+    side = which === 'play' ? other(colourOf(chess)) : null;
     if (which === 'guess') {
       answer = game.san[lpv.path.size()];
       verdict.className = 'verdict verdict--ask';
       verdict.textContent = colourOf(chess) === 'white' ? 'White?' : 'Black?';
-    } else {
+    } else if (which === 'explore') {
       rootFen = chess.fen();
       entryPly = resume.size();
       path = [];
@@ -809,7 +955,7 @@ export function attach({ boardEl, lpv, game }) {
     ground.destroy();
     host.remove();
     viewer().style.display = '';
-    column.classList.remove('is-guess', 'is-explore');
+    column.classList.remove('is-guess', 'is-explore', 'is-play');
     treeEl.hidden = true;
     list.textContent = '';
     crumb.textContent = '';
@@ -825,9 +971,30 @@ export function attach({ boardEl, lpv, game }) {
   onBtn.addEventListener('click', () => leave(1));
   againBtn.addEventListener('click', () => { leave(1); enter('guess'); });
   exploreBtn.addEventListener('click', () => enter('explore'));
+  playBtn.addEventListener('click', () => enter('play'));
   backBtn.addEventListener('click', () => leave(0));
+
+  vsBtn.addEventListener('click', () => {
+    level = (level + 1) % LEVELS.length;
+    try { localStorage.setItem(LEVEL_KEY, level); } catch { /* private window */ }
+    if (level === 1) side = other(colourOf(chess));
+    paint();
+  });
+
+  // Exploring steps back along the line it has walked. A game against the
+  // engine takes back its answer along with the reader's own move, so what
+  // comes back is the reader's move to make again rather than the engine's.
   undoBtn.addEventListener('click', () => {
-    if (path.length) goTo(path.length - 1);
+    if (mode === 'explore') {
+      if (path.length) goTo(path.length - 1);
+      return;
+    }
+    seq++;
+    if (!chess.undo()) return;
+    if (level && colourOf(chess) === side) chess.undo();
+    const last = chess.history({ verbose: true }).slice(-1)[0];
+    sync(last ? [last.from, last.to] : null);
+    paint();
   });
 
   paint();
